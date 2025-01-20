@@ -43,6 +43,7 @@ void *createSocket(void *threadid){
 }
 
 void *writeFunction(void *threadid){
+  
   std::vector<int> requests;
   requests.push_back(MSP_RC);
   requests.push_back(MSP_ATTITUDE);
@@ -109,6 +110,9 @@ void *serviceFunction(void *threadid){
        service.request.alt=alt;
        service.request.battery=battery;
        service.request.rssi=rssi;
+       service.request.a1=a1;
+       service.request.a2=a2;
+       service.request.a3=a3;
   }
   }
  pthread_exit(NULL);

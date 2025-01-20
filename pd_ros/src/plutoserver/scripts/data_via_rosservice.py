@@ -17,6 +17,8 @@ class request_data():
 		 print "roll = " + str(req.roll), "pitch = " + str(req.pitch), "yaw = " + str(req.yaw)
 		 print "altitude = " +str(req.alt)
 		 print "battery = " + str(req.battery), "Power Consumed = " + str(req.rssi)
+		 print "Anchor1 = " + str(req.a1), "Anchor2 = " + str(req.a2), "Anchor3 = " + str(req.a3)
+		 
 		 rospy.sleep(.1)
 		 return PlutoPilotResponse(rcAUX2 =1500)
 

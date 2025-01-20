@@ -25,7 +25,7 @@ static const int MSP_ACC_TRIM=240;
 static const int MSP_EEPROM_WRITE = 250;
 static const int MSP_SET_POS= 216;
 static const int MSP_SET_COMMAND = 217;
-
+static const int MSP_UWB = 230;
 
 static const int IDLE = 0, HEADER_START = 1, HEADER_M = 2, HEADER_ARROW = 3, HEADER_SIZE = 4, HEADER_CMD = 5, HEADER_ERR = 6;
 
@@ -34,6 +34,10 @@ extern int pitch;
 extern int yaw;
 extern float battery;
 extern int rssi;
+
+extern float a1;
+extern float a2;
+extern float a3;
 
 extern float accX;
 extern float accY;
@@ -55,6 +59,8 @@ extern int FC_versionPatchLevel;
 
 extern int trim_roll;
 extern int trim_pitch;
+
+extern float a1,a2,a3;
 
 
 extern float rcThrottle, rcRoll, rcPitch, rcYaw, rcAUX1 , rcAUX2, rcAUX3, rcAUX4 ;

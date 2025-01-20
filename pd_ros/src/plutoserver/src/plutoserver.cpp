@@ -13,6 +13,9 @@ bool myFunction(plutodrone::PlutoPilot::Request  &req,
   ROS_INFO("altitiude=%f", req.alt);
   ROS_INFO("battery=%f rssi=%i", req.battery,req.rssi);
 
+  ROS_INFO("Anchor_1=%f Anchor_3=%f Anchor_2=%f", req.a1,req.a2,req.a3);
+
+
   res.rcAUX1=1800;
 
   ROS_INFO("sending back response: [%ld]", (long int)res.rcAUX1);

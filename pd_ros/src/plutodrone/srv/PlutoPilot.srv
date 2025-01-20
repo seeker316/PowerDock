@@ -15,6 +15,9 @@ float32 magZ
 float32 alt
 float32 battery
 int32 rssi
+float32 a1
+float32 a2
+float32 a3
 ---
 #response
 

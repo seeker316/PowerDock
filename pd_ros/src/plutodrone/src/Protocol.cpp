@@ -23,6 +23,10 @@ float magY=0;
 float magZ=0;
 float alt=0;
 
+float a1 = 0;
+float a2 = 0;
+float a3 = 0;
+
 int FC_versionMajor=0;
 int FC_versionMinor=0;
 int FC_versionPatchLevel=0;
@@ -114,6 +118,13 @@ void Protocol::evaluateCommand(int command)
       rcAUX2 = read16();
       rcAUX3 = read16();
       rcAUX4 = read16();
+
+      break;
+
+    case MSP_UWB:
+      a1 = read16();
+      a2 = read16();
+      a3 = read16();
 
       break;
 
