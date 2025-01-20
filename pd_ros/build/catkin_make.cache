@@ -1,0 +1,2 @@
+pluto-ros-package/pluto_drone:pluto-ros-package/plutodrone:pluto-ros-package/plutoserver
+-DCATKIN_DEVEL_PREFIX=/home/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ros_ws/install -G Unix Makefiles
