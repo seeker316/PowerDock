@@ -50,6 +50,7 @@ void *writeFunction(void *threadid){
   requests.push_back(MSP_RAW_IMU);
   requests.push_back(MSP_ALTITUDE);
   requests.push_back(MSP_ANALOG);
+  requests.push_back(MSP_UWB);
 
   pro.sendRequestMSP_ACC_TRIM();
 
