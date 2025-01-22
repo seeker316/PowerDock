@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ros_ws/src
+CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ros_ws/build
+CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,9 +135,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros_ws/build/CMakeFiles /home/ros_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Desktop/PowerDock/pd_ros/build/CMakeFiles /root/Desktop/PowerDock/pd_ros/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Desktop/PowerDock/pd_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -292,7 +292,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f pluto-ros-package/pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build.make pluto-ros-package/pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build.make pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
@@ -305,7 +305,7 @@ plutoswarm: cmake_check_build_system
 
 # fast build rule for target.
 plutoswarm/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutoswarm.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutoswarm.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/build
 .PHONY : plutoswarm/fast
 
 #=============================================================================
@@ -318,7 +318,7 @@ plutonode: cmake_check_build_system
 
 # fast build rule for target.
 plutonode/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutonode.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutonode.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutonode.dir/build.make plutodrone/CMakeFiles/plutonode.dir/build
 .PHONY : plutonode/fast
 
 #=============================================================================
@@ -331,7 +331,7 @@ plutodrone: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone.dir/build.make plutodrone/CMakeFiles/plutodrone.dir/build
 .PHONY : plutodrone/fast
 
 #=============================================================================
@@ -344,7 +344,7 @@ plutodrone_genpy: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_genpy/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_genpy.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_genpy.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_genpy.dir/build.make plutodrone/CMakeFiles/plutodrone_genpy.dir/build
 .PHONY : plutodrone_genpy/fast
 
 #=============================================================================
@@ -357,7 +357,7 @@ plutodrone_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages_py/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
 .PHONY : plutodrone_generate_messages_py/fast
 
 #=============================================================================
@@ -370,7 +370,7 @@ plutodrone_gennodejs: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_gennodejs/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build
 .PHONY : plutodrone_gennodejs/fast
 
 #=============================================================================
@@ -383,7 +383,7 @@ plutodrone_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages_nodejs/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
 .PHONY : plutodrone_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -396,7 +396,7 @@ plutodrone_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages_lisp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
 .PHONY : plutodrone_generate_messages_lisp/fast
 
 #=============================================================================
@@ -409,7 +409,7 @@ plutodrone_geneus: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_geneus/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_geneus.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_geneus.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_geneus.dir/build.make plutodrone/CMakeFiles/plutodrone_geneus.dir/build
 .PHONY : plutodrone_geneus/fast
 
 #=============================================================================
@@ -422,7 +422,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -435,7 +435,7 @@ plutodrone_genlisp: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_genlisp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_genlisp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_genlisp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_genlisp.dir/build.make plutodrone/CMakeFiles/plutodrone_genlisp.dir/build
 .PHONY : plutodrone_genlisp/fast
 
 #=============================================================================
@@ -448,7 +448,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -461,7 +461,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -474,7 +474,7 @@ plutodrone_generate_messages: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build
 .PHONY : plutodrone_generate_messages/fast
 
 #=============================================================================
@@ -487,7 +487,7 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -500,7 +500,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -513,7 +513,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -526,7 +526,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -539,7 +539,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -552,7 +552,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -565,7 +565,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -578,7 +578,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -591,7 +591,7 @@ plutodrone_gencpp: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_gencpp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_gencpp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_gencpp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_gencpp.dir/build.make plutodrone/CMakeFiles/plutodrone_gencpp.dir/build
 .PHONY : plutodrone_gencpp/fast
 
 #=============================================================================
@@ -604,7 +604,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -617,7 +617,7 @@ plutodrone_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages_cpp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
 .PHONY : plutodrone_generate_messages_cpp/fast
 
 #=============================================================================
@@ -630,7 +630,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -643,7 +643,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -656,7 +656,7 @@ _plutodrone_generate_messages_check_deps_PlutoMsg: cmake_check_build_system
 
 # fast build rule for target.
 _plutodrone_generate_messages_check_deps_PlutoMsg/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build
 .PHONY : _plutodrone_generate_messages_check_deps_PlutoMsg/fast
 
 #=============================================================================
@@ -669,21 +669,8 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# Build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _plutodrone_generate_messages_check_deps_PlutoMsgAP
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
 
 #=============================================================================
 # Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoPilot
@@ -695,8 +682,21 @@ _plutodrone_generate_messages_check_deps_PlutoPilot: cmake_check_build_system
 
 # fast build rule for target.
 _plutodrone_generate_messages_check_deps_PlutoPilot/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build
 .PHONY : _plutodrone_generate_messages_check_deps_PlutoPilot/fast
+
+#=============================================================================
+# Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# Build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _plutodrone_generate_messages_check_deps_PlutoMsgAP
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
 
 #=============================================================================
 # Target rules for targets named plutodrone_generate_messages_eus
@@ -708,7 +708,7 @@ plutodrone_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 plutodrone_generate_messages_eus/fast:
-	$(MAKE) -f pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make pluto-ros-package/plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
 .PHONY : plutodrone_generate_messages_eus/fast
 
 #=============================================================================
@@ -721,7 +721,7 @@ plutoserver_generate_messages: cmake_check_build_system
 
 # fast build rule for target.
 plutoserver_generate_messages/fast:
-	$(MAKE) -f pluto-ros-package/plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build.make pluto-ros-package/plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build
+	$(MAKE) -f plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build.make plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build
 .PHONY : plutoserver_generate_messages/fast
 
 #=============================================================================
@@ -734,7 +734,7 @@ plutojoystick: cmake_check_build_system
 
 # fast build rule for target.
 plutojoystick/fast:
-	$(MAKE) -f pluto-ros-package/plutoserver/CMakeFiles/plutojoystick.dir/build.make pluto-ros-package/plutoserver/CMakeFiles/plutojoystick.dir/build
+	$(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/build
 .PHONY : plutojoystick/fast
 
 #=============================================================================
@@ -747,7 +747,7 @@ plutoserver: cmake_check_build_system
 
 # fast build rule for target.
 plutoserver/fast:
-	$(MAKE) -f pluto-ros-package/plutoserver/CMakeFiles/plutoserver.dir/build.make pluto-ros-package/plutoserver/CMakeFiles/plutoserver.dir/build
+	$(MAKE) -f plutoserver/CMakeFiles/plutoserver.dir/build.make plutoserver/CMakeFiles/plutoserver.dir/build
 .PHONY : plutoserver/fast
 
 # Help Target
@@ -802,8 +802,8 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsg"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoPilot"
+	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
 	@echo "... plutodrone_generate_messages_eus"
 	@echo "... plutoserver_generate_messages"
 	@echo "... plutojoystick"

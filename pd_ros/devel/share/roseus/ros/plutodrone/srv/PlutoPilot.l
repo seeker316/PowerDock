@@ -20,7 +20,7 @@
 
 (defclass plutodrone::PlutoPilotRequest
   :super ros::object
-  :slots (_roll _pitch _yaw _accX _accY _accZ _gyroX _gyroY _gyroZ _magX _magY _magZ _alt _battery _rssi ))
+  :slots (_roll _pitch _yaw _accX _accY _accZ _gyroX _gyroY _gyroZ _magX _magY _magZ _alt _battery _rssi _a1 _a2 _a3 ))
 
 (defmethod plutodrone::PlutoPilotRequest
   (:init
@@ -40,6 +40,9 @@
     ((:alt __alt) 0.0)
     ((:battery __battery) 0.0)
     ((:rssi __rssi) 0)
+    ((:a1 __a1) 0.0)
+    ((:a2 __a2) 0.0)
+    ((:a3 __a3) 0.0)
     )
    (send-super :init)
    (setq _roll (round __roll))
@@ -57,6 +60,9 @@
    (setq _alt (float __alt))
    (setq _battery (float __battery))
    (setq _rssi (round __rssi))
+   (setq _a1 (float __a1))
+   (setq _a2 (float __a2))
+   (setq _a3 (float __a3))
    self)
   (:roll
    (&optional __roll)
@@ -103,6 +109,15 @@
   (:rssi
    (&optional __rssi)
    (if __rssi (setq _rssi __rssi)) _rssi)
+  (:a1
+   (&optional __a1)
+   (if __a1 (setq _a1 __a1)) _a1)
+  (:a2
+   (&optional __a2)
+   (if __a2 (setq _a2 __a2)) _a2)
+  (:a3
+   (&optional __a3)
+   (if __a3 (setq _a3 __a3)) _a3)
   (:serialization-length
    ()
    (+
@@ -135,6 +150,12 @@
     ;; float32 _battery
     4
     ;; int32 _rssi
+    4
+    ;; float32 _a1
+    4
+    ;; float32 _a2
+    4
+    ;; float32 _a3
     4
     ))
   (:serialize
@@ -171,6 +192,12 @@
        (sys::poke _battery (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; int32 _rssi
        (write-long _rssi s)
+     ;; float32 _a1
+       (sys::poke _a1 (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _a2
+       (sys::poke _a2 (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _a3
+       (sys::poke _a3 (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -205,6 +232,12 @@
      (setq _battery (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; int32 _rssi
      (setq _rssi (sys::peek buf ptr- :integer)) (incf ptr- 4)
+   ;; float32 _a1
+     (setq _a1 (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _a2
+     (setq _a2 (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _a3
+     (setq _a3 (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
@@ -327,7 +360,7 @@
   :super ros::object
   :slots ())
 
-(setf (get plutodrone::PlutoPilot :md5sum-) "4694157b8edbc1fcf473057bcd528de1")
+(setf (get plutodrone::PlutoPilot :md5sum-) "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (setf (get plutodrone::PlutoPilot :datatype-) "plutodrone/PlutoPilot")
 (setf (get plutodrone::PlutoPilot :request) plutodrone::PlutoPilotRequest)
 (setf (get plutodrone::PlutoPilot :response) plutodrone::PlutoPilotResponse)
@@ -335,7 +368,7 @@
 (defmethod plutodrone::PlutoPilotRequest
   (:response () (instance plutodrone::PlutoPilotResponse :init)))
 
-(setf (get plutodrone::PlutoPilotRequest :md5sum-) "4694157b8edbc1fcf473057bcd528de1")
+(setf (get plutodrone::PlutoPilotRequest :md5sum-) "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (setf (get plutodrone::PlutoPilotRequest :datatype-) "plutodrone/PlutoPilotRequest")
 (setf (get plutodrone::PlutoPilotRequest :definition-)
       "
@@ -355,6 +388,9 @@ float32 magZ
 float32 alt
 float32 battery
 int32 rssi
+float32 a1
+float32 a2
+float32 a3
 ---
 
 
@@ -369,7 +405,7 @@ int32 rcAUX4
 
 ")
 
-(setf (get plutodrone::PlutoPilotResponse :md5sum-) "4694157b8edbc1fcf473057bcd528de1")
+(setf (get plutodrone::PlutoPilotResponse :md5sum-) "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (setf (get plutodrone::PlutoPilotResponse :datatype-) "plutodrone/PlutoPilotResponse")
 (setf (get plutodrone::PlutoPilotResponse :definition-)
       "
@@ -389,6 +425,9 @@ float32 magZ
 float32 alt
 float32 battery
 int32 rssi
+float32 a1
+float32 a2
+float32 a3
 ---
 
 
@@ -405,6 +444,6 @@ int32 rcAUX4
 
 
 
-(provide :plutodrone/PlutoPilot "4694157b8edbc1fcf473057bcd528de1")
+(provide :plutodrone/PlutoPilot "b32e434826cbd99f1cb25a2ae0b2ac1a")
 
 

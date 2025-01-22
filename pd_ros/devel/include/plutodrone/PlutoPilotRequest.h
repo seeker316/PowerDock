@@ -38,7 +38,10 @@ struct PlutoPilotRequest_
     , magZ(0.0)
     , alt(0.0)
     , battery(0.0)
-    , rssi(0)  {
+    , rssi(0)
+    , a1(0.0)
+    , a2(0.0)
+    , a3(0.0)  {
     }
   PlutoPilotRequest_(const ContainerAllocator& _alloc)
     : roll(0)
@@ -55,7 +58,10 @@ struct PlutoPilotRequest_
     , magZ(0.0)
     , alt(0.0)
     , battery(0.0)
-    , rssi(0)  {
+    , rssi(0)
+    , a1(0.0)
+    , a2(0.0)
+    , a3(0.0)  {
   (void)_alloc;
     }
 
@@ -106,6 +112,15 @@ struct PlutoPilotRequest_
    typedef int32_t _rssi_type;
   _rssi_type rssi;
 
+   typedef float _a1_type;
+  _a1_type a1;
+
+   typedef float _a2_type;
+  _a2_type a2;
+
+   typedef float _a3_type;
+  _a3_type a3;
+
 
 
 
@@ -141,7 +156,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'plutodrone': ['/home/ros_ws/src/pluto-ros-package/plutodrone/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+// {'plutodrone': ['/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -184,12 +199,12 @@ struct MD5Sum< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f8dca44e14493750e1a83a8276b2d8e4";
+    return "964873791b4873409e5448be03280576";
   }
 
   static const char* value(const ::plutodrone::PlutoPilotRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf8dca44e14493750ULL;
-  static const uint64_t static_value2 = 0xe1a83a8276b2d8e4ULL;
+  static const uint64_t static_value1 = 0x964873791b487340ULL;
+  static const uint64_t static_value2 = 0x9e5448be03280576ULL;
 };
 
 template<class ContainerAllocator>
@@ -225,6 +240,9 @@ float32 magZ\n\
 float32 alt\n\
 float32 battery\n\
 int32 rssi\n\
+float32 a1\n\
+float32 a2\n\
+float32 a3\n\
 ";
   }
 
@@ -258,6 +276,9 @@ namespace serialization
       stream.next(m.alt);
       stream.next(m.battery);
       stream.next(m.rssi);
+      stream.next(m.a1);
+      stream.next(m.a2);
+      stream.next(m.a3);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -306,6 +327,12 @@ struct Printer< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.battery);
     s << indent << "rssi: ";
     Printer<int32_t>::stream(s, indent + "  ", v.rssi);
+    s << indent << "a1: ";
+    Printer<float>::stream(s, indent + "  ", v.a1);
+    s << indent << "a2: ";
+    Printer<float>::stream(s, indent + "  ", v.a2);
+    s << indent << "a3: ";
+    Printer<float>::stream(s, indent + "  ", v.a3);
   }
 };
 

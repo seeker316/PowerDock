@@ -81,7 +81,22 @@
     :reader rssi
     :initarg :rssi
     :type cl:integer
-    :initform 0))
+    :initform 0)
+   (a1
+    :reader a1
+    :initarg :a1
+    :type cl:float
+    :initform 0.0)
+   (a2
+    :reader a2
+    :initarg :a2
+    :type cl:float
+    :initform 0.0)
+   (a3
+    :reader a3
+    :initarg :a3
+    :type cl:float
+    :initform 0.0))
 )
 
 (cl:defclass PlutoPilot-request (<PlutoPilot-request>)
@@ -166,6 +181,21 @@
 (cl:defmethod rssi-val ((m <PlutoPilot-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader plutodrone-srv:rssi-val is deprecated.  Use plutodrone-srv:rssi instead.")
   (rssi m))
+
+(cl:ensure-generic-function 'a1-val :lambda-list '(m))
+(cl:defmethod a1-val ((m <PlutoPilot-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader plutodrone-srv:a1-val is deprecated.  Use plutodrone-srv:a1 instead.")
+  (a1 m))
+
+(cl:ensure-generic-function 'a2-val :lambda-list '(m))
+(cl:defmethod a2-val ((m <PlutoPilot-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader plutodrone-srv:a2-val is deprecated.  Use plutodrone-srv:a2 instead.")
+  (a2 m))
+
+(cl:ensure-generic-function 'a3-val :lambda-list '(m))
+(cl:defmethod a3-val ((m <PlutoPilot-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader plutodrone-srv:a3-val is deprecated.  Use plutodrone-srv:a3 instead.")
+  (a3 m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <PlutoPilot-request>) ostream)
   "Serializes a message object of type '<PlutoPilot-request>"
   (cl:let* ((signed (cl:slot-value msg 'roll)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 4294967296) signed)))
@@ -247,6 +277,21 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
     )
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'a1))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'a2))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'a3))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <PlutoPilot-request>) istream)
   "Deserializes a message object of type '<PlutoPilot-request>"
@@ -340,6 +385,24 @@
       (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'rssi) (cl:if (cl:< unsigned 2147483648) unsigned (cl:- unsigned 4294967296))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'a1) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'a2) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'a3) (roslisp-utils:decode-single-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<PlutoPilot-request>)))
@@ -350,18 +413,21 @@
   "plutodrone/PlutoPilotRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<PlutoPilot-request>)))
   "Returns md5sum for a message object of type '<PlutoPilot-request>"
-  "4694157b8edbc1fcf473057bcd528de1")
+  "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'PlutoPilot-request)))
   "Returns md5sum for a message object of type 'PlutoPilot-request"
-  "4694157b8edbc1fcf473057bcd528de1")
+  "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PlutoPilot-request>)))
   "Returns full string definition for message of type '<PlutoPilot-request>"
-  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%~%~%"))
+  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PlutoPilot-request)))
   "Returns full string definition for message of type 'PlutoPilot-request"
-  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%~%~%"))
+  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PlutoPilot-request>))
   (cl:+ 0
+     4
+     4
+     4
      4
      4
      4
@@ -396,6 +462,9 @@
     (cl:cons ':alt (alt msg))
     (cl:cons ':battery (battery msg))
     (cl:cons ':rssi (rssi msg))
+    (cl:cons ':a1 (a1 msg))
+    (cl:cons ':a2 (a2 msg))
+    (cl:cons ':a3 (a3 msg))
 ))
 ;//! \htmlinclude PlutoPilot-response.msg.html
 
@@ -600,10 +669,10 @@
   "plutodrone/PlutoPilotResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<PlutoPilot-response>)))
   "Returns md5sum for a message object of type '<PlutoPilot-response>"
-  "4694157b8edbc1fcf473057bcd528de1")
+  "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'PlutoPilot-response)))
   "Returns md5sum for a message object of type 'PlutoPilot-response"
-  "4694157b8edbc1fcf473057bcd528de1")
+  "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PlutoPilot-response>)))
   "Returns full string definition for message of type '<PlutoPilot-response>"
   (cl:format cl:nil "~%~%int32 rcRoll~%int32 rcPitch~%int32 rcYaw~%int32 rcThrottle~%int32 rcAUX1~%int32 rcAUX2~%int32 rcAUX3~%int32 rcAUX4~%~%~%~%"))

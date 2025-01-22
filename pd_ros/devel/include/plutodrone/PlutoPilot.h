@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::plutodrone::PlutoPilot > {
   static const char* value()
   {
-    return "4694157b8edbc1fcf473057bcd528de1";
+    return "b32e434826cbd99f1cb25a2ae0b2ac1a";
   }
 
   static const char* value(const ::plutodrone::PlutoPilot&) { return value(); }

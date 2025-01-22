@@ -36,6 +36,9 @@ class PlutoPilotRequest {
       this.alt = null;
       this.battery = null;
       this.rssi = null;
+      this.a1 = null;
+      this.a2 = null;
+      this.a3 = null;
     }
     else {
       if (initObj.hasOwnProperty('roll')) {
@@ -128,6 +131,24 @@ class PlutoPilotRequest {
       else {
         this.rssi = 0;
       }
+      if (initObj.hasOwnProperty('a1')) {
+        this.a1 = initObj.a1
+      }
+      else {
+        this.a1 = 0.0;
+      }
+      if (initObj.hasOwnProperty('a2')) {
+        this.a2 = initObj.a2
+      }
+      else {
+        this.a2 = 0.0;
+      }
+      if (initObj.hasOwnProperty('a3')) {
+        this.a3 = initObj.a3
+      }
+      else {
+        this.a3 = 0.0;
+      }
     }
   }
 
@@ -163,6 +184,12 @@ class PlutoPilotRequest {
     bufferOffset = _serializer.float32(obj.battery, buffer, bufferOffset);
     // Serialize message field [rssi]
     bufferOffset = _serializer.int32(obj.rssi, buffer, bufferOffset);
+    // Serialize message field [a1]
+    bufferOffset = _serializer.float32(obj.a1, buffer, bufferOffset);
+    // Serialize message field [a2]
+    bufferOffset = _serializer.float32(obj.a2, buffer, bufferOffset);
+    // Serialize message field [a3]
+    bufferOffset = _serializer.float32(obj.a3, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -200,11 +227,17 @@ class PlutoPilotRequest {
     data.battery = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [rssi]
     data.rssi = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [a1]
+    data.a1 = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [a2]
+    data.a2 = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [a3]
+    data.a3 = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 60;
+    return 72;
   }
 
   static datatype() {
@@ -214,7 +247,7 @@ class PlutoPilotRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f8dca44e14493750e1a83a8276b2d8e4';
+    return '964873791b4873409e5448be03280576';
   }
 
   static messageDefinition() {
@@ -237,6 +270,9 @@ class PlutoPilotRequest {
     float32 alt
     float32 battery
     int32 rssi
+    float32 a1
+    float32 a2
+    float32 a3
     
     `;
   }
@@ -350,6 +386,27 @@ class PlutoPilotRequest {
     }
     else {
       resolved.rssi = 0
+    }
+
+    if (msg.a1 !== undefined) {
+      resolved.a1 = msg.a1;
+    }
+    else {
+      resolved.a1 = 0.0
+    }
+
+    if (msg.a2 !== undefined) {
+      resolved.a2 = msg.a2;
+    }
+    else {
+      resolved.a2 = 0.0
+    }
+
+    if (msg.a3 !== undefined) {
+      resolved.a3 = msg.a3;
+    }
+    else {
+      resolved.a3 = 0.0
     }
 
     return resolved;
@@ -566,6 +623,6 @@ class PlutoPilotResponse {
 module.exports = {
   Request: PlutoPilotRequest,
   Response: PlutoPilotResponse,
-  md5sum() { return '4694157b8edbc1fcf473057bcd528de1'; },
+  md5sum() { return 'b32e434826cbd99f1cb25a2ae0b2ac1a'; },
   datatype() { return 'plutodrone/PlutoPilot'; }
 };

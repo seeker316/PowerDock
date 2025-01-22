@@ -67,14 +67,14 @@ set(plutodrone_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(plutodrone_SOURCE_PREFIX /home/ros_ws/src/pluto-ros-package/plutodrone)
-  set(plutodrone_DEVEL_PREFIX /home/ros_ws/devel)
+  set(plutodrone_SOURCE_PREFIX /root/Desktop/PowerDock/pd_ros/src/plutodrone)
+  set(plutodrone_DEVEL_PREFIX /root/Desktop/PowerDock/pd_ros/devel)
   set(plutodrone_INSTALL_PREFIX "")
   set(plutodrone_PREFIX ${plutodrone_DEVEL_PREFIX})
 else()
   set(plutodrone_SOURCE_PREFIX "")
   set(plutodrone_DEVEL_PREFIX "")
-  set(plutodrone_INSTALL_PREFIX /home/ros_ws/install)
+  set(plutodrone_INSTALL_PREFIX /root/Desktop/PowerDock/pd_ros/install)
   set(plutodrone_PREFIX ${plutodrone_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(plutodrone_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ros_ws/devel/include;/home/ros_ws/src/pluto-ros-package/plutodrone/include " STREQUAL " ")
+if(NOT "/root/Desktop/PowerDock/pd_ros/devel/include;/root/Desktop/PowerDock/pd_ros/src/plutodrone/include " STREQUAL " ")
   set(plutodrone_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ros_ws/devel/include;/home/ros_ws/src/pluto-ros-package/plutodrone/include")
+  set(_include_dirs "/root/Desktop/PowerDock/pd_ros/devel/include;/root/Desktop/PowerDock/pd_ros/src/plutodrone/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/ros_ws/devel/include;/home/ros_ws/src/pluto-ros-package/plutodrone
         message(FATAL_ERROR "Project 'plutodrone' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'plutodrone' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ros_ws/src/pluto-ros-package/plutodrone/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'plutodrone' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/root/Desktop/PowerDock/pd_ros/src/plutodrone/${idir}'.  ${_report}")
     endif()
     _list_append_unique(plutodrone_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ros_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /root/Desktop/PowerDock/pd_ros/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

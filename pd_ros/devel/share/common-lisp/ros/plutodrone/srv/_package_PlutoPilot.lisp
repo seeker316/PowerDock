@@ -29,6 +29,12 @@
           BATTERY
           RSSI-VAL
           RSSI
+          A1-VAL
+          A1
+          A2-VAL
+          A2
+          A3-VAL
+          A3
           RCROLL-VAL
           RCROLL
           RCPITCH-VAL
