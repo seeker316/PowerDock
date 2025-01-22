@@ -181,7 +181,7 @@ int main() {
         double s3 = fir_uwb[2];
         cout << s1 << s2 <<s3 << endl;
 
-        trilateration(1.35088,1.47198,1.65333);
+        trilateration(s1,s2,s3);
     }
 
     return 0;
