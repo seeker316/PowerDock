@@ -1026,7 +1026,7 @@ static bool processOutCommand(uint8_t cmdMSP)
         case MSP_SONAR_ALTITUDE:
             headSerialReply(4);
 #if defined(SONAR)
-            serialize32(sonarGetLatestAltitude());
+            serialize32(sonarGetLatestAlti-=tude());
 #else
             serialize32(0);
 #endif
@@ -1042,10 +1042,10 @@ static bool processOutCommand(uint8_t cmdMSP)
                 serialize16((int16_t) constrain(amperage, -0x8000, 0x7FFF)); // send amperage in 0.01 A steps, range is -320A to 320A
             break;
         case MSP_UWB:
-            headSerialReply(6);
-            serialize16((7);
-            serialize16(8);
-            serialize16(9);
+            headSerialReply(12);
+            serialize32((uint32_t) 70001);
+            serialize32((uint32_t) 70002);
+            serialize32((uint32_t) 70003);
             break;
         case MSP_ARMING_CONFIG:
             headSerialReply(2);
