@@ -1043,7 +1043,7 @@ static bool processOutCommand(uint8_t cmdMSP)
             break;
         case MSP_UWB:
             headSerialReply(6);
-            serialize16(7);
+            serialize16((7);
             serialize16(8);
             serialize16(9);
             break;
