@@ -1,8 +1,8 @@
-# Install script for directory: /root/Desktop/PowerDock/pd_ros/src/plutodrone
+# Install script for directory: /root/PowerDock/pd_ros/src/plutodrone
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/root/Desktop/PowerDock/pd_ros/install")
+  set(CMAKE_INSTALL_PREFIX "/root/PowerDock/pd_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,59 +34,59 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/msg" TYPE FILE FILES
-    "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
-    "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+    "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+    "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/srv" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/srv" TYPE FILE FILES "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/cmake" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/cmake" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/root/PowerDock/pd_ros/devel/include/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/root/Desktop/PowerDock/pd_ros/devel/share/roseus/ros/plutodrone")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/root/PowerDock/pd_ros/devel/share/roseus/ros/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/cmake" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/cmake" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodrone-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/cmake" TYPE FILE FILES
-    "/root/Desktop/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodroneConfig.cmake"
-    "/root/Desktop/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodroneConfig-version.cmake"
+    "/root/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodroneConfig.cmake"
+    "/root/PowerDock/pd_ros/build/plutodrone/catkin_generated/installspace/plutodroneConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/src/plutodrone/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone" TYPE FILE FILES "/root/PowerDock/pd_ros/src/plutodrone/package.xml")
 endif()
 

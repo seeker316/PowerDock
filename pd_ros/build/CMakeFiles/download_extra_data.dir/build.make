@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for download_extra_data.
 
@@ -67,6 +67,6 @@ CMakeFiles/download_extra_data.dir/clean:
 .PHONY : CMakeFiles/download_extra_data.dir/clean
 
 CMakeFiles/download_extra_data.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/CMakeFiles/download_extra_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/download_extra_data.dir/depend
 

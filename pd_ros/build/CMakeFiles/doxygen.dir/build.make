@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

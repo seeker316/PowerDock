@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for _plutodrone_generate_messages_check_deps_PlutoPilot.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
 include plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/progress.make
 
 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py plutodrone /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv 
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py plutodrone /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv 
 
 _plutodrone_generate_messages_check_deps_PlutoPilot: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot
 _plutodrone_generate_messages_check_deps_PlutoPilot: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build.make
@@ -67,10 +67,10 @@ plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/bu
 .PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build
 
 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/clean
 
 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_ex
 .PHONY : pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/pluto_drone && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/pluto_drone && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/pluto_drone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/pluto_drone /root/Desktop/PowerDock/pd_ros/build/pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/pluto_drone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/pluto_drone /root/PowerDock/pd_ros/build/pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

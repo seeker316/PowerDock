@@ -664,17 +664,17 @@ vector
 time.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
 Communication.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
 stdio.h
 -
 string
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
 stdint.h
 -
 vector
@@ -682,9 +682,9 @@ vector
 plutodrone/Common.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
+/root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
 ros/ros.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/ros/ros.h
+/root/PowerDock/pd_ros/src/plutodrone/src/ros/ros.h
 stdio.h
 -
 sys/socket.h
@@ -710,7 +710,7 @@ plutodrone/Communication.h
 plutodrone/Protocol.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
+/root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
 unistd.h
 -
 plutodrone/Protocol.h

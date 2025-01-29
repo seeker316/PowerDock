@@ -52,7 +52,7 @@ void *writeFunction(void *threadid){
   requests.push_back(MSP_ANALOG);
   requests.push_back(MSP_UWB);
 
-  pro.sendRequestMSP_ACC_TRIM();
+  // pro.sendRequestMSP_ACC_TRIM();
 
   while(1)
   {

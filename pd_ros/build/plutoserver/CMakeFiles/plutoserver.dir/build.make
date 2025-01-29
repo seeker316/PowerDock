@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Include any dependencies generated for this target.
 include plutoserver/CMakeFiles/plutoserver.dir/depend.make
@@ -58,17 +58,17 @@ include plutoserver/CMakeFiles/plutoserver.dir/progress.make
 include plutoserver/CMakeFiles/plutoserver.dir/flags.make
 
 plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o: plutoserver/CMakeFiles/plutoserver.dir/flags.make
-plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o -c /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp
+plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o: /root/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o"
+	cd /root/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o -c /root/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp
 
 plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plutoserver.dir/src/plutoserver.cpp.i"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp > CMakeFiles/plutoserver.dir/src/plutoserver.cpp.i
+	cd /root/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp > CMakeFiles/plutoserver.dir/src/plutoserver.cpp.i
 
 plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plutoserver.dir/src/plutoserver.cpp.s"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp -o CMakeFiles/plutoserver.dir/src/plutoserver.cpp.s
+	cd /root/PowerDock/pd_ros/build/plutoserver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp -o CMakeFiles/plutoserver.dir/src/plutoserver.cpp.s
 
 plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o.requires:
 
@@ -88,34 +88,34 @@ plutoserver_OBJECTS = \
 # External object files for target plutoserver
 plutoserver_EXTERNAL_OBJECTS =
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/build.make
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libroscpp.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librostime.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libcpp_common.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libpthread.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plutoserver.dir/link.txt --verbose=$(VERBOSE)
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/build.make
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /root/PowerDock/pd_ros/devel/lib/libplutodrone.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libroscpp.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/librostime.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /opt/ros/kinetic/lib/libcpp_common.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libpthread.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver: plutoserver/CMakeFiles/plutoserver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver"
+	cd /root/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plutoserver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-plutoserver/CMakeFiles/plutoserver.dir/build: /root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver
+plutoserver/CMakeFiles/plutoserver.dir/build: /root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver
 
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/build
 
@@ -124,10 +124,10 @@ plutoserver/CMakeFiles/plutoserver.dir/requires: plutoserver/CMakeFiles/plutoser
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/requires
 
 plutoserver/CMakeFiles/plutoserver.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -P CMakeFiles/plutoserver.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -P CMakeFiles/plutoserver.dir/cmake_clean.cmake
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/clean
 
 plutoserver/CMakeFiles/plutoserver.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutoserver /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutoserver /root/Desktop/PowerDock/pd_ros/build/plutoserver/CMakeFiles/plutoserver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutoserver /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutoserver /root/PowerDock/pd_ros/build/plutoserver/CMakeFiles/plutoserver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/depend
 

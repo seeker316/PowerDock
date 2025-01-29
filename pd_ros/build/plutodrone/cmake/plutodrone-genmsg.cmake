@@ -2,7 +2,7 @@
 
 message(STATUS "plutodrone: 2 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,19 +17,19 @@ add_custom_target(plutodrone_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" ""
 )
 
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" ""
 )
 
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" ""
 )
 
 #
@@ -39,13 +39,13 @@ add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
 )
 _generate_msg_cpp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
@@ -53,7 +53,7 @@ _generate_msg_cpp(plutodrone
 
 ### Generating Services
 _generate_srv_cpp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
+  "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
@@ -71,11 +71,11 @@ add_custom_target(plutodrone_generate_messages_cpp
 add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -88,13 +88,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS plutodrone_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
 )
 _generate_msg_eus(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
@@ -102,7 +102,7 @@ _generate_msg_eus(plutodrone
 
 ### Generating Services
 _generate_srv_eus(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
+  "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
@@ -120,11 +120,11 @@ add_custom_target(plutodrone_generate_messages_eus
 add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -137,13 +137,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS plutodrone_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
 )
 _generate_msg_lisp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
@@ -151,7 +151,7 @@ _generate_msg_lisp(plutodrone
 
 ### Generating Services
 _generate_srv_lisp(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
+  "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
@@ -169,11 +169,11 @@ add_custom_target(plutodrone_generate_messages_lisp
 add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -186,13 +186,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS plutodrone_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
 )
 _generate_msg_nodejs(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
@@ -200,7 +200,7 @@ _generate_msg_nodejs(plutodrone
 
 ### Generating Services
 _generate_srv_nodejs(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
+  "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
@@ -218,11 +218,11 @@ add_custom_target(plutodrone_generate_messages_nodejs
 add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -235,13 +235,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS plutodrone_generate_messages_nodejs
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
 )
 _generate_msg_py(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
@@ -249,7 +249,7 @@ _generate_msg_py(plutodrone
 
 ### Generating Services
 _generate_srv_py(plutodrone
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
+  "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
@@ -267,11 +267,11 @@ add_custom_target(plutodrone_generate_messages_py
 add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+get_filename_component(_filename "/root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

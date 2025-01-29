@@ -772,7 +772,7 @@ vector
 time.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
 string
 -
 vector
@@ -788,7 +788,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
 string
 -
 vector
@@ -804,7 +804,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
 ros/service_traits.h
 -
 plutodrone/PlutoPilotRequest.h
@@ -812,7 +812,7 @@ plutodrone/PlutoPilotRequest.h
 plutodrone/PlutoPilotResponse.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
 string
 -
 vector
@@ -828,7 +828,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
 string
 -
 vector
@@ -844,17 +844,17 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
 Communication.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
 stdio.h
 -
 string
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
+/root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
 stdint.h
 -
 vector
@@ -862,13 +862,13 @@ vector
 plutodrone/Common.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/PlutoNode.cpp
+/root/PowerDock/pd_ros/src/plutodrone/src/PlutoNode.cpp
 ros/ros.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/ros/ros.h
+/root/PowerDock/pd_ros/src/plutodrone/src/ros/ros.h
 std_msgs/String.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/std_msgs/String.h
+/root/PowerDock/pd_ros/src/plutodrone/src/std_msgs/String.h
 plutodrone/PlutoPilot.h
-/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/plutodrone/PlutoPilot.h
+/root/PowerDock/pd_ros/src/plutodrone/src/plutodrone/PlutoPilot.h
 geometry_msgs/PoseArray.h
 -
 sys/time.h

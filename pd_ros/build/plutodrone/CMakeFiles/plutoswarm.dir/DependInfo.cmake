@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/src/PlutoSwarm.cpp" "/root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutoswarm.dir/src/PlutoSwarm.cpp.o"
+  "/root/PowerDock/pd_ros/src/plutodrone/src/PlutoSwarm.cpp" "/root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutoswarm.dir/src/PlutoSwarm.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,15 +17,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/root/Desktop/PowerDock/pd_ros/devel/include"
-  "/root/Desktop/PowerDock/pd_ros/src/plutodrone/include"
+  "/root/PowerDock/pd_ros/devel/include"
+  "/root/PowerDock/pd_ros/src/plutodrone/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/DependInfo.cmake"
+  "/root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

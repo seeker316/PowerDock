@@ -43,40 +43,40 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for plutodrone_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/progress.make
 
-plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js
-plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js
-plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
 
 
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from plutodrone/PlutoMsg.msg"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from plutodrone/PlutoMsgAP.msg"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from plutodrone/PlutoMsgAP.msg"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from plutodrone/PlutoMsg.msg"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js: /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from plutodrone/PlutoPilot.srv"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js: /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from plutodrone/PlutoPilot.srv"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv
 
 plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs
-plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js
-plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js
-plutodrone_generate_messages_nodejs: /root/Desktop/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
+plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js
+plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js
+plutodrone_generate_messages_nodejs: /root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
 plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make
 
 .PHONY : plutodrone_generate_messages_nodejs
@@ -87,10 +87,10 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build: plutodrone_
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/clean
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"plutoserver\"
 
-CXX_INCLUDES = -I/root/Desktop/PowerDock/pd_ros/devel/include -I/root/Desktop/PowerDock/pd_ros/src/plutodrone/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/root/Desktop/PowerDock/pd_ros/src/plutoserver/include 
+CXX_INCLUDES = -I/root/PowerDock/pd_ros/devel/include -I/root/PowerDock/pd_ros/src/plutodrone/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/root/PowerDock/pd_ros/src/plutoserver/include 
 

@@ -43,40 +43,40 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for plutodrone_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/progress.make
 
-plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
-plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
-plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
 
 
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from plutodrone/PlutoMsg.msg"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from plutodrone/PlutoMsgAP.msg"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from plutodrone/PlutoMsgAP.msg"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from plutodrone/PlutoMsg.msg"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
-/root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from plutodrone/PlutoPilot.srv"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from plutodrone/PlutoPilot.srv"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv
 
 plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp
-plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
-plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
-plutodrone_generate_messages_lisp: /root/Desktop/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
+plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
+plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
+plutodrone_generate_messages_lisp: /root/PowerDock/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
 plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make
 
 .PHONY : plutodrone_generate_messages_lisp
@@ -87,10 +87,10 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build: plutodrone_ge
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/clean
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/depend
 

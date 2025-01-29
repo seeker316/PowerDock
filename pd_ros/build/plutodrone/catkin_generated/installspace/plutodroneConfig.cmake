@@ -67,14 +67,14 @@ set(plutodrone_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(plutodrone_SOURCE_PREFIX /root/Desktop/PowerDock/pd_ros/src/plutodrone)
-  set(plutodrone_DEVEL_PREFIX /root/Desktop/PowerDock/pd_ros/devel)
+  set(plutodrone_SOURCE_PREFIX /root/PowerDock/pd_ros/src/plutodrone)
+  set(plutodrone_DEVEL_PREFIX /root/PowerDock/pd_ros/devel)
   set(plutodrone_INSTALL_PREFIX "")
   set(plutodrone_PREFIX ${plutodrone_DEVEL_PREFIX})
 else()
   set(plutodrone_SOURCE_PREFIX "")
   set(plutodrone_DEVEL_PREFIX "")
-  set(plutodrone_INSTALL_PREFIX /root/Desktop/PowerDock/pd_ros/install)
+  set(plutodrone_INSTALL_PREFIX /root/PowerDock/pd_ros/install)
   set(plutodrone_PREFIX ${plutodrone_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /root/Desktop/PowerDock/pd_ros/install/lib;/opt/ros/kinetic/lib)
+    foreach(path /root/PowerDock/pd_ros/install/lib;/root/PowerDock/pd_ros/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

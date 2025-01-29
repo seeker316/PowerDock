@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Include any dependencies generated for this target.
 include plutodrone/CMakeFiles/plutodrone.dir/depend.make
@@ -58,17 +58,17 @@ include plutodrone/CMakeFiles/plutodrone.dir/progress.make
 include plutodrone/CMakeFiles/plutodrone.dir/flags.make
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o: plutodrone/CMakeFiles/plutodrone.dir/flags.make
-plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutodrone.dir/src/Communication.cpp.o -c /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
+plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o"
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutodrone.dir/src/Communication.cpp.o -c /root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plutodrone.dir/src/Communication.cpp.i"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp > CMakeFiles/plutodrone.dir/src/Communication.cpp.i
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp > CMakeFiles/plutodrone.dir/src/Communication.cpp.i
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plutodrone.dir/src/Communication.cpp.s"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp -o CMakeFiles/plutodrone.dir/src/Communication.cpp.s
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp -o CMakeFiles/plutodrone.dir/src/Communication.cpp.s
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o.requires:
 
@@ -82,17 +82,17 @@ plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o.provides.build: plu
 
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o: plutodrone/CMakeFiles/plutodrone.dir/flags.make
-plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutodrone.dir/src/Protocol.cpp.o -c /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
+plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o"
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/plutodrone.dir/src/Protocol.cpp.o -c /root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/plutodrone.dir/src/Protocol.cpp.i"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp > CMakeFiles/plutodrone.dir/src/Protocol.cpp.i
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp > CMakeFiles/plutodrone.dir/src/Protocol.cpp.i
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/plutodrone.dir/src/Protocol.cpp.s"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp -o CMakeFiles/plutodrone.dir/src/Protocol.cpp.s
+	cd /root/PowerDock/pd_ros/build/plutodrone && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp -o CMakeFiles/plutodrone.dir/src/Protocol.cpp.s
 
 plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o.requires:
 
@@ -113,15 +113,15 @@ plutodrone_OBJECTS = \
 # External object files for target plutodrone
 plutodrone_EXTERNAL_OBJECTS =
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o
-/root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o
-/root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/build.make
-/root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plutodrone.dir/link.txt --verbose=$(VERBOSE)
+/root/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o
+/root/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o
+/root/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/build.make
+/root/PowerDock/pd_ros/devel/lib/libplutodrone.so: plutodrone/CMakeFiles/plutodrone.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /root/PowerDock/pd_ros/devel/lib/libplutodrone.so"
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/plutodrone.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-plutodrone/CMakeFiles/plutodrone.dir/build: /root/Desktop/PowerDock/pd_ros/devel/lib/libplutodrone.so
+plutodrone/CMakeFiles/plutodrone.dir/build: /root/PowerDock/pd_ros/devel/lib/libplutodrone.so
 
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/build
 
@@ -131,10 +131,10 @@ plutodrone/CMakeFiles/plutodrone.dir/requires: plutodrone/CMakeFiles/plutodrone.
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/requires
 
 plutodrone/CMakeFiles/plutodrone.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/clean
 
 plutodrone/CMakeFiles/plutodrone.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/depend
 

@@ -1,2 +1,2 @@
 pluto_drone:plutodrone:plutoserver
--DCATKIN_DEVEL_PREFIX=/root/Desktop/PowerDock/pd_ros/devel -DCMAKE_INSTALL_PREFIX=/root/Desktop/PowerDock/pd_ros/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/root/PowerDock/pd_ros/devel -DCMAKE_INSTALL_PREFIX=/root/PowerDock/pd_ros/install -G Unix Makefiles

@@ -60,7 +60,7 @@ plutoserver/CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
- /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
- /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
- /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
- /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp
+ /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
+ /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
+ /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
+ /root/PowerDock/pd_ros/src/plutoserver/src/plutoserver.cpp

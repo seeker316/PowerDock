@@ -43,44 +43,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for plutodrone_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/progress.make
 
-plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
-plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
-plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
 
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from plutodrone/PlutoMsg.msg"
-	cd /root/Desktop/PowerDock/pd_ros/src/plutodrone && /root/Desktop/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from plutodrone/PlutoMsgAP.msg"
+	cd /root/PowerDock/pd_ros/src/plutodrone && /root/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from plutodrone/PlutoMsgAP.msg"
-	cd /root/Desktop/PowerDock/pd_ros/src/plutodrone && /root/Desktop/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from plutodrone/PlutoMsg.msg"
+	cd /root/PowerDock/pd_ros/src/plutodrone && /root/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from plutodrone/PlutoPilot.srv"
-	cd /root/Desktop/PowerDock/pd_ros/src/plutodrone && /root/Desktop/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from plutodrone/PlutoPilot.srv"
+	cd /root/PowerDock/pd_ros/src/plutodrone && /root/PowerDock/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/include/plutodrone -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp
-plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
-plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
-plutodrone_generate_messages_cpp: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
+plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+plutodrone_generate_messages_cpp: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
 plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make
 
 .PHONY : plutodrone_generate_messages_cpp
@@ -91,10 +91,10 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build: plutodrone_gen
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/clean
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/depend
 

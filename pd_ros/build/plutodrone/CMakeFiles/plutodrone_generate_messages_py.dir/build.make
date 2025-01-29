@@ -43,58 +43,58 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for plutodrone_generate_messages_py.
 
 # Include the progress variables for this target.
 include plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/progress.make
 
-plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
-plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
-plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
-plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py
-plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py
 
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG plutodrone/PlutoMsg"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG plutodrone/PlutoMsgAP"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py: /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG plutodrone/PlutoMsgAP"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py: /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG plutodrone/PlutoMsg"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /root/PowerDock/pd_ros/src/plutodrone/msg/PlutoMsg.msg -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py: /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV plutodrone/PlutoPilot"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /root/Desktop/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/Desktop/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py: /opt/ros/kinetic/lib/genpy/gensrv_py.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py: /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV plutodrone/PlutoPilot"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /root/PowerDock/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/root/PowerDock/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p plutodrone -o /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for plutodrone"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg --initpy
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for plutodrone"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg --initpy
 
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
-/root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/Desktop/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for plutodrone"
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv --initpy
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
+/root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/root/PowerDock/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python srv __init__.py for plutodrone"
+	cd /root/PowerDock/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv --initpy
 
 plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py
-plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
-plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
-plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
-plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py
-plutodrone_generate_messages_py: /root/Desktop/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py
+plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/_PlutoMsg.py
+plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/_PlutoPilot.py
+plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/msg/__init__.py
+plutodrone_generate_messages_py: /root/PowerDock/pd_ros/devel/lib/python2.7/dist-packages/plutodrone/srv/__init__.py
 plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make
 
 .PHONY : plutodrone_generate_messages_py
@@ -105,10 +105,10 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build: plutodrone_gene
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_py.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutodrone && $(CMAKE_COMMAND) -P CMakeFiles/plutodrone_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutodrone /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutodrone /root/Desktop/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutodrone /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutodrone /root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/depend
 

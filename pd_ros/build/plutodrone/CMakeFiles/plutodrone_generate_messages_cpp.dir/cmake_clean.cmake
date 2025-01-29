@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/plutodrone_generate_messages_cpp"
-  "/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h"
-  "/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h"
-  "/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h"
+  "/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h"
+  "/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h"
+  "/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h"
 )
 
 # Per-language clean rules from dependency scanning.

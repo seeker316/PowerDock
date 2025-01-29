@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "roscpp;rospy;std_msgs;message_runtime".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lplutodrone".split(';') if "-lplutodrone" != "" else []
 PROJECT_NAME = "plutodrone"
-PROJECT_SPACE_DIR = "/root/Desktop/PowerDock/pd_ros/install"
+PROJECT_SPACE_DIR = "/root/PowerDock/pd_ros/install"
 PROJECT_VERSION = "1.0.0"

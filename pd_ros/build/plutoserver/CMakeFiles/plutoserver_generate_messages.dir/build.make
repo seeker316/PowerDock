@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 # Utility rule file for plutoserver_generate_messages.
 
@@ -63,10 +63,10 @@ plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build: plutoserver_gene
 .PHONY : plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build
 
 plutoserver/CMakeFiles/plutoserver_generate_messages.dir/clean:
-	cd /root/Desktop/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -P CMakeFiles/plutoserver_generate_messages.dir/cmake_clean.cmake
+	cd /root/PowerDock/pd_ros/build/plutoserver && $(CMAKE_COMMAND) -P CMakeFiles/plutoserver_generate_messages.dir/cmake_clean.cmake
 .PHONY : plutoserver/CMakeFiles/plutoserver_generate_messages.dir/clean
 
 plutoserver/CMakeFiles/plutoserver_generate_messages.dir/depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/Desktop/PowerDock/pd_ros/src /root/Desktop/PowerDock/pd_ros/src/plutoserver /root/Desktop/PowerDock/pd_ros/build /root/Desktop/PowerDock/pd_ros/build/plutoserver /root/Desktop/PowerDock/pd_ros/build/plutoserver/CMakeFiles/plutoserver_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/PowerDock/pd_ros/src /root/PowerDock/pd_ros/src/plutoserver /root/PowerDock/pd_ros/build /root/PowerDock/pd_ros/build/plutoserver /root/PowerDock/pd_ros/build/plutoserver/CMakeFiles/plutoserver_generate_messages.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : plutoserver/CMakeFiles/plutoserver_generate_messages.dir/depend
 

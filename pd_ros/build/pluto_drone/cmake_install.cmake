@@ -1,8 +1,8 @@
-# Install script for directory: /root/Desktop/PowerDock/pd_ros/src/pluto_drone
+# Install script for directory: /root/PowerDock/pd_ros/src/pluto_drone
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/root/Desktop/PowerDock/pd_ros/install")
+  set(CMAKE_INSTALL_PREFIX "/root/PowerDock/pd_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pluto_drone" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/src/pluto_drone/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pluto_drone" TYPE FILE FILES "/root/PowerDock/pd_ros/src/pluto_drone/package.xml")
 endif()
 

@@ -122,9 +122,9 @@ void Protocol::evaluateCommand(int command)
       break;
 
     case MSP_UWB:
-      a1 = read16();
-      a2 = read16();
-      a3 = read16();
+      a1 = read32();
+      a2 = read32();
+      a3 = read32();
 
       break;
 

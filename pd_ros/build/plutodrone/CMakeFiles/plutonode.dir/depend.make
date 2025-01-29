@@ -65,13 +65,13 @@ plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /opt/ros/kinetic/includ
 plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /opt/ros/kinetic/include/std_msgs/String.h
 plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
-plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutodrone/src/PlutoNode.cpp
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilot.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Common.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Communication.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/include/plutodrone/Protocol.h
+plutodrone/CMakeFiles/plutonode.dir/src/PlutoNode.cpp.o: /root/PowerDock/pd_ros/src/plutodrone/src/PlutoNode.cpp
 

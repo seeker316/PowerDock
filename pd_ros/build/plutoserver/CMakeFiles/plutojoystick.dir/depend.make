@@ -61,7 +61,7 @@ plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /opt/ros/kinet
 plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
 plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
-plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
-plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutojoystick.h
-plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutojoystick.cpp
+plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutojoystick.h
+plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o: /root/PowerDock/pd_ros/src/plutoserver/src/plutojoystick.cpp
 

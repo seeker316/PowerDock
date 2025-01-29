@@ -702,7 +702,7 @@ vector
 time.h
 -
 
-/root/Desktop/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
+/root/PowerDock/pd_ros/devel/include/plutodrone/PlutoMsg.h
 string
 -
 vector
@@ -718,15 +718,15 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/root/Desktop/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutojoystick.h
+/root/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutojoystick.h
 ros/ros.h
 -
 sensor_msgs/Joy.h
 -
 plutodrone/PlutoMsg.h
-/root/Desktop/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutodrone/PlutoMsg.h
+/root/PowerDock/pd_ros/src/plutoserver/include/plutoserver/plutodrone/PlutoMsg.h
 
-/root/Desktop/PowerDock/pd_ros/src/plutoserver/src/plutojoystick.cpp
+/root/PowerDock/pd_ros/src/plutoserver/src/plutojoystick.cpp
 plutoserver/plutojoystick.h
 -
 iostream

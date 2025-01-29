@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/Desktop/PowerDock/pd_ros/src
+CMAKE_SOURCE_DIR = /root/PowerDock/pd_ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/Desktop/PowerDock/pd_ros/build
+CMAKE_BINARY_DIR = /root/PowerDock/pd_ros/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/Desktop/PowerDock/pd_ros/build/CMakeFiles /root/Desktop/PowerDock/pd_ros/build/pluto_drone/CMakeFiles/progress.marks
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Desktop/PowerDock/pd_ros/build/CMakeFiles 0
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/PowerDock/pd_ros/build/CMakeFiles /root/PowerDock/pd_ros/build/pluto_drone/CMakeFiles/progress.marks
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/PowerDock/pd_ros/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/clean
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/preinstall
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/preinstall
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ _catkin_empty_exported_target: pluto_drone/CMakeFiles/_catkin_empty_exported_tar
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(MAKE) -f pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build.make pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /root/PowerDock/pd_ros/build && $(MAKE) -f pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build.make pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /root/Desktop/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /root/PowerDock/pd_ros/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

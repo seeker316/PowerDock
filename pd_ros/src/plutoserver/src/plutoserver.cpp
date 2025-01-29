@@ -4,21 +4,21 @@
 bool myFunction(plutodrone::PlutoPilot::Request  &req,
          plutodrone::PlutoPilot::Response &res)
 {
-  ROS_INFO("Ax=%f, Ay=%f, Az=%f", req.accX, req.accY, req.accZ);
-  ROS_INFO("Gx=%f, Gy=%f, Gz=%f", req.gyroX, req.gyroY, req.gyroZ);
-  ROS_INFO("Mx=%f, My=%f, Mz=%f", req.magX, req.magY, req.magZ);
+  // ROS_INFO("Ax=%f, Ay=%f, Az=%f", req.accX, req.accY, req.accZ);
+  // ROS_INFO("Gx=%f, Gy=%f, Gz=%f", req.gyroX, req.gyroY, req.gyroZ);
+  // ROS_INFO("Mx=%f, My=%f, Mz=%f", req.magX, req.magY, req.magZ);
 
 
-  ROS_INFO("roll=%i, pitch=%i, yaw=%i", req.roll, req.pitch, req.yaw);
-  ROS_INFO("altitiude=%f", req.alt);
-  ROS_INFO("battery=%f rssi=%i", req.battery,req.rssi);
+  // ROS_INFO("roll=%i, pitch=%i, yaw=%i", req.roll, req.pitch, req.yaw);
+  // ROS_INFO("altitiude=%f", req.alt);
+  // ROS_INFO("battery=%f rssi=%i", req.battery,req.rssi);
 
-  ROS_INFO("Anchor_1=%f Anchor_3=%f Anchor_2=%f", req.a1,req.a2,req.a3);
-
+  ROS_INFO("Anchor_1=%f Anchor_2=%f Anchor_3=%f", (req.a1/536870912),(req.a2/536870912),(req.a3/536870912));
+  // ROS_INFO("Anchor_1=%f Anchor_3=%f Anchor_2=%f", (req.a1),(req.a2),(req.a3));
 
   res.rcAUX1=1800;
 
-  ROS_INFO("sending back response: [%ld]", (long int)res.rcAUX1);
+  // ROS_INFO("sending back response: [%ld]", (long int)res.rcAUX1);
   return true;
 }
 

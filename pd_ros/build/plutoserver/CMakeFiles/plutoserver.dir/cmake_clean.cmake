@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/plutoserver.dir/src/plutoserver.cpp.o"
-  "/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver.pdb"
-  "/root/Desktop/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver"
+  "/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver.pdb"
+  "/root/PowerDock/pd_ros/devel/lib/plutoserver/plutoserver"
 )
 
 # Per-language clean rules from dependency scanning.

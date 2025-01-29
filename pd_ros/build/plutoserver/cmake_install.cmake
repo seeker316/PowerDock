@@ -1,8 +1,8 @@
-# Install script for directory: /root/Desktop/PowerDock/pd_ros/src/plutoserver
+# Install script for directory: /root/PowerDock/pd_ros/src/plutoserver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/root/Desktop/PowerDock/pd_ros/install")
+  set(CMAKE_INSTALL_PREFIX "/root/PowerDock/pd_ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,25 +33,29 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver/cmake" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver/cmake" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver/cmake" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver/cmake" TYPE FILE FILES "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserver-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver/cmake" TYPE FILE FILES
-    "/root/Desktop/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserverConfig.cmake"
-    "/root/Desktop/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserverConfig-version.cmake"
+    "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserverConfig.cmake"
+    "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/plutoserverConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver" TYPE FILE FILES "/root/Desktop/PowerDock/pd_ros/src/plutoserver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutoserver" TYPE FILE FILES "/root/PowerDock/pd_ros/src/plutoserver/package.xml")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plutoserver" TYPE PROGRAM FILES "/root/PowerDock/pd_ros/build/plutoserver/catkin_generated/installspace/kalman_filter.py")
 endif()
 

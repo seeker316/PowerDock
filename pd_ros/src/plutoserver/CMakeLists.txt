@@ -209,3 +209,9 @@ target_link_libraries(plutoserver ${catkin_LIBRARIES})
 add_executable(plutojoystick src/plutojoystick.cpp)
 target_link_libraries(plutojoystick ${catkin_LIBRARIES})
 #add_dependencies(plutojoystick plutoserver_gencpp)
+
+catkin_install_python(PROGRAMS
+  scripts/kalman_filter.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
