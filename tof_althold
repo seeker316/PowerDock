@@ -1,0 +1,60 @@
+#include "PlutoPilot.h"
+#include "Control.h"
+#include "XRanging.h"
+#include "Utils.h"
+#include "User.h"
+#include "Estimate.h"
+#include "math.h"
+
+#define dt 0.1
+float XExternal, external;
+float KP, KD, Error, FilError, PreError, Derivative, PD;
+float ThrottleValue;
+float DownHold = 70;
+PID UserPID;
+
+float Q = 0.03, R = 0.1, x = 0.0, P = 1.0, K = 0.0;
+
+float kalman_filter(float measurement) {
+    P = P + Q;
+    K = P / (P + R);
+    x = x + K * (measurement - x);
+    P = (1 - K) * P;
+    return x;
+}
+
+void plutoInit() {
+    XRanging.init(EXTERNAL);
+}
+
+void onLoopStart() {
+}
+
+void plutoLoop() {
+    PIDProfile.get(PID_USER, &UserPID);
+
+    XExternal = XRanging.getRange(EXTERNAL) / 10;
+    if (XExternal > 0) {
+        external = kalman_filter(XExternal);
+        Monitor.println(" external distance: ", external);
+        KP = UserPID.p / 10;
+        KD = UserPID.d / 10;
+        Error = DownHold - external;
+        FilError = (0.8 * Error) + (1 - 0.8) * FilError;
+        Derivative = (FilError - PreError);
+        PD = (KP * Error) + (KD * (Derivative / dt));
+        PD = fmax(-200, fmin(PD, 200));
+        Monitor.println(" pd ", PD);
+        ThrottleValue = 1500 + PD;
+    }
+
+    if (external < 100 ) {
+        RcCommand.set(RC_THROTTLE, ThrottleValue);
+        Monitor.println(" RC Throttle Command: ", ThrottleValue);
+    }
+
+    PreError = FilError;
+}
+
+void onLoopFinish() {
+}
