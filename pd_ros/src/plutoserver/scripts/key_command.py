@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import rospy
 import roslib
 from std_msgs.msg import Char,Int16
@@ -67,6 +68,8 @@ if __name__=="__main__":
                       'r':80,
                       't':90,
                       'p':100,
+                      'i':85, ##########CONTROL ON
+                      'o':95, ##########CONTROL OFF
                       '[B':110,
                       'n':120,
                       'q':130,
@@ -79,7 +82,7 @@ if __name__=="__main__":
                       '3' : 35,
                       '4' : 45}
 
-    control_to_change_value=('u','o',',','z','c') #tuple containing the key that change the value
+    # control_to_change_value=('u','o',',','z','c','i') #tuple containing the key that change the value
 
     try:
         pass
@@ -95,10 +98,11 @@ if __name__=="__main__":
           else:
             msg_pub=80                            #If key is not pressed published the reset value to hover at point
             pub.publish(msg_pub)
-          if key in control_to_change_value:      #Other than main control (Optional)
-            rate.sleep()
+          # if key in control_to_change_value:      #Other than main control (Optional)
+          #   rate.sleep()
     except Exception as e:
-        print e
+        print(e)
     finally:
-        print key
+        print(key)
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+

@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -146,6 +146,37 @@ ros::message_operations::Printer< ::plutodrone::PlutoPilotRequest_<ContainerAllo
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::plutodrone::PlutoPilotRequest_<ContainerAllocator1> & lhs, const ::plutodrone::PlutoPilotRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.roll == rhs.roll &&
+    lhs.pitch == rhs.pitch &&
+    lhs.yaw == rhs.yaw &&
+    lhs.accX == rhs.accX &&
+    lhs.accY == rhs.accY &&
+    lhs.accZ == rhs.accZ &&
+    lhs.gyroX == rhs.gyroX &&
+    lhs.gyroY == rhs.gyroY &&
+    lhs.gyroZ == rhs.gyroZ &&
+    lhs.magX == rhs.magX &&
+    lhs.magY == rhs.magY &&
+    lhs.magZ == rhs.magZ &&
+    lhs.alt == rhs.alt &&
+    lhs.battery == rhs.battery &&
+    lhs.rssi == rhs.rssi &&
+    lhs.a1 == rhs.a1 &&
+    lhs.a2 == rhs.a2 &&
+    lhs.a3 == rhs.a3;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::plutodrone::PlutoPilotRequest_<ContainerAllocator1> & lhs, const ::plutodrone::PlutoPilotRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace plutodrone
 
 namespace ros
@@ -155,23 +186,7 @@ namespace message_traits
 
 
 
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'plutodrone': ['/root/PowerDock/pd_ros/src/plutodrone/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
-
-
-
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
@@ -180,6 +195,16 @@ struct IsMessage< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
 
 template <class ContainerAllocator>
 struct IsMessage< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -223,27 +248,27 @@ struct Definition< ::plutodrone::PlutoPilotRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "\n\
-\n\
-int32 roll\n\
-int32 pitch\n\
-int32 yaw\n\
-float32 accX\n\
-float32 accY\n\
-float32 accZ\n\
-float32 gyroX\n\
-float32 gyroY\n\
-float32 gyroZ\n\
-float32 magX\n\
-float32 magY\n\
-float32 magZ\n\
-float32 alt\n\
-float32 battery\n\
-int32 rssi\n\
-float32 a1\n\
-float32 a2\n\
-float32 a3\n\
-";
+    return "#requests\n"
+"\n"
+"int32 roll\n"
+"int32 pitch\n"
+"int32 yaw\n"
+"float32 accX\n"
+"float32 accY\n"
+"float32 accZ\n"
+"float32 gyroX\n"
+"float32 gyroY\n"
+"float32 gyroZ\n"
+"float32 magX\n"
+"float32 magY\n"
+"float32 magZ\n"
+"float32 alt\n"
+"float32 battery\n"
+"int32 rssi\n"
+"float32 a1\n"
+"float32 a2\n"
+"float32 a3\n"
+;
   }
 
   static const char* value(const ::plutodrone::PlutoPilotRequest_<ContainerAllocator>&) { return value(); }

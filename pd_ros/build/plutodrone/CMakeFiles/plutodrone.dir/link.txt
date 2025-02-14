@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -O3 -DNDEBUG -Wall -g -O4 -march=native -Wfatal-errors  -shared -Wl,-soname,libplutodrone.so -o /root/PowerDock/pd_ros/devel/lib/libplutodrone.so CMakeFiles/plutodrone.dir/src/Communication.cpp.o CMakeFiles/plutodrone.dir/src/Protocol.cpp.o 
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -Wall -g -O4 -march=native -Wfatal-errors  -shared -Wl,-soname,libplutodrone.so -o /home/ubuntu/pd_ros/devel/lib/libplutodrone.so CMakeFiles/plutodrone.dir/src/Communication.cpp.o CMakeFiles/plutodrone.dir/src/Protocol.cpp.o 

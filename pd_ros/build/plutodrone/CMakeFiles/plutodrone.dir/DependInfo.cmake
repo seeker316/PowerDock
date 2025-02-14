@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/root/PowerDock/pd_ros/src/plutodrone/src/Communication.cpp" "/root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o"
-  "/root/PowerDock/pd_ros/src/plutodrone/src/Protocol.cpp" "/root/PowerDock/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o"
+  "/home/ubuntu/pd_ros/src/plutodrone/src/Communication.cpp" "/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/src/Communication.cpp.o"
+  "/home/ubuntu/pd_ros/src/plutodrone/src/Protocol.cpp" "/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -14,14 +14,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"plutodrone\""
+  "plutodrone_EXPORTS"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/root/PowerDock/pd_ros/devel/include"
-  "/root/PowerDock/pd_ros/src/plutodrone/include"
-  "/opt/ros/kinetic/include"
-  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/ubuntu/pd_ros/devel/include"
+  "/home/ubuntu/pd_ros/src/plutodrone/include"
+  "/opt/ros/noetic/include"
+  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.

@@ -1,0 +1,3 @@
+int32 size  # Request: The number of elements in the array
+---
+int16[] data  # Response: The array of int16 values

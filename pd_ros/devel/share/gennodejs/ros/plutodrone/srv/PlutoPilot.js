@@ -253,7 +253,7 @@ class PlutoPilotRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
+    #requests
     
     int32 roll
     int32 pitch
@@ -539,7 +539,7 @@ class PlutoPilotResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
+    #response
     
     int32 rcRoll
     int32 rcPitch

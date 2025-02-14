@@ -371,7 +371,7 @@
 (setf (get plutodrone::PlutoPilotRequest :md5sum-) "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (setf (get plutodrone::PlutoPilotRequest :datatype-) "plutodrone/PlutoPilotRequest")
 (setf (get plutodrone::PlutoPilotRequest :definition-)
-      "
+      "#requests
 
 int32 roll
 int32 pitch
@@ -392,7 +392,7 @@ float32 a1
 float32 a2
 float32 a3
 ---
-
+#response
 
 int32 rcRoll
 int32 rcPitch
@@ -408,7 +408,7 @@ int32 rcAUX4
 (setf (get plutodrone::PlutoPilotResponse :md5sum-) "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (setf (get plutodrone::PlutoPilotResponse :datatype-) "plutodrone/PlutoPilotResponse")
 (setf (get plutodrone::PlutoPilotResponse :definition-)
-      "
+      "#requests
 
 int32 roll
 int32 pitch
@@ -429,7 +429,7 @@ float32 a1
 float32 a2
 float32 a3
 ---
-
+#response
 
 int32 rcRoll
 int32 rcPitch

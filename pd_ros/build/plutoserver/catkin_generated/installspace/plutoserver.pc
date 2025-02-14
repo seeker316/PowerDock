@@ -1,4 +1,4 @@
-prefix=/root/PowerDock/pd_ros/install
+prefix=/home/ubuntu/pd_ros/install
 
 Name: plutoserver
 Description: Description of plutoserver

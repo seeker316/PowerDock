@@ -1,8 +1,8 @@
-prefix=/root/PowerDock/pd_ros/devel
+prefix=/home/ubuntu/pd_ros/devel
 
 Name: plutodrone
 Description: Description of plutodrone
 Version: 1.0.0
-Cflags: -I/root/PowerDock/pd_ros/devel/include -I/root/PowerDock/pd_ros/src/plutodrone/include
+Cflags: -I/home/ubuntu/pd_ros/devel/include -I/home/ubuntu/pd_ros/src/plutodrone/include
 Libs: -L${prefix}/lib -lplutodrone
 Requires: roscpp rospy std_msgs message_runtime

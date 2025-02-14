@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/lib/libplutodrone.pdb"
+  "/home/ubuntu/pd_ros/devel/lib/libplutodrone.so"
   "CMakeFiles/plutodrone.dir/src/Communication.cpp.o"
   "CMakeFiles/plutodrone.dir/src/Protocol.cpp.o"
-  "/root/PowerDock/pd_ros/devel/lib/libplutodrone.pdb"
-  "/root/PowerDock/pd_ros/devel/lib/libplutodrone.so"
 )
 
 # Per-language clean rules from dependency scanning.

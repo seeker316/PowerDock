@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /root/PowerDock/pd_ros/devel/setup.sh
+    local-name: /home/ubuntu/pd_ros/devel/setup.sh

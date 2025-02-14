@@ -57,8 +57,8 @@ struct DataType< ::plutodrone::PlutoPilot > {
 };
 
 
-// service_traits::MD5Sum< ::plutodrone::PlutoPilotRequest> should match 
-// service_traits::MD5Sum< ::plutodrone::PlutoPilot > 
+// service_traits::MD5Sum< ::plutodrone::PlutoPilotRequest> should match
+// service_traits::MD5Sum< ::plutodrone::PlutoPilot >
 template<>
 struct MD5Sum< ::plutodrone::PlutoPilotRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::plutodrone::PlutoPilotRequest>
   }
 };
 
-// service_traits::DataType< ::plutodrone::PlutoPilotRequest> should match 
-// service_traits::DataType< ::plutodrone::PlutoPilot > 
+// service_traits::DataType< ::plutodrone::PlutoPilotRequest> should match
+// service_traits::DataType< ::plutodrone::PlutoPilot >
 template<>
 struct DataType< ::plutodrone::PlutoPilotRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::plutodrone::PlutoPilotRequest>
   }
 };
 
-// service_traits::MD5Sum< ::plutodrone::PlutoPilotResponse> should match 
-// service_traits::MD5Sum< ::plutodrone::PlutoPilot > 
+// service_traits::MD5Sum< ::plutodrone::PlutoPilotResponse> should match
+// service_traits::MD5Sum< ::plutodrone::PlutoPilot >
 template<>
 struct MD5Sum< ::plutodrone::PlutoPilotResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::plutodrone::PlutoPilotResponse>
   }
 };
 
-// service_traits::DataType< ::plutodrone::PlutoPilotResponse> should match 
-// service_traits::DataType< ::plutodrone::PlutoPilot > 
+// service_traits::DataType< ::plutodrone::PlutoPilotResponse> should match
+// service_traits::DataType< ::plutodrone::PlutoPilot >
 template<>
 struct DataType< ::plutodrone::PlutoPilotResponse>
 {

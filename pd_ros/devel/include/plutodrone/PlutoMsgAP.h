@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -86,6 +86,25 @@ ros::message_operations::Printer< ::plutodrone::PlutoMsgAP_<ContainerAllocator> 
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::plutodrone::PlutoMsgAP_<ContainerAllocator1> & lhs, const ::plutodrone::PlutoMsgAP_<ContainerAllocator2> & rhs)
+{
+  return lhs.rcRoll == rhs.rcRoll &&
+    lhs.rcPitch == rhs.rcPitch &&
+    lhs.rcYaw == rhs.rcYaw &&
+    lhs.rcThrottle == rhs.rcThrottle &&
+    lhs.plutoIndex == rhs.plutoIndex &&
+    lhs.commandType == rhs.commandType;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::plutodrone::PlutoMsgAP_<ContainerAllocator1> & lhs, const ::plutodrone::PlutoMsgAP_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace plutodrone
 
 namespace ros
@@ -95,23 +114,7 @@ namespace message_traits
 
 
 
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'plutodrone': ['/root/PowerDock/pd_ros/src/plutodrone/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
 
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
-
-
-
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::plutodrone::PlutoMsgAP_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::plutodrone::PlutoMsgAP_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::plutodrone::PlutoMsgAP_<ContainerAllocator> >
@@ -120,6 +123,16 @@ struct IsMessage< ::plutodrone::PlutoMsgAP_<ContainerAllocator> >
 
 template <class ContainerAllocator>
 struct IsMessage< ::plutodrone::PlutoMsgAP_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::plutodrone::PlutoMsgAP_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::plutodrone::PlutoMsgAP_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -163,13 +176,13 @@ struct Definition< ::plutodrone::PlutoMsgAP_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int64 rcRoll\n\
-int64 rcPitch\n\
-int64 rcYaw\n\
-int64 rcThrottle\n\
-int64 plutoIndex\n\
-int8 commandType\n\
-";
+    return "int64 rcRoll\n"
+"int64 rcPitch\n"
+"int64 rcYaw\n"
+"int64 rcThrottle\n"
+"int64 plutoIndex\n"
+"int8 commandType\n"
+;
   }
 
   static const char* value(const ::plutodrone::PlutoMsgAP_<ContainerAllocator>&) { return value(); }

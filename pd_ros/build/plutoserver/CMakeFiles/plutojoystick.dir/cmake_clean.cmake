@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/lib/plutoserver/plutojoystick"
+  "/home/ubuntu/pd_ros/devel/lib/plutoserver/plutojoystick.pdb"
   "CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o"
-  "/root/PowerDock/pd_ros/devel/lib/plutoserver/plutojoystick.pdb"
-  "/root/PowerDock/pd_ros/devel/lib/plutoserver/plutojoystick"
 )
 
 # Per-language clean rules from dependency scanning.

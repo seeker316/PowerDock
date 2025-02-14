@@ -419,10 +419,10 @@
   "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PlutoPilot-request>)))
   "Returns full string definition for message of type '<PlutoPilot-request>"
-  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
+  (cl:format cl:nil "#requests~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PlutoPilot-request)))
   "Returns full string definition for message of type 'PlutoPilot-request"
-  (cl:format cl:nil "~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
+  (cl:format cl:nil "#requests~%~%int32 roll~%int32 pitch~%int32 yaw~%float32 accX~%float32 accY~%float32 accZ~%float32 gyroX~%float32 gyroY~%float32 gyroZ~%float32 magX~%float32 magY~%float32 magZ~%float32 alt~%float32 battery~%int32 rssi~%float32 a1~%float32 a2~%float32 a3~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PlutoPilot-request>))
   (cl:+ 0
      4
@@ -675,10 +675,10 @@
   "b32e434826cbd99f1cb25a2ae0b2ac1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PlutoPilot-response>)))
   "Returns full string definition for message of type '<PlutoPilot-response>"
-  (cl:format cl:nil "~%~%int32 rcRoll~%int32 rcPitch~%int32 rcYaw~%int32 rcThrottle~%int32 rcAUX1~%int32 rcAUX2~%int32 rcAUX3~%int32 rcAUX4~%~%~%~%"))
+  (cl:format cl:nil "#response~%~%int32 rcRoll~%int32 rcPitch~%int32 rcYaw~%int32 rcThrottle~%int32 rcAUX1~%int32 rcAUX2~%int32 rcAUX3~%int32 rcAUX4~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PlutoPilot-response)))
   "Returns full string definition for message of type 'PlutoPilot-response"
-  (cl:format cl:nil "~%~%int32 rcRoll~%int32 rcPitch~%int32 rcYaw~%int32 rcThrottle~%int32 rcAUX1~%int32 rcAUX2~%int32 rcAUX3~%int32 rcAUX4~%~%~%~%"))
+  (cl:format cl:nil "#response~%~%int32 rcRoll~%int32 rcPitch~%int32 rcYaw~%int32 rcThrottle~%int32 rcAUX1~%int32 rcAUX2~%int32 rcAUX3~%int32 rcAUX4~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PlutoPilot-response>))
   (cl:+ 0
      4

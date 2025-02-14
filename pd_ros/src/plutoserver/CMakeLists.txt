@@ -212,6 +212,10 @@ target_link_libraries(plutojoystick ${catkin_LIBRARIES})
 
 catkin_install_python(PROGRAMS
   scripts/kalman_filter.py
+  scripts/control.py
+  scripts/aruco.py
+  scripts/aruco_client.py
+  scripts/aruco_server.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

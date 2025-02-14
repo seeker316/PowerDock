@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/root/PowerDock/pd_ros/build'
+export LD_LIBRARY_PATH='/home/ubuntu/pd_ros/devel/lib:/opt/ros/noetic/lib:/opt/glibc-2.35/lib'
+export PWD='/home/ubuntu/pd_ros/build'

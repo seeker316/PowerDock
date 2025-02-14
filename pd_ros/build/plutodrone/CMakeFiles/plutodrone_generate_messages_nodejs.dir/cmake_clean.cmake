@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js"
+  "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js"
+  "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js"
+  "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/aruco.js"
   "CMakeFiles/plutodrone_generate_messages_nodejs"
-  "/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js"
-  "/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js"
-  "/root/PowerDock/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js"
 )
 
 # Per-language clean rules from dependency scanning.
