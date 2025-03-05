@@ -12,11 +12,11 @@ pid_pub = rospy.Publisher("/pid_values", Int16MultiArray, queue_size=10)
 rate = rospy.Rate(100)  # 30 Hz publishing rate
 
 # Camera Parameters
-camera_matrix = np.array([[461.08112803 , 0 , 313.35111521 ],
-                            [  0 , 462.4188646, 230.23307771],
+camera_matrix = np.array([[798.93081497, 0. ,296.5859955 ],
+                            [  0. , 800.27022346 , 211.25710158],
                             [  0,0,1] ])
 
-dist_coeffs = np.array([0.14671439,-0.62057158,-0.00651751,0.0008797,0.64152671])
+dist_coeffs = np.array([ 0.0583473,-0.10449641,-0.01582648,-0.01281692,0.68203321])
 marker_size = 0.05  # Marker size in meters
 
 # Function to Get Yaw Angle from Rotation Vector
@@ -54,7 +54,7 @@ pid_yaw = PID(0.4, 0.02, 0.3, 1200, 1800)
 pid_throttle = PID(1.5, 0.00, 0.0, 1300, 1800)
 
 # Initialize Video Capture
-cap = cv2.VideoCapture(2)  
+cap = cv2.VideoCapture(3)  
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 # cap.set(cv2.CAP_PROP_FPS, 10)
@@ -97,6 +97,7 @@ while not rospy.is_shutdown():
                 center_y = int((marker_corners[0][1] + marker_corners[2][1]) / 2)
 
                 last_known_position = (center_x, center_y)
+                
                 frame_center_x, frame_center_y = frame.shape[1] // 2, frame.shape[0] // 2
                 error_x, error_y = center_x - frame_center_x, center_y - frame_center_y
 
