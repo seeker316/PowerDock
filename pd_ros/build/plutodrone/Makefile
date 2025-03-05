@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+plutodrone/CMakeFiles/key_handling.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/key_handling.dir/rule
+.PHONY : plutodrone/CMakeFiles/key_handling.dir/rule
+
+# Convenience name for target.
+key_handling: plutodrone/CMakeFiles/key_handling.dir/rule
+
+.PHONY : key_handling
+
+# fast build rule for target.
+key_handling/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/build
+.PHONY : key_handling/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/key_command.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/key_command.dir/rule
+.PHONY : plutodrone/CMakeFiles/key_command.dir/rule
+
+# Convenience name for target.
+key_command: plutodrone/CMakeFiles/key_command.dir/rule
+
+.PHONY : key_command
+
+# fast build rule for target.
+key_command/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/build
+.PHONY : key_command/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/plutonode.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutonode.dir/rule
 .PHONY : plutodrone/CMakeFiles/plutonode.dir/rule
@@ -421,6 +451,21 @@ roscpp_generate_messages_eus: plutodrone/CMakeFiles/roscpp_generate_messages_eus
 roscpp_generate_messages_eus/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/aruco.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/aruco.dir/rule
+.PHONY : plutodrone/CMakeFiles/aruco.dir/rule
+
+# Convenience name for target.
+aruco: plutodrone/CMakeFiles/aruco.dir/rule
+
+.PHONY : aruco
+
+# fast build rule for target.
+aruco/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/build
+.PHONY : aruco/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
@@ -770,6 +815,87 @@ src/Protocol.cpp.s:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone.dir/build.make plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.s
 .PHONY : src/Protocol.cpp.s
 
+src/aruco.o: src/aruco.cpp.o
+
+.PHONY : src/aruco.o
+
+# target to build an object file
+src/aruco.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/src/aruco.cpp.o
+.PHONY : src/aruco.cpp.o
+
+src/aruco.i: src/aruco.cpp.i
+
+.PHONY : src/aruco.i
+
+# target to preprocess a source file
+src/aruco.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/src/aruco.cpp.i
+.PHONY : src/aruco.cpp.i
+
+src/aruco.s: src/aruco.cpp.s
+
+.PHONY : src/aruco.s
+
+# target to generate assembly for a file
+src/aruco.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/src/aruco.cpp.s
+.PHONY : src/aruco.cpp.s
+
+src/key_command.o: src/key_command.cpp.o
+
+.PHONY : src/key_command.o
+
+# target to build an object file
+src/key_command.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/src/key_command.cpp.o
+.PHONY : src/key_command.cpp.o
+
+src/key_command.i: src/key_command.cpp.i
+
+.PHONY : src/key_command.i
+
+# target to preprocess a source file
+src/key_command.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/src/key_command.cpp.i
+.PHONY : src/key_command.cpp.i
+
+src/key_command.s: src/key_command.cpp.s
+
+.PHONY : src/key_command.s
+
+# target to generate assembly for a file
+src/key_command.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/src/key_command.cpp.s
+.PHONY : src/key_command.cpp.s
+
+src/key_handling.o: src/key_handling.cpp.o
+
+.PHONY : src/key_handling.o
+
+# target to build an object file
+src/key_handling.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/src/key_handling.cpp.o
+.PHONY : src/key_handling.cpp.o
+
+src/key_handling.i: src/key_handling.cpp.i
+
+.PHONY : src/key_handling.i
+
+# target to preprocess a source file
+src/key_handling.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/src/key_handling.cpp.i
+.PHONY : src/key_handling.cpp.i
+
+src/key_handling.s: src/key_handling.cpp.s
+
+.PHONY : src/key_handling.s
+
+# target to generate assembly for a file
+src/key_handling.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/src/key_handling.cpp.s
+.PHONY : src/key_handling.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -778,6 +904,8 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... key_handling"
+	@echo "... key_command"
 	@echo "... plutonode"
 	@echo "... plutodrone"
 	@echo "... roscpp_generate_messages_lisp"
@@ -798,6 +926,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... aruco"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... list_install_components"
 	@echo "... plutodrone_generate_messages_eus"
@@ -828,6 +957,15 @@ help:
 	@echo "... src/Protocol.o"
 	@echo "... src/Protocol.i"
 	@echo "... src/Protocol.s"
+	@echo "... src/aruco.o"
+	@echo "... src/aruco.i"
+	@echo "... src/aruco.s"
+	@echo "... src/key_command.o"
+	@echo "... src/key_command.i"
+	@echo "... src/key_command.s"
+	@echo "... src/key_handling.o"
+	@echo "... src/key_handling.i"
+	@echo "... src/key_handling.s"
 .PHONY : help
 
 

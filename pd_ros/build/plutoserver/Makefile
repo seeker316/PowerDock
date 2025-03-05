@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-plutoserver/CMakeFiles/plutojoystick.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutoserver/CMakeFiles/plutojoystick.dir/rule
-.PHONY : plutoserver/CMakeFiles/plutojoystick.dir/rule
-
-# Convenience name for target.
-plutojoystick: plutoserver/CMakeFiles/plutojoystick.dir/rule
-
-.PHONY : plutojoystick
-
-# fast build rule for target.
-plutojoystick/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/build
-.PHONY : plutojoystick/fast
-
-# Convenience name for target.
 plutoserver/CMakeFiles/plutoserver.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutoserver/CMakeFiles/plutoserver.dir/rule
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/rule
@@ -211,33 +196,6 @@ plutoserver_generate_messages: plutoserver/CMakeFiles/plutoserver_generate_messa
 plutoserver_generate_messages/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build.make plutoserver/CMakeFiles/plutoserver_generate_messages.dir/build
 .PHONY : plutoserver_generate_messages/fast
-
-src/plutojoystick.o: src/plutojoystick.cpp.o
-
-.PHONY : src/plutojoystick.o
-
-# target to build an object file
-src/plutojoystick.cpp.o:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o
-.PHONY : src/plutojoystick.cpp.o
-
-src/plutojoystick.i: src/plutojoystick.cpp.i
-
-.PHONY : src/plutojoystick.i
-
-# target to preprocess a source file
-src/plutojoystick.cpp.i:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.i
-.PHONY : src/plutojoystick.cpp.i
-
-src/plutojoystick.s: src/plutojoystick.cpp.s
-
-.PHONY : src/plutojoystick.s
-
-# target to generate assembly for a file
-src/plutojoystick.cpp.s:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.s
-.PHONY : src/plutojoystick.cpp.s
 
 src/plutoserver.o: src/plutoserver.cpp.o
 
@@ -276,15 +234,11 @@ help:
 	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... plutojoystick"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... plutoserver"
 	@echo "... plutoserver_generate_messages"
-	@echo "... src/plutojoystick.o"
-	@echo "... src/plutojoystick.i"
-	@echo "... src/plutojoystick.s"
 	@echo "... src/plutoserver.o"
 	@echo "... src/plutoserver.i"
 	@echo "... src/plutoserver.s"

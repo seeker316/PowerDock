@@ -1,7 +1,7 @@
 <launch>
-  <node name="key_command" type="key_command.py" pkg="plutoserver"/>
-  <node name="drone_server" type="key_handling.py" pkg="plutoserver" />
+  <node name="simple_drone_teleop_key" type="key_command" pkg="plutodrone"/>
+  <node name="drone_controller" type="key_handling" pkg="plutodrone" />
   
-  <node name="aruco_pid_publisher" type="aruco.py" pkg="plutoserver"/>
+  <node name="aruco_pid_publisher" type="aruco" pkg="plutodrone"/>
 
 </launch>

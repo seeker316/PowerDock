@@ -12,11 +12,11 @@ pid_pub = rospy.Publisher("/pid_values", Int16MultiArray, queue_size=10)
 rate = rospy.Rate(100)  # 30 Hz publishing rate
 
 # Camera Parameters
-camera_matrix = np.array([[437.48477209,0,479.37404252],
-                            [  0, 438.32360844,259.97078463],
+camera_matrix = np.array([[461.08112803 , 0 , 313.35111521 ],
+                            [  0 , 462.4188646, 230.23307771],
                             [  0,0,1] ])
 
-dist_coeffs = np.array([-0.06249348 , 0.14815148, -0.00491044, -0.00591934, -0.12213315])
+dist_coeffs = np.array([0.14671439,-0.62057158,-0.00651751,0.0008797,0.64152671])
 marker_size = 0.05  # Marker size in meters
 
 # Function to Get Yaw Angle from Rotation Vector
