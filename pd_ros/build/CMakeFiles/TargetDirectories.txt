@@ -45,6 +45,8 @@
 /home/ubuntu/pd_ros/build/pluto_drone/CMakeFiles/_catkin_empty_exported_target.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/install/strip.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/install.dir
+/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/key_handling.dir
+/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/key_command.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutonode.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir
@@ -65,6 +67,7 @@
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/rebuild_cache.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir
+/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/aruco.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/list_install_components.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir
@@ -87,7 +90,6 @@
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/install/local.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/edit_cache.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/test.dir
-/home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/plutojoystick.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/install.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/list_install_components.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/rebuild_cache.dir

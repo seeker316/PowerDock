@@ -206,8 +206,6 @@ add_executable(plutoserver src/plutoserver.cpp)
 target_link_libraries(plutoserver ${catkin_LIBRARIES})
 #add_dependencies(plutoserver plutoserver_gencpp)
 
-add_executable(plutojoystick src/plutojoystick.cpp)
-target_link_libraries(plutojoystick ${catkin_LIBRARIES})
 #add_dependencies(plutojoystick plutoserver_gencpp)
 
 catkin_install_python(PROGRAMS
@@ -218,4 +216,3 @@ catkin_install_python(PROGRAMS
   scripts/aruco_server.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-

@@ -38,6 +38,7 @@ class send_data():
 		self.cmd.rcAUX4 = 1500
 		self.cmd.isAutoPilotOn = 0
 		self.command_pub.publish(self.cmd)
+		rospy.logwarn("arm")
 		rospy.sleep(1)
 
 	def box_arm(self):
@@ -55,6 +56,7 @@ class send_data():
 		self.cmd.rcAUX4 = 1200
 		self.command_pub.publish(self.cmd)
 		rospy.sleep(0.5)
+		rospy.logwarn("disarm")
 
 	def aruco_callback(self, msg):
 		"""Receive PID values and store them."""
@@ -62,11 +64,11 @@ class send_data():
 		# rospy.logwarn(f"state of Control is {control}")
 		if control:
 			roll,pitch,yaw,throttle = msg.data
-			rospy.logwarn(f"📥 Received PID Values: Roll={roll}, Pitch={pitch}, Yaw={yaw}, Throttle={throttle}")
-			self.cmd.rcRoll = roll
+			rospy.logwarn(f"📥 Received PID Values: Roll={roll}, Pitch={pitch}, Yaw={yaw}, Throttle={throttle}\n")
+			# self.cmd.rcRoll = roll
 			self.cmd.rcThrottle = throttle
-			self.cmd.rcYaw = yaw
-			self.cmd.rcPitch = pitch
+			# self.cmd.rcYaw = yaw
+			# self.cmd.rcPitch = pitch
 			
 			self.command_pub.publish(self.cmd)
     

@@ -298,6 +298,32 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
+# Target rules for targets named key_handling
+
+# Build rule for target.
+key_handling: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 key_handling
+.PHONY : key_handling
+
+# fast build rule for target.
+key_handling/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/build
+.PHONY : key_handling/fast
+
+#=============================================================================
+# Target rules for targets named key_command
+
+# Build rule for target.
+key_command: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 key_command
+.PHONY : key_command
+
+# fast build rule for target.
+key_command/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/build
+.PHONY : key_command/fast
+
+#=============================================================================
 # Target rules for targets named plutonode
 
 # Build rule for target.
@@ -519,6 +545,19 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named aruco
+
+# Build rule for target.
+aruco: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 aruco
+.PHONY : aruco
+
+# fast build rule for target.
+aruco/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/build
+.PHONY : aruco/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -727,19 +766,6 @@ plutodrone_gennodejs/fast:
 .PHONY : plutodrone_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named plutojoystick
-
-# Build rule for target.
-plutojoystick: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plutojoystick
-.PHONY : plutojoystick
-
-# fast build rule for target.
-plutojoystick/fast:
-	$(MAKE) -f plutoserver/CMakeFiles/plutojoystick.dir/build.make plutoserver/CMakeFiles/plutojoystick.dir/build
-.PHONY : plutojoystick/fast
-
-#=============================================================================
 # Target rules for targets named plutoserver
 
 # Build rule for target.
@@ -788,6 +814,8 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... _catkin_empty_exported_target"
+	@echo "... key_handling"
+	@echo "... key_command"
 	@echo "... plutonode"
 	@echo "... plutodrone"
 	@echo "... roscpp_generate_messages_lisp"
@@ -805,6 +833,7 @@ help:
 	@echo "... plutodrone_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... aruco"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... plutodrone_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
@@ -821,7 +850,6 @@ help:
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
 	@echo "... plutodrone_generate_messages_py"
 	@echo "... plutodrone_gennodejs"
-	@echo "... plutojoystick"
 	@echo "... plutoserver"
 	@echo "... plutoserver_generate_messages"
 .PHONY : help

@@ -129,6 +129,9 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(include)
+include_directories(include ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS} /usr/include/opencv4)
+
+
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -215,6 +218,10 @@ target_link_libraries(plutodrone)
 
 ## Find catkin and any catkin packages
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
+find_package(OpenCV REQUIRED)
+
+find_package(realsense2 REQUIRED)
+
 
 ## Declare ROS messages and services
 #add_message_files(DIRECTORY msg FILES Num.msg)
@@ -227,6 +234,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
 #catkin_package()
 
 include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(plutonode src/PlutoNode.cpp)
 target_link_libraries(plutonode ${catkin_LIBRARIES} plutodrone)
@@ -235,6 +243,20 @@ add_dependencies(plutonode plutodrone_generate_messages_cpp)
 add_executable(plutoswarm src/PlutoSwarm.cpp)
 target_link_libraries(plutoswarm ${catkin_LIBRARIES} plutodrone)
 #add_dependencies(plutoswarm plutodrone_generate_messages_cpp)
+
+add_executable(key_command src/key_command.cpp)
+target_link_libraries(key_command ${catkin_LIBRARIES} plutodrone)
+add_dependencies(key_command plutodrone_generate_messages_cpp)
+
+add_executable(key_handling src/key_handling.cpp)
+target_link_libraries(key_handling ${catkin_LIBRARIES} plutodrone)
+add_dependencies(key_handling plutodrone_generate_messages_cpp)
+
+add_executable(aruco src/aruco.cpp)
+target_link_libraries(aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(aruco ${catkin_LIBRARIES} realsense2)
+
+add_dependencies(aruco plutodrone_generate_messages_cpp)
 
 #add_executable(listener src/listener.cpp)
 #target_link_libraries(listener ${catkin_LIBRARIES})

@@ -7,5 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/ubuntu/pd_ros/devel/lib:/opt/ros/noetic/lib:/opt/glibc-2.35/lib'
+export LD_LIBRARY_PATH='/home/ubuntu/pd_ros/devel/lib:/opt/ros/noetic/lib:/usr/local/lib:/opt/glibc-2.35/lib:/usr/local/lib:/opt/glibc-2.35/lib'
 export PWD='/home/ubuntu/pd_ros/build'

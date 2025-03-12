@@ -352,6 +352,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
@@ -493,6 +496,9 @@ plutoserver_BINARY_DIR:STATIC=/home/ubuntu/pd_ros/build/plutoserver
 
 //Value Computed by CMake
 plutoserver_SOURCE_DIR:STATIC=/home/ubuntu/pd_ros/src/plutoserver
+
+//The directory containing a CMake configuration file for realsense2.
+realsense2_DIR:PATH=/usr/local/lib/cmake/realsense2
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -712,6 +718,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.2.0()]
 //Details about finding PY_em
 FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
 //Details about finding PythonInterp

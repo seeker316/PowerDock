@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/pd_ros/src/plutoserver/src/plutojoystick.cpp" "/home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/plutojoystick.dir/src/plutojoystick.cpp.o"
+  "/home/ubuntu/pd_ros/src/plutodrone/src/key_command.cpp" "/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/key_command.dir/src/key_command.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -12,7 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
-  "ROS_PACKAGE_NAME=\"plutoserver\""
+  "ROS_PACKAGE_NAME=\"plutodrone\""
   )
 
 # The include file search paths:
@@ -21,7 +21,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/ubuntu/pd_ros/src/plutodrone/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/ubuntu/pd_ros/src/plutoserver/include"
+  "/usr/include/opencv4"
   )
 
 # Targets to which this target links.
