@@ -4,6 +4,8 @@
 (defsystem "plutodrone-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
+    (:file "Drone_stats" :depends-on ("_package_Drone_stats"))
+    (:file "_package_Drone_stats" :depends-on ("_package"))
     (:file "PlutoMsg" :depends-on ("_package_PlutoMsg"))
     (:file "_package_PlutoMsg" :depends-on ("_package"))
     (:file "PlutoMsgAP" :depends-on ("_package_PlutoMsgAP"))

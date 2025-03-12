@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py"
   "/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsg.py"
   "/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsgAP.py"
   "/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py"

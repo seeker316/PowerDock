@@ -545,6 +545,32 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named plutodrone_generate_messages_py
+
+# Build rule for target.
+plutodrone_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plutodrone_generate_messages_py
+.PHONY : plutodrone_generate_messages_py
+
+# fast build rule for target.
+plutodrone_generate_messages_py/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
+.PHONY : plutodrone_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# Build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _plutodrone_generate_messages_check_deps_PlutoMsgAP
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
+
+#=============================================================================
 # Target rules for targets named aruco
 
 # Build rule for target.
@@ -608,6 +634,19 @@ plutodrone_generate_messages: cmake_check_build_system
 plutodrone_generate_messages/fast:
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build
 .PHONY : plutodrone_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _plutodrone_generate_messages_check_deps_Drone_stats
+
+# Build rule for target.
+_plutodrone_generate_messages_check_deps_Drone_stats: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _plutodrone_generate_messages_check_deps_Drone_stats
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_Drone_stats/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats/fast
 
 #=============================================================================
 # Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoPilot
@@ -727,32 +766,6 @@ plutodrone_genlisp/fast:
 .PHONY : plutodrone_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# Build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _plutodrone_generate_messages_check_deps_PlutoMsgAP
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
-	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
-
-#=============================================================================
-# Target rules for targets named plutodrone_generate_messages_py
-
-# Build rule for target.
-plutodrone_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 plutodrone_generate_messages_py
-.PHONY : plutodrone_generate_messages_py
-
-# fast build rule for target.
-plutodrone_generate_messages_py/fast:
-	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
-.PHONY : plutodrone_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named plutodrone_gennodejs
 
 # Build rule for target.
@@ -833,11 +846,14 @@ help:
 	@echo "... plutodrone_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... plutodrone_generate_messages_py"
+	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
 	@echo "... aruco"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... plutodrone_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... plutodrone_generate_messages"
+	@echo "... _plutodrone_generate_messages_check_deps_Drone_stats"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoPilot"
 	@echo "... plutodrone_genpy"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsg"
@@ -847,8 +863,6 @@ help:
 	@echo "... plutoswarm"
 	@echo "... plutodrone_generate_messages_lisp"
 	@echo "... plutodrone_genlisp"
-	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
-	@echo "... plutodrone_generate_messages_py"
 	@echo "... plutodrone_gennodejs"
 	@echo "... plutoserver"
 	@echo "... plutoserver_generate_messages"

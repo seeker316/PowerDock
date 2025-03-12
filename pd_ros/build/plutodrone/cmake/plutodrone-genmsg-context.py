@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsg.msg;/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+messages_str = "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsg.msg;/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg;/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
 services_str = "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv;/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv"
 pkg_name = "plutodrone"
 dependencies_str = "std_msgs"

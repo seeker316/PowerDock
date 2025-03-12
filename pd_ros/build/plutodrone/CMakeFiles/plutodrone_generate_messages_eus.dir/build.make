@@ -55,6 +55,7 @@ include plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/progress.make
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsg.l
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsgAP.l
+plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/Drone_stats.l
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/PlutoPilot.l
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/aruco.l
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/manifest.l
@@ -70,23 +71,29 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from plutodrone/PlutoMsgAP.msg"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg
 
+/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/Drone_stats.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/Drone_stats.l: /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from plutodrone/Drone_stats.msg"
+	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg
+
 /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/PlutoPilot.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/PlutoPilot.l: /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from plutodrone/PlutoPilot.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from plutodrone/PlutoPilot.srv"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv
 
 /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/aruco.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/aruco.l: /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from plutodrone/aruco.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from plutodrone/aruco.srv"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv
 
 /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for plutodrone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for plutodrone"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone plutodrone std_msgs
 
 plutodrone_generate_messages_eus: plutodrone/CMakeFiles/plutodrone_generate_messages_eus
 plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsg.l
 plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsgAP.l
+plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/Drone_stats.l
 plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/PlutoPilot.l
 plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/aruco.l
 plutodrone_generate_messages_eus: /home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/manifest.l

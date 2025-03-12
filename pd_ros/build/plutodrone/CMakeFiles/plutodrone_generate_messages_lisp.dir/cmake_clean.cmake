@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/Drone_stats.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp"

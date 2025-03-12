@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,6 +111,18 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -453,6 +453,36 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
+
+.PHONY : plutodrone_generate_messages_py
+
+# fast build rule for target.
+plutodrone_generate_messages_py/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
+.PHONY : plutodrone_generate_messages_py/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
+
+# Convenience name for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
+
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/aruco.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/aruco.dir/rule
 .PHONY : plutodrone/CMakeFiles/aruco.dir/rule
@@ -526,6 +556,21 @@ plutodrone_generate_messages: plutodrone/CMakeFiles/plutodrone_generate_messages
 plutodrone_generate_messages/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build
 .PHONY : plutodrone_generate_messages/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+
+# Convenience name for target.
+_plutodrone_generate_messages_check_deps_Drone_stats: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_Drone_stats/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule:
@@ -661,36 +706,6 @@ plutodrone_genlisp: plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
 plutodrone_genlisp/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_genlisp.dir/build.make plutodrone/CMakeFiles/plutodrone_genlisp.dir/build
 .PHONY : plutodrone_genlisp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
-
-# Convenience name for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
-
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
-
-# Convenience name for target.
-plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
-
-.PHONY : plutodrone_generate_messages_py
-
-# fast build rule for target.
-plutodrone_generate_messages_py/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
-.PHONY : plutodrone_generate_messages_py/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule:
@@ -903,7 +918,6 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install"
 	@echo "... key_handling"
 	@echo "... key_command"
 	@echo "... plutonode"
@@ -926,12 +940,16 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... plutodrone_generate_messages_py"
+	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
 	@echo "... aruco"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... list_install_components"
 	@echo "... plutodrone_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... plutodrone_generate_messages"
+	@echo "... install"
+	@echo "... _plutodrone_generate_messages_check_deps_Drone_stats"
 	@echo "... edit_cache"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoPilot"
 	@echo "... plutodrone_genpy"
@@ -942,8 +960,6 @@ help:
 	@echo "... plutoswarm"
 	@echo "... plutodrone_generate_messages_lisp"
 	@echo "... plutodrone_genlisp"
-	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
-	@echo "... plutodrone_generate_messages_py"
 	@echo "... plutodrone_gennodejs"
 	@echo "... src/Communication.o"
 	@echo "... src/Communication.i"

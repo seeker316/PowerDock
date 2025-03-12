@@ -55,6 +55,7 @@ include plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/progress.make
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsg.h
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h
 
@@ -71,23 +72,30 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from plutodrone/PlutoMsgAP.msg"
 	cd /home/ubuntu/pd_ros/src/plutodrone && /home/ubuntu/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/include/plutodrone -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h: /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg
+/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from plutodrone/Drone_stats.msg"
+	cd /home/ubuntu/pd_ros/src/plutodrone && /home/ubuntu/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/include/plutodrone -e /opt/ros/noetic/share/gencpp/cmake/..
+
 /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h: /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv
 /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from plutodrone/PlutoPilot.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from plutodrone/PlutoPilot.srv"
 	cd /home/ubuntu/pd_ros/src/plutodrone && /home/ubuntu/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/include/plutodrone -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h: /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv
 /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from plutodrone/aruco.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from plutodrone/aruco.srv"
 	cd /home/ubuntu/pd_ros/src/plutodrone && /home/ubuntu/pd_ros/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/include/plutodrone -e /opt/ros/noetic/share/gencpp/cmake/..
 
 plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp
 plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsg.h
 plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsgAP.h
+plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h
 plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h
 plutodrone_generate_messages_cpp: /home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h
 plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make

@@ -195,11 +195,14 @@ plutodrone/clean: plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/clea
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
+plutodrone/clean: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/aruco.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages.dir/clean
+plutodrone/clean: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_genpy.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/clean
@@ -209,8 +212,6 @@ plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/cle
 plutodrone/clean: plutodrone/CMakeFiles/plutoswarm.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean
-plutodrone/clean: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
-plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_gennodejs.dir/clean
 
 .PHONY : plutodrone/clean
@@ -519,7 +520,7 @@ plutodrone/CMakeFiles/key_handling.dir/all: plutodrone/CMakeFiles/plutodrone_gen
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/key_handling.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/key_handling.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/key_handling.dir/rule
@@ -547,7 +548,7 @@ plutodrone/CMakeFiles/key_command.dir/all: plutodrone/CMakeFiles/plutodrone_gene
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/key_command.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/key_command.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/key_command.dir/rule
@@ -570,12 +571,12 @@ plutodrone/CMakeFiles/plutonode.dir/all: plutodrone/CMakeFiles/plutodrone.dir/al
 plutodrone/CMakeFiles/plutonode.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutonode.dir/build.make plutodrone/CMakeFiles/plutonode.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutonode.dir/build.make plutodrone/CMakeFiles/plutonode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=41,42 "Built target plutonode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=46,47 "Built target plutonode"
 .PHONY : plutodrone/CMakeFiles/plutonode.dir/all
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutonode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutonode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutonode.dir/rule
@@ -764,7 +765,7 @@ plutodrone/CMakeFiles/plutodrone_geneus.dir/all: plutodrone/CMakeFiles/plutodron
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
@@ -818,7 +819,7 @@ plutodrone/CMakeFiles/plutodrone_gencpp.dir/all: plutodrone/CMakeFiles/plutodron
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_gencpp.dir/rule
@@ -945,19 +946,20 @@ plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 # Target rules for target plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir
 
 # All Build rule for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=31,32,33,34 "Built target plutodrone_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=34,35,36,37,38 "Built target plutodrone_generate_messages_nodejs"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
@@ -1027,6 +1029,65 @@ plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
 .PHONY : plutodrone/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
+# Target rules for target plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir
+
+# All Build rule for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/depend
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=39,40,41,42,43,44,45 "Built target plutodrone_generate_messages_py"
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
+
+.PHONY : plutodrone_generate_messages_py
+
+# clean rule for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean:
+	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir
+
+# All Build rule for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/depend
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num= "Built target _plutodrone_generate_messages_check_deps_PlutoMsgAP"
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+
+# Build rule for subdir invocation for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
+
+# Convenience name for target.
+_plutodrone_generate_messages_check_deps_PlutoMsgAP: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
+
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
+
+# clean rule for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
+
+#=============================================================================
 # Target rules for target plutodrone/CMakeFiles/aruco.dir
 
 # All Build rule for target.
@@ -1038,7 +1099,7 @@ plutodrone/CMakeFiles/aruco.dir/all: plutodrone/CMakeFiles/plutodrone_generate_m
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/aruco.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/aruco.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/aruco.dir/rule
@@ -1085,18 +1146,19 @@ plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 
 # All Build rule for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=22,23,24,25,26 "Built target plutodrone_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=23,24,25,26,27,28 "Built target plutodrone_generate_messages_eus"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
@@ -1143,10 +1205,10 @@ plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 
 # All Build rule for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num= "Built target plutodrone_generate_messages"
@@ -1154,7 +1216,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all: plutodrone/CMakeFile
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages.dir/rule
@@ -1168,6 +1230,33 @@ plutodrone_generate_messages: plutodrone/CMakeFiles/plutodrone_generate_messages
 plutodrone/CMakeFiles/plutodrone_generate_messages.dir/clean:
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages.dir/clean
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages.dir/clean
+
+#=============================================================================
+# Target rules for target plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir
+
+# All Build rule for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/depend
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num= "Built target _plutodrone_generate_messages_check_deps_Drone_stats"
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
+
+# Build rule for subdir invocation for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+
+# Convenience name for target.
+_plutodrone_generate_messages_check_deps_Drone_stats: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats
+
+# clean rule for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/clean:
+	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/clean
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/clean
 
 #=============================================================================
 # Target rules for target plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir
@@ -1208,7 +1297,7 @@ plutodrone/CMakeFiles/plutodrone_genpy.dir/all: plutodrone/CMakeFiles/plutodrone
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_genpy.dir/rule
@@ -1309,18 +1398,19 @@ plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 
 # All Build rule for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=18,19,20,21 "Built target plutodrone_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=18,19,20,21,22 "Built target plutodrone_generate_messages_cpp"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
@@ -1342,7 +1432,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/clean:
 plutodrone/CMakeFiles/plutoswarm.dir/all: plutodrone/CMakeFiles/plutodrone.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=45,46 "Built target plutoswarm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=50,51 "Built target plutoswarm"
 .PHONY : plutodrone/CMakeFiles/plutoswarm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1367,18 +1457,19 @@ plutodrone/CMakeFiles/plutoswarm.dir/clean:
 
 # All Build rule for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=27,28,29,30 "Built target plutodrone_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=29,30,31,32,33 "Built target plutodrone_generate_messages_lisp"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
@@ -1405,7 +1496,7 @@ plutodrone/CMakeFiles/plutodrone_genlisp.dir/all: plutodrone/CMakeFiles/plutodro
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
@@ -1421,64 +1512,6 @@ plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean:
 .PHONY : plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean
 
 #=============================================================================
-# Target rules for target plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir
-
-# All Build rule for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all:
-	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/depend
-	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num= "Built target _plutodrone_generate_messages_check_deps_PlutoMsgAP"
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
-
-# Build rule for subdir invocation for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
-
-# Convenience name for target.
-_plutodrone_generate_messages_check_deps_PlutoMsgAP: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/rule
-
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP
-
-# clean rule for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean:
-	$(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/clean
-
-#=============================================================================
-# Target rules for target plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir
-
-# All Build rule for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/all
-	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/depend
-	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=35,36,37,38,39,40 "Built target plutodrone_generate_messages_py"
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
-
-# Convenience name for target.
-plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
-
-.PHONY : plutodrone_generate_messages_py
-
-# clean rule for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean:
-	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/clean
-
-#=============================================================================
 # Target rules for target plutodrone/CMakeFiles/plutodrone_gennodejs.dir
 
 # All Build rule for target.
@@ -1490,7 +1523,7 @@ plutodrone/CMakeFiles/plutodrone_gennodejs.dir/all: plutodrone/CMakeFiles/plutod
 
 # Build rule for subdir invocation for target.
 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
 .PHONY : plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
@@ -1512,7 +1545,7 @@ plutodrone/CMakeFiles/plutodrone_gennodejs.dir/clean:
 plutoserver/CMakeFiles/plutoserver.dir/all: plutodrone/CMakeFiles/plutodrone.dir/all
 	$(MAKE) -f plutoserver/CMakeFiles/plutoserver.dir/build.make plutoserver/CMakeFiles/plutoserver.dir/depend
 	$(MAKE) -f plutoserver/CMakeFiles/plutoserver.dir/build.make plutoserver/CMakeFiles/plutoserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=43,44 "Built target plutoserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=48,49 "Built target plutoserver"
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/all
 
 # Build rule for subdir invocation for target.

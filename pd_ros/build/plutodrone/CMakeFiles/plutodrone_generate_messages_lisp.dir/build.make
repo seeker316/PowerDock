@@ -55,6 +55,7 @@ include plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/progress.mak
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/Drone_stats.lisp
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/aruco.lisp
 
@@ -69,19 +70,25 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from plutodrone/PlutoMsgAP.msg"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
 
+/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/Drone_stats.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/Drone_stats.lisp: /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from plutodrone/Drone_stats.msg"
+	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg
+
 /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp: /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from plutodrone/PlutoPilot.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from plutodrone/PlutoPilot.srv"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv
 
 /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/aruco.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/aruco.lisp: /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from plutodrone/aruco.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from plutodrone/aruco.srv"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv
 
 plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp
 plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp
 plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp
+plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/Drone_stats.lisp
 plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp
 plutodrone_generate_messages_lisp: /home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/aruco.lisp
 plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make

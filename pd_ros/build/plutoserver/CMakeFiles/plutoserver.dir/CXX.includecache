@@ -6,31 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h
-ros/service_traits.h
--
-plutodrone/PlutoPilotRequest.h
--
-plutodrone/PlutoPilotResponse.h
--
-
-/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilotRequest.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilotResponse.h
+/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h
 string
 -
 vector
@@ -49,8 +25,8 @@ ros/message_operations.h
 /home/ubuntu/pd_ros/src/plutoserver/src/plutoserver.cpp
 ros/ros.h
 /home/ubuntu/pd_ros/src/plutoserver/src/ros/ros.h
-plutodrone/PlutoPilot.h
-/home/ubuntu/pd_ros/src/plutoserver/src/plutodrone/PlutoPilot.h
+plutodrone/Drone_stats.h
+/home/ubuntu/pd_ros/src/plutoserver/src/plutodrone/Drone_stats.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

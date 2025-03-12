@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsg.h
 string
 -
@@ -122,6 +138,8 @@ plutodrone/Protocol.h
 plutodrone/PlutoMsg.h
 -
 plutodrone/PlutoMsgAP.h
+-
+plutodrone/Drone_stats.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/Point.h

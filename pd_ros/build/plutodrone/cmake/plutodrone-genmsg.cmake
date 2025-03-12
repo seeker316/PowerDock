@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "plutodrone: 2 messages, 2 services")
+message(STATUS "plutodrone: 3 messages, 2 services")
 
 set(MSG_I_FLAGS "-Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" ""
 )
 
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
+add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" ""
+)
+
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" ""
@@ -51,6 +56,12 @@ _generate_msg_cpp(plutodrone
 )
 _generate_msg_cpp(plutodrone
   "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
+)
+_generate_msg_cpp(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
@@ -86,6 +97,8 @@ get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMs
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
+add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
@@ -108,6 +121,12 @@ _generate_msg_eus(plutodrone
 )
 _generate_msg_eus(plutodrone
   "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
+)
+_generate_msg_eus(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
@@ -143,6 +162,8 @@ get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMs
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
+add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
@@ -165,6 +186,12 @@ _generate_msg_lisp(plutodrone
 )
 _generate_msg_lisp(plutodrone
   "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
+)
+_generate_msg_lisp(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
@@ -200,6 +227,8 @@ get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMs
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
+add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
@@ -222,6 +251,12 @@ _generate_msg_nodejs(plutodrone
 )
 _generate_msg_nodejs(plutodrone
   "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
+)
+_generate_msg_nodejs(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
@@ -257,6 +292,8 @@ get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMs
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
+add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
@@ -279,6 +316,12 @@ _generate_msg_py(plutodrone
 )
 _generate_msg_py(plutodrone
   "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
+)
+_generate_msg_py(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
@@ -313,6 +356,8 @@ add_dependencies(plutodrone_generate_messages plutodrone_generate_messages_py)
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsg.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg" NAME_WE)
+add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})

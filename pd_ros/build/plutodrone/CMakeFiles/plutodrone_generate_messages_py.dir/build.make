@@ -55,6 +55,7 @@ include plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/progress.make
 
 plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsg.py
 plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py
 plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py
 plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py
 plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py
@@ -71,35 +72,43 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG plutodrone/PlutoMsgAP"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg
 
+/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py: /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG plutodrone/Drone_stats"
+	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg
+
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py: /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV plutodrone/PlutoPilot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV plutodrone/PlutoPilot"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv
 
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py: /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV plutodrone/aruco"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV plutodrone/aruco"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv
 
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsg.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for plutodrone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for plutodrone"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg --initpy
 
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsg.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+/home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py
 /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/__init__.py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for plutodrone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python srv __init__.py for plutodrone"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv --initpy
 
 plutodrone_generate_messages_py: plutodrone/CMakeFiles/plutodrone_generate_messages_py
 plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsg.py
 plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_PlutoMsgAP.py
+plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/_Drone_stats.py
 plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_PlutoPilot.py
 plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/srv/_aruco.py
 plutodrone_generate_messages_py: /home/ubuntu/pd_ros/devel/lib/python3/dist-packages/plutodrone/msg/__init__.py

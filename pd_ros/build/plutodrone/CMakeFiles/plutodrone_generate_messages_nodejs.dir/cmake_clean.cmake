@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/Drone_stats.js"
   "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js"
   "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js"
   "/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js"

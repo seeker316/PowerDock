@@ -56,6 +56,7 @@ add_message_files(
   FILES
   PlutoMsg.msg
   PlutoMsgAP.msg
+  Drone_stats.msg
 )
 
 ## Generate services in the 'srv' folder

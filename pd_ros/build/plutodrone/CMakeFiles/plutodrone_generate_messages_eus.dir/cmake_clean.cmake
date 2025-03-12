@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/manifest.l"
+  "/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/Drone_stats.l"
   "/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsg.l"
   "/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/msg/PlutoMsgAP.l"
   "/home/ubuntu/pd_ros/devel/share/roseus/ros/plutodrone/srv/PlutoPilot.l"

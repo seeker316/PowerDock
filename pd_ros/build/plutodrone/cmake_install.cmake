@@ -41,6 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/msg" TYPE FILE FILES
     "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsg.msg"
     "/home/ubuntu/pd_ros/src/plutodrone/msg/PlutoMsgAP.msg"
+    "/home/ubuntu/pd_ros/src/plutodrone/msg/Drone_stats.msg"
     )
 endif()
 

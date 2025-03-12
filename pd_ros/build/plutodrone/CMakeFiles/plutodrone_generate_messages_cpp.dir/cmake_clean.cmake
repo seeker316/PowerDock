@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/ubuntu/pd_ros/devel/include/plutodrone/Drone_stats.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsg.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsgAP.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h"
