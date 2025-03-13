@@ -708,6 +708,21 @@ plutodrone_genlisp/fast:
 .PHONY : plutodrone_genlisp/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/april.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/april.dir/rule
+.PHONY : plutodrone/CMakeFiles/april.dir/rule
+
+# Convenience name for target.
+april: plutodrone/CMakeFiles/april.dir/rule
+
+.PHONY : april
+
+# fast build rule for target.
+april/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/build
+.PHONY : april/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
 .PHONY : plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
@@ -829,6 +844,33 @@ src/Protocol.s: src/Protocol.cpp.s
 src/Protocol.cpp.s:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone.dir/build.make plutodrone/CMakeFiles/plutodrone.dir/src/Protocol.cpp.s
 .PHONY : src/Protocol.cpp.s
+
+src/april.o: src/april.cpp.o
+
+.PHONY : src/april.o
+
+# target to build an object file
+src/april.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/src/april.cpp.o
+.PHONY : src/april.cpp.o
+
+src/april.i: src/april.cpp.i
+
+.PHONY : src/april.i
+
+# target to preprocess a source file
+src/april.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/src/april.cpp.i
+.PHONY : src/april.cpp.i
+
+src/april.s: src/april.cpp.s
+
+.PHONY : src/april.s
+
+# target to generate assembly for a file
+src/april.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/src/april.cpp.s
+.PHONY : src/april.cpp.s
 
 src/aruco.o: src/aruco.cpp.o
 
@@ -960,6 +1002,7 @@ help:
 	@echo "... plutoswarm"
 	@echo "... plutodrone_generate_messages_lisp"
 	@echo "... plutodrone_genlisp"
+	@echo "... april"
 	@echo "... plutodrone_gennodejs"
 	@echo "... src/Communication.o"
 	@echo "... src/Communication.i"
@@ -973,6 +1016,9 @@ help:
 	@echo "... src/Protocol.o"
 	@echo "... src/Protocol.i"
 	@echo "... src/Protocol.s"
+	@echo "... src/april.o"
+	@echo "... src/april.i"
+	@echo "... src/april.s"
 	@echo "... src/aruco.o"
 	@echo "... src/aruco.i"
 	@echo "... src/aruco.s"

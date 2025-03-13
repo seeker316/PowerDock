@@ -86,6 +86,7 @@
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutoswarm.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone_genlisp.dir
+/home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/april.dir
 /home/ubuntu/pd_ros/build/plutodrone/CMakeFiles/plutodrone_gennodejs.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/install/strip.dir
 /home/ubuntu/pd_ros/build/plutoserver/CMakeFiles/install/local.dir

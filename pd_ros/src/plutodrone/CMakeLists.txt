@@ -237,6 +237,12 @@ find_package(realsense2 REQUIRED)
 include_directories(include ${catkin_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  /usr/include/apriltag  # Ensure AprilTag is properly included
+)
+
 add_executable(plutonode src/PlutoNode.cpp)
 target_link_libraries(plutonode ${catkin_LIBRARIES} plutodrone)
 add_dependencies(plutonode plutodrone_generate_messages_cpp)
@@ -258,6 +264,16 @@ target_link_libraries(aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(aruco ${catkin_LIBRARIES} realsense2)
 
 add_dependencies(aruco plutodrone_generate_messages_cpp)
+
+add_executable(april src/april.cpp)
+
+
+target_link_libraries(april
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  apriltag
+)
+target_link_libraries(april ${catkin_LIBRARIES} realsense2)
 
 #add_executable(listener src/listener.cpp)
 #target_link_libraries(listener ${catkin_LIBRARIES})

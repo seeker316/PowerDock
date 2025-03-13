@@ -167,6 +167,7 @@ plutodrone/all: plutodrone/CMakeFiles/plutodrone.dir/all
 plutodrone/all: plutodrone/CMakeFiles/aruco.dir/all
 plutodrone/all: plutodrone/CMakeFiles/plutodrone_generate_messages.dir/all
 plutodrone/all: plutodrone/CMakeFiles/plutoswarm.dir/all
+plutodrone/all: plutodrone/CMakeFiles/april.dir/all
 
 .PHONY : plutodrone/all
 
@@ -212,6 +213,7 @@ plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/cle
 plutodrone/clean: plutodrone/CMakeFiles/plutoswarm.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean
+plutodrone/clean: plutodrone/CMakeFiles/april.dir/clean
 plutodrone/clean: plutodrone/CMakeFiles/plutodrone_gennodejs.dir/clean
 
 .PHONY : plutodrone/clean
@@ -379,7 +381,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=7,8 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -406,7 +408,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=5,6 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -433,7 +435,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -460,7 +462,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=9,10 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -515,7 +517,7 @@ plutodrone/CMakeFiles/key_handling.dir/all: plutodrone/CMakeFiles/plutodrone.dir
 plutodrone/CMakeFiles/key_handling.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/key_handling.dir/build.make plutodrone/CMakeFiles/key_handling.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=13,14 "Built target key_handling"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=15,16 "Built target key_handling"
 .PHONY : plutodrone/CMakeFiles/key_handling.dir/all
 
 # Build rule for subdir invocation for target.
@@ -543,7 +545,7 @@ plutodrone/CMakeFiles/key_command.dir/all: plutodrone/CMakeFiles/plutodrone.dir/
 plutodrone/CMakeFiles/key_command.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/key_command.dir/build.make plutodrone/CMakeFiles/key_command.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=11,12 "Built target key_command"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=13,14 "Built target key_command"
 .PHONY : plutodrone/CMakeFiles/key_command.dir/all
 
 # Build rule for subdir invocation for target.
@@ -571,7 +573,7 @@ plutodrone/CMakeFiles/plutonode.dir/all: plutodrone/CMakeFiles/plutodrone.dir/al
 plutodrone/CMakeFiles/plutonode.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutonode.dir/build.make plutodrone/CMakeFiles/plutonode.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutonode.dir/build.make plutodrone/CMakeFiles/plutonode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=46,47 "Built target plutonode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=48,49 "Built target plutonode"
 .PHONY : plutodrone/CMakeFiles/plutonode.dir/all
 
 # Build rule for subdir invocation for target.
@@ -598,7 +600,7 @@ plutodrone/CMakeFiles/plutonode.dir/clean:
 plutodrone/CMakeFiles/plutodrone.dir/all:
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone.dir/build.make plutodrone/CMakeFiles/plutodrone.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone.dir/build.make plutodrone/CMakeFiles/plutodrone.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=15,16,17 "Built target plutodrone"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=17,18,19 "Built target plutodrone"
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/all
 
 # Build rule for subdir invocation for target.
@@ -954,7 +956,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CM
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all: plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=34,35,36,37,38 "Built target plutodrone_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=36,37,38,39,40 "Built target plutodrone_generate_messages_nodejs"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1040,7 +1042,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeF
 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=39,40,41,42,43,44,45 "Built target plutodrone_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=41,42,43,44,45,46,47 "Built target plutodrone_generate_messages_py"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1094,7 +1096,7 @@ plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsgAP.dir/cl
 plutodrone/CMakeFiles/aruco.dir/all: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=1,2 "Built target aruco"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=3,4 "Built target aruco"
 .PHONY : plutodrone/CMakeFiles/aruco.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1153,7 +1155,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMake
 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=23,24,25,26,27,28 "Built target plutodrone_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=25,26,27,28,29,30 "Built target plutodrone_generate_messages_eus"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1405,7 +1407,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMake
 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=18,19,20,21,22 "Built target plutodrone_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=20,21,22,23,24 "Built target plutodrone_generate_messages_cpp"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1432,7 +1434,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/clean:
 plutodrone/CMakeFiles/plutoswarm.dir/all: plutodrone/CMakeFiles/plutodrone.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=50,51 "Built target plutoswarm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=52,53 "Built target plutoswarm"
 .PHONY : plutodrone/CMakeFiles/plutoswarm.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1464,7 +1466,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMak
 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/all
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/depend
 	$(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=29,30,31,32,33 "Built target plutodrone_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=31,32,33,34,35 "Built target plutodrone_generate_messages_lisp"
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1512,6 +1514,33 @@ plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean:
 .PHONY : plutodrone/CMakeFiles/plutodrone_genlisp.dir/clean
 
 #=============================================================================
+# Target rules for target plutodrone/CMakeFiles/april.dir
+
+# All Build rule for target.
+plutodrone/CMakeFiles/april.dir/all:
+	$(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/depend
+	$(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=1,2 "Built target april"
+.PHONY : plutodrone/CMakeFiles/april.dir/all
+
+# Build rule for subdir invocation for target.
+plutodrone/CMakeFiles/april.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/april.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/pd_ros/build/CMakeFiles 0
+.PHONY : plutodrone/CMakeFiles/april.dir/rule
+
+# Convenience name for target.
+april: plutodrone/CMakeFiles/april.dir/rule
+
+.PHONY : april
+
+# clean rule for target.
+plutodrone/CMakeFiles/april.dir/clean:
+	$(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/clean
+.PHONY : plutodrone/CMakeFiles/april.dir/clean
+
+#=============================================================================
 # Target rules for target plutodrone/CMakeFiles/plutodrone_gennodejs.dir
 
 # All Build rule for target.
@@ -1545,7 +1574,7 @@ plutodrone/CMakeFiles/plutodrone_gennodejs.dir/clean:
 plutoserver/CMakeFiles/plutoserver.dir/all: plutodrone/CMakeFiles/plutodrone.dir/all
 	$(MAKE) -f plutoserver/CMakeFiles/plutoserver.dir/build.make plutoserver/CMakeFiles/plutoserver.dir/depend
 	$(MAKE) -f plutoserver/CMakeFiles/plutoserver.dir/build.make plutoserver/CMakeFiles/plutoserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=48,49 "Built target plutoserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=50,51 "Built target plutoserver"
 .PHONY : plutoserver/CMakeFiles/plutoserver.dir/all
 
 # Build rule for subdir invocation for target.

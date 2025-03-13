@@ -766,6 +766,19 @@ plutodrone_genlisp/fast:
 .PHONY : plutodrone_genlisp/fast
 
 #=============================================================================
+# Target rules for targets named april
+
+# Build rule for target.
+april: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april
+.PHONY : april
+
+# fast build rule for target.
+april/fast:
+	$(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/build
+.PHONY : april/fast
+
+#=============================================================================
 # Target rules for targets named plutodrone_gennodejs
 
 # Build rule for target.
@@ -863,6 +876,7 @@ help:
 	@echo "... plutoswarm"
 	@echo "... plutodrone_generate_messages_lisp"
 	@echo "... plutodrone_genlisp"
+	@echo "... april"
 	@echo "... plutodrone_gennodejs"
 	@echo "... plutoserver"
 	@echo "... plutoserver_generate_messages"

@@ -309,44 +309,40 @@ void *readFunction(void *threadid){
   pthread_exit(NULL);
 }
 
-void *serviceFunction(void* args){
+void *serviceFunction(void* args)
+{
   ros::Publisher* drone_stat_pub = (ros::Publisher*)args;
+  plutodrone::Drone_stats new_msg; // Create a new message to publish
+  ros::Rate loop_rate(10);
+  
+  while (ros::ok()) 
+  {
 
-  while (ros::ok()) {
-      if (ros::ok()) {
-          // Debug: Check if the function is called
-          
-
-          plutodrone::Drone_stats new_msg; // Create a new message to publish
-
-          // Set the values to the new message
-          new_msg.accX = accX;
-          new_msg.accY = accY;
-          new_msg.accZ = accZ;
-          new_msg.gyroX = gyroX;
-          new_msg.gyroY = gyroY;
-          new_msg.gyroZ = gyroZ;
-          new_msg.magX = magX;
-          new_msg.magY = magY;
-          new_msg.magZ = magZ;
-          new_msg.roll = roll;
-          new_msg.pitch = pitch;
-          new_msg.yaw = yaw;
-          new_msg.alt = alt;
-          new_msg.battery = battery;
-          new_msg.rssi = rssi;
-          new_msg.a1 = a1;
-          new_msg.a2 = a2;
-          new_msg.a3 = a3;
+    // Set the values to the new message
+    new_msg.accX = accX;
+    new_msg.accY = accY;
+    new_msg.accZ = accZ;
+    new_msg.gyroX = gyroX;
+    new_msg.gyroY = gyroY;
+    new_msg.gyroZ = gyroZ;
+    new_msg.magX = magX;
+    new_msg.magY = magY;
+    new_msg.magZ = magZ;
+    new_msg.roll = roll;
+    new_msg.pitch = pitch;
+    new_msg.yaw = yaw;
+    new_msg.alt = alt;
+    new_msg.battery = battery;
+    new_msg.rssi = rssi;
+    new_msg.a1 = a1;
+    new_msg.a2 = a2;
+    new_msg.a3 = a3;
 
 
-          // Publish the new message
-          drone_stat_pub->publish(new_msg);
-      }
-
-      ros::Rate loop_rate(10);
-      ros::spinOnce();  // Call callbacks (if any)
-      loop_rate.sleep();  // Sleep to maintain the desired rate
+    // Publish the new message
+    drone_stat_pub->publish(new_msg);
+    ros::spinOnce();  // Call callbacks (if any)
+    loop_rate.sleep();  // Sleep to maintain the desired rate
   }
   pthread_exit(NULL);
 }

@@ -365,6 +365,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "plutodrone/CMakeFiles/plutoswarm.dir/DependInfo.cmake"
   "plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/DependInfo.cmake"
   "plutodrone/CMakeFiles/plutodrone_genlisp.dir/DependInfo.cmake"
+  "plutodrone/CMakeFiles/april.dir/DependInfo.cmake"
   "plutodrone/CMakeFiles/plutodrone_gennodejs.dir/DependInfo.cmake"
   "plutoserver/CMakeFiles/plutoserver.dir/DependInfo.cmake"
   "plutoserver/CMakeFiles/plutoserver_generate_messages.dir/DependInfo.cmake"
