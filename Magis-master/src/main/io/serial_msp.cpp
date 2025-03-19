@@ -1081,17 +1081,11 @@ static bool processOutCommand(uint8_t cmdMSP)
 
 
             break;
-        case MSP_ALTITUDE:
-            headSerialReply(6);
-#if defined(BARO)
-
-
-            serialize32(altitudeHoldGetEstimatedAltitude());
-
-#else
-            serialize32(10);
-#endif
-            serialize16(vario);
+	case MSP_ALTITUDE:
+            headSerialReply(4);
+            float XExternal;
+            XExternal = XRanging.getRange(EXTERNAL);
+            serialize32(XExternal);
             break;
         case MSP_SONAR_ALTITUDE:
             headSerialReply(4);
