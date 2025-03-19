@@ -98,6 +98,8 @@ bool messageStarted = false;
 
 #include "serial_msp.h"
 
+
+
 #ifdef USE_SERIAL_1WIRE
 #include "io/serial_1wire.h"
 #endif
@@ -105,6 +107,8 @@ bool messageStarted = false;
 #include "command/command.h"
 
 #include "API/API-Utils.h"
+
+#include "API/XRanging.h"
 
 static serialPort_t *mspSerialPort;
 
