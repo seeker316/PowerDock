@@ -3,7 +3,7 @@ import cv2
 # URL of the DroidCam video feed
 url = "http://192.168.0.109:5050/video"
 
-cap = cv2.VideoCapture(url)
+cap = cv2.VideoCapture(6)
 
 if not cap.isOpened():
     print("Error: Couldn't open video stream.")

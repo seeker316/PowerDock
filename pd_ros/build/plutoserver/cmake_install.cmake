@@ -65,6 +65,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plutoserver" TYPE PROGRAM FILES "/home/ubuntu/pd_ros/build/plutoserver/catkin_generated/installspace/data_via_rosservice.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/plutoserver" TYPE PROGRAM FILES "/home/ubuntu/pd_ros/build/plutoserver/catkin_generated/installspace/control.py")
 endif()
 

@@ -40,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ubuntu/pd_ros/src/plutoserver/scripts/aruco_client.py"
   "/home/ubuntu/pd_ros/src/plutoserver/scripts/aruco_server.py"
   "/home/ubuntu/pd_ros/src/plutoserver/scripts/control.py"
+  "/home/ubuntu/pd_ros/src/plutoserver/scripts/data_via_rosservice.py"
   "/home/ubuntu/pd_ros/src/plutoserver/scripts/kalman_filter.py"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"

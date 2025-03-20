@@ -33,8 +33,6 @@ ros/ros.h
 -
 std_msgs/Int16MultiArray.h
 -
-librealsense2/rs.hpp
--
 apriltag/apriltag.h
 -
 apriltag/apriltag_pose.h

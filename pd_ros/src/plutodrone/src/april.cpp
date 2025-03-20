@@ -3,7 +3,7 @@
 #include <cmath>
 #include <ros/ros.h>
 #include <std_msgs/Int16MultiArray.h>
-#include <librealsense2/rs.hpp>
+// #include <librealsense2/rs.hpp>
 #include <apriltag/apriltag.h>
 #include <apriltag/apriltag_pose.h>
 #include <apriltag/tag16h5.h>
@@ -13,10 +13,10 @@ using namespace std;
 using namespace cv;
 
 // Camera parameters for RealSense D455F
-const double fx = 649.75666738;
-const double fy = 653.15699671;
-const double cx = 661.4503591;
-const double cy = 349.48366792;
+const double fx = 385.0124976;
+const double fy = 385.33449174;
+const double cx = 317.58273274;
+const double cy = 231.94288763;
 const double tag_size = 0.05;  // 5 cm
 
 plutodrone::Drone_stats current_drone_data;
@@ -28,13 +28,13 @@ void dataCallback(const plutodrone::Drone_stats::ConstPtr& msg) {
     // Store the received data in the global variable
     current_drone_data = *msg;
     // Print the received data
-    ROS_INFO("Received data: ");
-    ROS_INFO("AccX: %f, AccY: %f, AccZ: %f", msg->accX, msg->accY, msg->accZ);
-    ROS_INFO("GyroX: %f, GyroY: %f, GyroZ: %f", msg->gyroX, msg->gyroY, msg->gyroZ);
-    ROS_INFO("MagX: %f, MagY: %f, MagZ: %f", msg->magX, msg->magY, msg->magZ);
-    ROS_INFO("Roll: %f, Pitch: %f, Yaw: %f", msg->roll, msg->pitch, msg->yaw);
-    ROS_INFO("Altitude: %f, Battery: %f, RSSI: %f", msg->alt, msg->battery, msg->rssi);
-    ROS_INFO("Anchor 1: %f, Anchor 2: %f, Anchor 3: %f", msg->a1, msg->a2, msg->a3);
+    // ROS_INFO("Received data: ");
+    // ROS_INFO("AccX: %f, AccY: %f, AccZ: %f", msg->accX, msg->accY, msg->accZ);
+    // ROS_INFO("GyroX: %f, GyroY: %f, GyroZ: %f", msg->gyroX, msg->gyroY, msg->gyroZ);
+    // ROS_INFO("MagX: %f, MagY: %f, MagZ: %f", msg->magX, msg->magY, msg->magZ);
+    // ROS_INFO("Roll: %f, Pitch: %f, Yaw: %f", msg->roll, msg->pitch, msg->yaw);
+    // ROS_INFO("Altitude: %f, Battery: %f, RSSI: %f", msg->alt, msg->battery, msg->rssi);
+    // ROS_INFO("Anchor 1: %f, Anchor 2: %f, Anchor 3: %f", msg->a1, msg->a2, msg->a3);
   }
   
 
@@ -80,16 +80,16 @@ int main(int argc, char** argv)
     ros::Subscriber dataSubscriber = nh.subscribe("drone_data", 1000, dataCallback);
     ros::Rate rate(100);
         
-    PIDController roll_pid(0.35, 0.0, 0.0, 1400, 1600);
-    PIDController pitch_pid(0.35, 0.0, 0.0, 1400, 1600);
+    PIDController roll_pid(0.3, 0.0, 0.0, 1400, 1600);
+    PIDController pitch_pid(0.5, 0.0, 0.0, 1400, 1600);
     PIDController yaw_pid(0.0, 0.0, 0.0, 1200, 1800);
-    PIDController throttle_pid(25, 0.0, 5, 1300, 1800);
+    PIDController throttle_pid(5, 0.0, 2, 1300, 1800);
 
     float error_x = 0, error_y = 0, error_yaw = 0, alt_error = 0, estimated_distance = 0;
 
     float roll_pid_output = 0, pitch_pid_output = 0, yaw_pid_output = 0, throttle_pid_output = 0;
 
-    int alt_hold = 20;
+    int alt_hold = 500;
 
     float depth_value,tof_data; //because realsense provides data in 16 bits
     
@@ -112,12 +112,22 @@ int main(int argc, char** argv)
     td->nthreads = 6;
 
 
-    // cv::VideoCapture cap("http://192.168.4.3:4747/video");
-    rs2::pipeline pipeline;
-    rs2::config config;
-    config.enable_stream(RS2_STREAM_COLOR, 640,480, RS2_FORMAT_BGR8, 60);
-    config.enable_stream(RS2_STREAM_DEPTH,  640,480, RS2_FORMAT_Z16, 60);
-    pipeline.start(config);
+    cv::VideoCapture cap(8);
+    if (!cap.isOpened()) {
+        ROS_ERROR("Error: Could not open the camera.");
+        return -1;
+    }
+
+    cap.set(CAP_PROP_FRAME_WIDTH, 640);
+    cap.set(CAP_PROP_FRAME_HEIGHT, 480);
+    // cap.set(CAP_PROP_FPS, 30);
+    // cap.set(CAP_PROP_AUTO_EXPOSURE, 0.25);
+    // cap.set(CAP_PROP_EXPOSURE, -4);
+    // rs2::pipeline pipeline;
+    // rs2::config config;
+    // config.enable_stream(RS2_STREAM_COLOR, 640,480, RS2_FORMAT_BGR8, 60);
+    // config.enable_stream(RS2_STREAM_DEPTH,  640,480, RS2_FORMAT_Z16, 60);
+    // pipeline.start(config);
 
 
     cv::Mat frame, gray, prev_gray;
@@ -126,12 +136,13 @@ int main(int argc, char** argv)
     while (ros::ok())
     {
         detected = false;
-        rs2::frameset frames = pipeline.wait_for_frames();
-        rs2::frame color_frame = frames.get_color_frame();
-        rs2::frame depth_frame = frames.get_depth_frame();
+        // rs2::frameset frames = pipeline.wait_for_frames();
+        // rs2::frame color_frame = frames.get_color_frame();
+        // rs2::frame depth_frame = frames.get_depth_frame();
         
-        cv::Mat frame(cv::Size( 640,480), CV_8UC3, (void*)color_frame.get_data(), cv::Mat::AUTO_STEP);
-        cv::Mat depth = cv::Mat(cv::Size( 640,480), CV_16U, (void*)depth_frame.get_data(), cv::Mat::AUTO_STEP);  // Convert depth frame to Mat
+        // cv::Mat frame(cv::Size( 640,480), CV_8UC3, (void*)color_frame.get_data(), cv::Mat::AUTO_STEP);
+        // cv::Mat depth = cv::Mat(cv::Size( 640,480), CV_16U, (void*)depth_frame.get_data(), cv::Mat::AUTO_STEP);  // Convert depth frame to Mat
+        cap.read(frame);
 
         cv::Mat gray;
         if (frame.empty()) break;
@@ -139,7 +150,8 @@ int main(int argc, char** argv)
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
         image_u8_t img_header = {gray.cols, gray.rows, gray.cols, gray.data};
         zarray_t* detections = apriltag_detector_detect(td, &img_header);
-
+        
+        tof_data = current_drone_data.alt;
 
 
         for (int i = 0; i < zarray_size(detections); i++) 
@@ -156,8 +168,9 @@ int main(int argc, char** argv)
                 estimate_tag_pose(&info, &pose);
 
                 std::lock_guard<std::mutex> lock(data_mutex);
-                estimated_distance = pose.t->data[2];
-                tof_data = current_drone_data.alt;
+                estimated_distance = (pose.t->data[2]*1000) + 30;
+                
+                
 
                 int tag_center_x = det->c[0];
                 int tag_center_y = det->c[1];
@@ -177,6 +190,10 @@ int main(int argc, char** argv)
                 circle(frame, Point(tag_center_x, tag_center_y), 5, Scalar(0, 0, 255), -1);
                 break;
             }
+            else
+            {
+                estimated_distance = tof_data;
+            }
         }
         
 
@@ -187,7 +204,6 @@ int main(int argc, char** argv)
                     last_known_position = {static_cast<int>(next_points[0].x), static_cast<int>(next_points[0].y)};
                     error_x = last_known_position[0] - (frame.cols / 2);
                     error_y = last_known_position[1] - (frame.rows / 2);
-                    estimated_distance = last_known_distance;
                     error_yaw = last_yaw_error;
 
                     circle(frame, Point(last_known_position[0], last_known_position[1]), 10, Scalar(255, 0, 0), -1);
@@ -197,9 +213,9 @@ int main(int argc, char** argv)
         }
 
 
-        if (estimated_distance < 1.8)
+        if (estimated_distance < 2000)
         {
-            alt_error = alt_hold - (estimated_distance * 100);
+            alt_error = alt_hold - estimated_distance;
 
             roll_pid_output = roll_pid.PID_Output(error_x, true);
             pitch_pid_output = pitch_pid.PID_Output(error_y, false);
@@ -225,11 +241,12 @@ int main(int argc, char** argv)
         if (!last_known_position.empty()) {
             prev_points = {cv::Point2f(last_known_position[0], last_known_position[1])};
         }
-
+        putText(frame, "Battery: " + to_string(current_drone_data.battery), Point(10, 30), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        
         putText(frame, "X Error: " + to_string(int(error_x)), Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
         putText(frame, "Y Error: " + to_string(int(error_y)), Point(10, 90), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
         putText(frame, "Yaw: " + to_string(int(error_yaw)), Point(10, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
-        putText(frame, "Distance: " + to_string(estimated_distance*100), Point(10, 150), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        putText(frame, "Distance: " + to_string(estimated_distance), Point(10, 150), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
 
         int text_x = frame.cols - 250;
         putText(frame, "Roll PID: " + to_string(int(roll_pid_output)), Point(text_x, 30), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
@@ -247,7 +264,8 @@ int main(int argc, char** argv)
         ros::spinOnce();
     }
 
-    pipeline.stop();
+    // pipeline.stop();
+    cap.release();
     cv::destroyAllWindows();
 
     

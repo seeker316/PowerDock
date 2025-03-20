@@ -313,7 +313,7 @@ void *serviceFunction(void* args)
 {
   ros::Publisher* drone_stat_pub = (ros::Publisher*)args;
   plutodrone::Drone_stats new_msg; // Create a new message to publish
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(100);
   
   while (ros::ok()) 
   {

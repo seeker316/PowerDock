@@ -210,6 +210,7 @@ target_link_libraries(plutoserver ${catkin_LIBRARIES})
 
 catkin_install_python(PROGRAMS
   scripts/kalman_filter.py
+  scripts/data_via_rosservice.py
   scripts/control.py
   scripts/aruco.py
   scripts/aruco_client.py

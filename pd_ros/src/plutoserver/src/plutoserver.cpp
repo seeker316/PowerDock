@@ -46,7 +46,8 @@ void dataCallback(const plutodrone::Drone_stats::ConstPtr& msg) {
   ROS_INFO("MagX: %f, MagY: %f, MagZ: %f", msg->magX, msg->magY, msg->magZ);
   ROS_INFO("Roll: %f, Pitch: %f, Yaw: %f", msg->roll, msg->pitch, msg->yaw);
   ROS_INFO("Altitude: %f, Battery: %f, RSSI: %f", msg->alt, msg->battery, msg->rssi);
-  ROS_INFO("Anchor 1: %f, Anchor 2: %f, Anchor 3: %f", msg->a1, msg->a2, msg->a3);
+  ROS_INFO("Anchor 1: %f, Anchor 2: %f, Anchor 3: %f", (msg->a1/536870912), (msg->a2/536870912), (msg->a3/536870912));
+  // ROS_INFO("Anchor_1=%f Anchor_2=%f Anchor_3=%f", (req.a1/536870912),(req.a2/536870912),(req.a3/536870912));
 }
 
 int main(int argc, char **argv) {

@@ -90,7 +90,7 @@ void Protocol::evaluateCommand(int command)
       break;
 
     case MSP_ALTITUDE:
-      alt=(read32()/10)-0;
+      alt=read32();
 
       break;
 
