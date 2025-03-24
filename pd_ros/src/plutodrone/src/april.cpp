@@ -112,7 +112,7 @@ int main(int argc, char** argv)
     td->nthreads = 6;
 
 
-    cv::VideoCapture cap(8);
+    cv::VideoCapture cap(0);
     if (!cap.isOpened()) {
         ROS_ERROR("Error: Could not open the camera.");
         return -1;
