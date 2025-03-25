@@ -13,14 +13,41 @@ using namespace std;
 using namespace cv;
 
 // Camera parameters for RealSense D455F
-const double fx = 385.0124976;
-const double fy = 385.33449174;
+const double fx = 390.23;
+const double fy = 390.23;
 const double cx = 317.58273274;
 const double cy = 231.94288763;
 const double tag_size = 0.05;  // 5 cm
 
 plutodrone::Drone_stats current_drone_data;
 std::mutex data_mutex; 
+
+
+
+class kalman_filter
+{
+private:
+float Q, R, P, K = 0, x = 0;
+public:
+    kalman_filter(float Q_set,float R_set,float P_set)
+    {   
+        Q = Q_set;
+        R = R_set;
+        P = P_set;
+    
+    };
+    
+    float kalman_filter_calc(float measurement)
+    {
+        P = P + Q;
+        K = P / (P + R);
+        x = x + K * (measurement - x);
+        P = (1 - K) * P;
+        return x;
+    };
+};
+
+
 
 void dataCallback(const plutodrone::Drone_stats::ConstPtr& msg) {
     
@@ -80,10 +107,23 @@ int main(int argc, char** argv)
     ros::Subscriber dataSubscriber = nh.subscribe("drone_data", 1000, dataCallback);
     ros::Rate rate(100);
         
-    PIDController roll_pid(0.3, 0.0, 0.0, 1400, 1600);
-    PIDController pitch_pid(0.5, 0.0, 0.0, 1400, 1600);
+    // PIDController roll_pid(0.40625, 0.0,6.4, 1300, 1700);
+    PIDController roll_pid(0.4, 0.0,6.5, 1300, 1700);
+    // PIDController roll_pid(0.5, 0.0, 10, 1300, 1700);
+
+    PIDController pitch_pid(0.4, 0.0, 6.5, 1300, 1700);
+
+    // PIDController yaw_pid(0.0, 0.0, 0.0, 1200, 1800);
+    PIDController throttle_pid(2, 0.0, 1.5, 1300, 1800);
+
+    // PIDController roll_pid(0.0, 0.0, 0.0, 1300, 1700);
+    // PIDController pitch_pid(0.0, 0.0, 0.0, 1300, 1700);
     PIDController yaw_pid(0.0, 0.0, 0.0, 1200, 1800);
-    PIDController throttle_pid(5, 0.0, 2, 1300, 1800);
+    // PIDController throttle_pid(0.0, 0.0, 0.0, 1300, 1800);
+
+    kalman_filter z_kal(0.03,0.1,1);
+    kalman_filter x_kal(0.09,0.5,1);
+    kalman_filter y_kal(0.09,0.5,1);
 
     float error_x = 0, error_y = 0, error_yaw = 0, alt_error = 0, estimated_distance = 0;
 
@@ -112,7 +152,7 @@ int main(int argc, char** argv)
     td->nthreads = 6;
 
 
-    cv::VideoCapture cap(0);
+    cv::VideoCapture cap(6);
     if (!cap.isOpened()) {
         ROS_ERROR("Error: Could not open the camera.");
         return -1;
@@ -151,7 +191,7 @@ int main(int argc, char** argv)
         image_u8_t img_header = {gray.cols, gray.rows, gray.cols, gray.data};
         zarray_t* detections = apriltag_detector_detect(td, &img_header);
         
-        tof_data = current_drone_data.alt;
+        tof_data = z_kal.kalman_filter_calc(current_drone_data.alt);
 
 
         for (int i = 0; i < zarray_size(detections); i++) 
@@ -168,7 +208,8 @@ int main(int argc, char** argv)
                 estimate_tag_pose(&info, &pose);
 
                 std::lock_guard<std::mutex> lock(data_mutex);
-                estimated_distance = (pose.t->data[2]*1000) + 30;
+                // estimated_distance = (pose.t->data[2]*1000) + 30;
+                estimated_distance = tof_data;
                 
                 
 
@@ -193,6 +234,7 @@ int main(int argc, char** argv)
             else
             {
                 estimated_distance = tof_data;
+                // estimated_distance = last_known_distance;
             }
         }
         
@@ -216,8 +258,10 @@ int main(int argc, char** argv)
         if (estimated_distance < 2000)
         {
             alt_error = alt_hold - estimated_distance;
+            error_x = x_kal.kalman_filter_calc((error_x/fx)*estimated_distance);
+            error_y = y_kal.kalman_filter_calc((error_y/fy)*estimated_distance);
 
-            roll_pid_output = roll_pid.PID_Output(error_x, true);
+            roll_pid_output = roll_pid.PID_Output(error_x, false);
             pitch_pid_output = pitch_pid.PID_Output(error_y, false);
             yaw_pid_output = yaw_pid.PID_Output(error_yaw, true);
             throttle_pid_output = throttle_pid.PID_Output(alt_error, true);
