@@ -119,6 +119,7 @@ uint16_t debug_e11;
 extern uint16_t vbatLatestADC; //adding to read adc
 extern int32_t amperage;
 extern int32_t mAhDrawn;
+float previous_alt = 0; ////////////////
 
 /////////////////////////////////////////////////
 //extern int uwba_x;
@@ -733,6 +734,7 @@ void mspReleasePortIfAllocated(serialPort_t *serialPort)
 void mspInit(serialConfig_t *serialConfig)
 {
 	UART.init(UART2, BAUD_RATE_9600);
+	XRanging.init(FRONT);
     // calculate used boxes based on features and fill availableBoxes[] array
     memset(activeBoxIds, 0xFF, sizeof(activeBoxIds));
 
@@ -1088,13 +1090,26 @@ static bool processOutCommand(uint8_t cmdMSP)
 	case MSP_ALTITUDE:
             headSerialReply(4);
             float XExternal;
-            XExternal = XRanging.getRange(EXTERNAL);
-            serialize32(XExternal);
-            break;
+            XExternal = XRanging.getRange(FRONT);
+            if(XExternal > 0)
+			{	previous_alt = XExternal;
+            	serialize32(XExternal);
+            	break;
+			}
+            else if (previous_alt != 0)
+            {
+            	serialize32(previous_alt);
+            	break;
+            }
+            else
+            {
+            	serialize32(XExternal);
+            	break;
+            }
         case MSP_SONAR_ALTITUDE:
             headSerialReply(4);
 #if defined(SONAR)
-            serialize32(sonarGetLatestAlti-=tude());
+            serialize32(sonarGetLatestAltitude());
 #else
             serialize32(0);
 #endif
@@ -1129,7 +1144,7 @@ static bool processOutCommand(uint8_t cmdMSP)
         					// Parse the message and extract values
         					if (inputBuffer[0] == 'A' && inputBuffer[1] == ':') {
         						// Parse A:{value1,value2,value3}
-        						int a1, a2, a3;
+//        						int a1, a2, a3;
         						// if (sscanf(inputBuffer, "A:{%d,%d,%d}", &a1, &a2, &a3) == 3) {
 
         						// }
