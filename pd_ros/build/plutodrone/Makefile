@@ -68,6 +68,27 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -102,16 +123,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,17 +134,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/ubuntu/pd_ros/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+plutodrone/CMakeFiles/cam_pub.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/cam_pub.dir/rule
+.PHONY : plutodrone/CMakeFiles/cam_pub.dir/rule
+
+# Convenience name for target.
+cam_pub: plutodrone/CMakeFiles/cam_pub.dir/rule
+
+.PHONY : cam_pub
+
+# fast build rule for target.
+cam_pub/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_pub.dir/build.make plutodrone/CMakeFiles/cam_pub.dir/build
+.PHONY : cam_pub/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/key_handling.dir/rule:
@@ -213,6 +228,21 @@ plutonode/fast:
 .PHONY : plutonode/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/cam_sub.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/cam_sub.dir/rule
+.PHONY : plutodrone/CMakeFiles/cam_sub.dir/rule
+
+# Convenience name for target.
+cam_sub: plutodrone/CMakeFiles/cam_sub.dir/rule
+
+.PHONY : cam_sub
+
+# fast build rule for target.
+cam_sub/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_sub.dir/build.make plutodrone/CMakeFiles/cam_sub.dir/build
+.PHONY : cam_sub/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/plutodrone.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone.dir/rule
 .PHONY : plutodrone/CMakeFiles/plutodrone.dir/rule
@@ -228,6 +258,156 @@ plutodrone/fast:
 .PHONY : plutodrone/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/april.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/april.dir/rule
+.PHONY : plutodrone/CMakeFiles/april.dir/rule
+
+# Convenience name for target.
+april: plutodrone/CMakeFiles/april.dir/rule
+
+.PHONY : april
+
+# fast build rule for target.
+april/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/build
+.PHONY : april/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
+
+# Convenience name for target.
+plutodrone_gennodejs: plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
+
+.PHONY : plutodrone_gennodejs
+
+# fast build rule for target.
+plutodrone_gennodejs/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build
+.PHONY : plutodrone_gennodejs/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
+
+.PHONY : plutodrone_generate_messages_nodejs
+
+# fast build rule for target.
+plutodrone_generate_messages_nodejs/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
+.PHONY : plutodrone_generate_messages_nodejs/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
+
+# Convenience name for target.
+plutodrone_genlisp: plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
+
+.PHONY : plutodrone_genlisp
+
+# fast build rule for target.
+plutodrone_genlisp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_genlisp.dir/build.make plutodrone/CMakeFiles/plutodrone_genlisp.dir/build
+.PHONY : plutodrone_genlisp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutoswarm.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutoswarm.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutoswarm.dir/rule
+
+# Convenience name for target.
+plutoswarm: plutodrone/CMakeFiles/plutoswarm.dir/rule
+
+.PHONY : plutoswarm
+
+# fast build rule for target.
+plutoswarm/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/build
+.PHONY : plutoswarm/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
+
+.PHONY : plutodrone_generate_messages_lisp
+
+# fast build rule for target.
+plutodrone_generate_messages_lisp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
+.PHONY : plutodrone_generate_messages_lisp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_eus: plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
+
+.PHONY : plutodrone_generate_messages_eus
+
+# fast build rule for target.
+plutodrone_generate_messages_eus/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
+.PHONY : plutodrone_generate_messages_eus/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
+
+# Convenience name for target.
+_plutodrone_generate_messages_check_deps_PlutoPilot: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
+
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoPilot
+
+# fast build rule for target.
+_plutodrone_generate_messages_check_deps_PlutoPilot/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoPilot/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_geneus.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
+
+# Convenience name for target.
+plutodrone_geneus: plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
+
+.PHONY : plutodrone_geneus
+
+# fast build rule for target.
+plutodrone_geneus/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_geneus.dir/build.make plutodrone/CMakeFiles/plutodrone_geneus.dir/build
+.PHONY : plutodrone_geneus/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -241,6 +421,36 @@ roscpp_generate_messages_lisp: plutodrone/CMakeFiles/roscpp_generate_messages_li
 roscpp_generate_messages_lisp/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
@@ -286,36 +496,6 @@ std_msgs_generate_messages_cpp: plutodrone/CMakeFiles/std_msgs_generate_messages
 std_msgs_generate_messages_cpp/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_geneus.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
-
-# Convenience name for target.
-plutodrone_geneus: plutodrone/CMakeFiles/plutodrone_geneus.dir/rule
-
-.PHONY : plutodrone_geneus
-
-# fast build rule for target.
-plutodrone_geneus/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_geneus.dir/build.make plutodrone/CMakeFiles/plutodrone_geneus.dir/build
-.PHONY : plutodrone_geneus/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
@@ -378,6 +558,21 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : plutodrone/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -406,21 +601,6 @@ std_msgs_generate_messages_lisp: plutodrone/CMakeFiles/std_msgs_generate_message
 std_msgs_generate_messages_lisp/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/rule
-
-.PHONY : plutodrone_generate_messages_nodejs
-
-# fast build rule for target.
-plutodrone_generate_messages_nodejs/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build
-.PHONY : plutodrone_generate_messages_nodejs/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -453,6 +633,51 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+plutodrone/CMakeFiles/aruco.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/aruco.dir/rule
+.PHONY : plutodrone/CMakeFiles/aruco.dir/rule
+
+# Convenience name for target.
+aruco: plutodrone/CMakeFiles/aruco.dir/rule
+
+.PHONY : aruco
+
+# fast build rule for target.
+aruco/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/build
+.PHONY : aruco/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
 .PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_py.dir/rule
@@ -483,49 +708,124 @@ _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast:
 .PHONY : _plutodrone_generate_messages_check_deps_PlutoMsgAP/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/aruco.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/aruco.dir/rule
-.PHONY : plutodrone/CMakeFiles/aruco.dir/rule
+plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-aruco: plutodrone/CMakeFiles/aruco.dir/rule
+sensor_msgs_generate_messages_lisp: plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : aruco
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-aruco/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/build
-.PHONY : aruco/fast
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+sensor_msgs_generate_messages_nodejs: plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : roscpp_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
+plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-plutodrone_generate_messages_eus: plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/rule
+sensor_msgs_generate_messages_py: plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
-.PHONY : plutodrone_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-plutodrone_generate_messages_eus/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_eus.dir/build
-.PHONY : plutodrone_generate_messages_eus/fast
+sensor_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make plutodrone/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
+.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
+
+.PHONY : plutodrone_generate_messages_cpp
+
+# fast build rule for target.
+plutodrone_generate_messages_cpp/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
+.PHONY : plutodrone_generate_messages_cpp/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make plutodrone/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -558,36 +858,6 @@ plutodrone_generate_messages/fast:
 .PHONY : plutodrone_generate_messages/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
-
-# Convenience name for target.
-_plutodrone_generate_messages_check_deps_Drone_stats: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
-
-.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_Drone_stats/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
-
-# Convenience name for target.
-_plutodrone_generate_messages_check_deps_PlutoPilot: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/rule
-
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoPilot
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoPilot/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoPilot.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoPilot/fast
-
-# Convenience name for target.
 plutodrone/CMakeFiles/plutodrone_genpy.dir/rule:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_genpy.dir/rule
 .PHONY : plutodrone/CMakeFiles/plutodrone_genpy.dir/rule
@@ -601,21 +871,6 @@ plutodrone_genpy: plutodrone/CMakeFiles/plutodrone_genpy.dir/rule
 plutodrone_genpy/fast:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_genpy.dir/build.make plutodrone/CMakeFiles/plutodrone_genpy.dir/build
 .PHONY : plutodrone_genpy/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
-.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
-
-# Convenience name for target.
-_plutodrone_generate_messages_check_deps_PlutoMsg: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
-
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsg
-
-# fast build rule for target.
-_plutodrone_generate_messages_check_deps_PlutoMsg/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build
-.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsg/fast
 
 # Convenience name for target.
 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_aruco.dir/rule:
@@ -633,109 +888,34 @@ _plutodrone_generate_messages_check_deps_aruco/fast:
 .PHONY : _plutodrone_generate_messages_check_deps_aruco/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+_plutodrone_generate_messages_check_deps_PlutoMsg: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/rule
 
-.PHONY : std_msgs_generate_messages_nodejs
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsg
 
 # fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make plutodrone/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
+_plutodrone_generate_messages_check_deps_PlutoMsg/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_PlutoMsg.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_PlutoMsg/fast
 
 # Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
+plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
+.PHONY : plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
 
 # Convenience name for target.
-plutodrone_generate_messages_cpp: plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/rule
+_plutodrone_generate_messages_check_deps_Drone_stats: plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/rule
 
-.PHONY : plutodrone_generate_messages_cpp
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats
 
 # fast build rule for target.
-plutodrone_generate_messages_cpp/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_cpp.dir/build
-.PHONY : plutodrone_generate_messages_cpp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutoswarm.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutoswarm.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutoswarm.dir/rule
-
-# Convenience name for target.
-plutoswarm: plutodrone/CMakeFiles/plutoswarm.dir/rule
-
-.PHONY : plutoswarm
-
-# fast build rule for target.
-plutoswarm/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutoswarm.dir/build.make plutodrone/CMakeFiles/plutoswarm.dir/build
-.PHONY : plutoswarm/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-plutodrone_generate_messages_lisp: plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/rule
-
-.PHONY : plutodrone_generate_messages_lisp
-
-# fast build rule for target.
-plutodrone_generate_messages_lisp/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build.make plutodrone/CMakeFiles/plutodrone_generate_messages_lisp.dir/build
-.PHONY : plutodrone_generate_messages_lisp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
-
-# Convenience name for target.
-plutodrone_genlisp: plutodrone/CMakeFiles/plutodrone_genlisp.dir/rule
-
-.PHONY : plutodrone_genlisp
-
-# fast build rule for target.
-plutodrone_genlisp/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_genlisp.dir/build.make plutodrone/CMakeFiles/plutodrone_genlisp.dir/build
-.PHONY : plutodrone_genlisp/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/april.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/april.dir/rule
-.PHONY : plutodrone/CMakeFiles/april.dir/rule
-
-# Convenience name for target.
-april: plutodrone/CMakeFiles/april.dir/rule
-
-.PHONY : april
-
-# fast build rule for target.
-april/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/april.dir/build.make plutodrone/CMakeFiles/april.dir/build
-.PHONY : april/fast
-
-# Convenience name for target.
-plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f CMakeFiles/Makefile2 plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
-.PHONY : plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
-
-# Convenience name for target.
-plutodrone_gennodejs: plutodrone/CMakeFiles/plutodrone_gennodejs.dir/rule
-
-.PHONY : plutodrone_gennodejs
-
-# fast build rule for target.
-plutodrone_gennodejs/fast:
-	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build.make plutodrone/CMakeFiles/plutodrone_gennodejs.dir/build
-.PHONY : plutodrone_gennodejs/fast
+_plutodrone_generate_messages_check_deps_Drone_stats/fast:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build.make plutodrone/CMakeFiles/_plutodrone_generate_messages_check_deps_Drone_stats.dir/build
+.PHONY : _plutodrone_generate_messages_check_deps_Drone_stats/fast
 
 src/Communication.o: src/Communication.cpp.o
 
@@ -899,6 +1079,60 @@ src/aruco.cpp.s:
 	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/aruco.dir/build.make plutodrone/CMakeFiles/aruco.dir/src/aruco.cpp.s
 .PHONY : src/aruco.cpp.s
 
+src/cam_pub.o: src/cam_pub.cpp.o
+
+.PHONY : src/cam_pub.o
+
+# target to build an object file
+src/cam_pub.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_pub.dir/build.make plutodrone/CMakeFiles/cam_pub.dir/src/cam_pub.cpp.o
+.PHONY : src/cam_pub.cpp.o
+
+src/cam_pub.i: src/cam_pub.cpp.i
+
+.PHONY : src/cam_pub.i
+
+# target to preprocess a source file
+src/cam_pub.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_pub.dir/build.make plutodrone/CMakeFiles/cam_pub.dir/src/cam_pub.cpp.i
+.PHONY : src/cam_pub.cpp.i
+
+src/cam_pub.s: src/cam_pub.cpp.s
+
+.PHONY : src/cam_pub.s
+
+# target to generate assembly for a file
+src/cam_pub.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_pub.dir/build.make plutodrone/CMakeFiles/cam_pub.dir/src/cam_pub.cpp.s
+.PHONY : src/cam_pub.cpp.s
+
+src/cam_sub.o: src/cam_sub.cpp.o
+
+.PHONY : src/cam_sub.o
+
+# target to build an object file
+src/cam_sub.cpp.o:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_sub.dir/build.make plutodrone/CMakeFiles/cam_sub.dir/src/cam_sub.cpp.o
+.PHONY : src/cam_sub.cpp.o
+
+src/cam_sub.i: src/cam_sub.cpp.i
+
+.PHONY : src/cam_sub.i
+
+# target to preprocess a source file
+src/cam_sub.cpp.i:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_sub.dir/build.make plutodrone/CMakeFiles/cam_sub.dir/src/cam_sub.cpp.i
+.PHONY : src/cam_sub.cpp.i
+
+src/cam_sub.s: src/cam_sub.cpp.s
+
+.PHONY : src/cam_sub.s
+
+# target to generate assembly for a file
+src/cam_sub.cpp.s:
+	cd /home/ubuntu/pd_ros/build && $(MAKE) -f plutodrone/CMakeFiles/cam_sub.dir/build.make plutodrone/CMakeFiles/cam_sub.dir/src/cam_sub.cpp.s
+.PHONY : src/cam_sub.cpp.s
+
 src/key_command.o: src/key_command.cpp.o
 
 .PHONY : src/key_command.o
@@ -960,50 +1194,62 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... cam_pub"
 	@echo "... key_handling"
 	@echo "... key_command"
 	@echo "... plutonode"
+	@echo "... cam_sub"
 	@echo "... plutodrone"
+	@echo "... april"
+	@echo "... plutodrone_gennodejs"
+	@echo "... plutodrone_generate_messages_nodejs"
+	@echo "... plutodrone_genlisp"
+	@echo "... plutoswarm"
+	@echo "... plutodrone_generate_messages_lisp"
+	@echo "... list_install_components"
+	@echo "... plutodrone_generate_messages_eus"
+	@echo "... edit_cache"
+	@echo "... _plutodrone_generate_messages_check_deps_PlutoPilot"
+	@echo "... plutodrone_geneus"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... plutodrone_geneus"
 	@echo "... test"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... plutodrone_gencpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... plutodrone_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... aruco"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_cpp"
 	@echo "... plutodrone_generate_messages_py"
 	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsgAP"
-	@echo "... aruco"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... list_install_components"
-	@echo "... plutodrone_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... plutodrone_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... plutodrone_generate_messages"
+	@echo "... plutodrone_genpy"
+	@echo "... _plutodrone_generate_messages_check_deps_aruco"
+	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsg"
 	@echo "... install"
 	@echo "... _plutodrone_generate_messages_check_deps_Drone_stats"
-	@echo "... edit_cache"
-	@echo "... _plutodrone_generate_messages_check_deps_PlutoPilot"
-	@echo "... plutodrone_genpy"
-	@echo "... _plutodrone_generate_messages_check_deps_PlutoMsg"
-	@echo "... _plutodrone_generate_messages_check_deps_aruco"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... plutodrone_generate_messages_cpp"
-	@echo "... plutoswarm"
-	@echo "... plutodrone_generate_messages_lisp"
-	@echo "... plutodrone_genlisp"
-	@echo "... april"
-	@echo "... plutodrone_gennodejs"
 	@echo "... src/Communication.o"
 	@echo "... src/Communication.i"
 	@echo "... src/Communication.s"
@@ -1022,6 +1268,12 @@ help:
 	@echo "... src/aruco.o"
 	@echo "... src/aruco.i"
 	@echo "... src/aruco.s"
+	@echo "... src/cam_pub.o"
+	@echo "... src/cam_pub.i"
+	@echo "... src/cam_pub.s"
+	@echo "... src/cam_sub.o"
+	@echo "... src/cam_sub.i"
+	@echo "... src/cam_sub.s"
 	@echo "... src/key_command.o"
 	@echo "... src/key_command.i"
 	@echo "... src/key_command.s"

@@ -13,6 +13,17 @@ plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/aprilta
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/apriltag/common/workerpool.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/apriltag/common/zarray.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/apriltag/tag16h5.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/cv_bridge/cv_bridge.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/camera_publisher.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/camera_subscriber.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/exception.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/exports.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/image_transport.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/loader_fwds.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/publisher.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/single_subscriber_publisher.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/subscriber.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/image_transport/transport_hints.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/assert.h
@@ -69,6 +80,13 @@ plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/typ
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/sensor_msgs/CameraInfo.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/sensor_msgs/CompressedImage.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/std_msgs/Int16.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/std_msgs/Int16MultiArray.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayDimension.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayLayout.h
@@ -81,6 +99,8 @@ plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/co
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/base.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/bufferpool.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/check.hpp
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/core.hpp
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/core_c.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/cuda.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/cuda.inl.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/cuda_types.hpp
@@ -104,6 +124,7 @@ plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/co
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/saturate.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/traits.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/types.hpp
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/types_c.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/utility.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/utils/instrumentation.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/core/utils/tls.hpp
@@ -152,6 +173,8 @@ plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/fl
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/highgui.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/imgcodecs.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/imgproc.hpp
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/imgproc/imgproc.hpp
+plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/imgproc/types_c.h
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/ml.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/ml/ml.inl.hpp
 plutodrone/CMakeFiles/april.dir/src/april.cpp.o: /usr/include/opencv4/opencv2/objdetect.hpp

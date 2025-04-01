@@ -3,11 +3,18 @@
 #include <cmath>
 #include <ros/ros.h>
 #include <std_msgs/Int16MultiArray.h>
-// #include <librealsense2/rs.hpp>
+#include <std_msgs/Int16.h>
+
+#include <librealsense2/rs.hpp>
+
 #include <apriltag/apriltag.h>
 #include <apriltag/apriltag_pose.h>
 #include <apriltag/tag16h5.h>
-#include "plutodrone/Drone_stats.h" 
+#include "plutodrone/Drone_stats.h"
+
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/Image.h>
 
 using namespace std;
 using namespace cv;
@@ -22,6 +29,10 @@ const double tag_size = 0.05;  // 5 cm
 plutodrone::Drone_stats current_drone_data;
 std::mutex data_mutex; 
 
+int pos_step = 50;
+int alt_hold = 500;
+
+int frame_centre_x = 320,frame_centre_y = 240;
 
 
 class kalman_filter
@@ -98,6 +109,15 @@ public:
 
 };
 
+void change_setpoint(const std_msgs::Int16::ConstPtr& msg) {
+    int key = msg->data;
+    int new_hold;
+    switch (key) {
+        case 63: new_hold = frame_centre_x + pos_step; frame_centre_x = new_hold; break;
+        case 64: new_hold = frame_centre_x - pos_step; frame_centre_x = new_hold; break;
+    }
+    
+}
 
 int main(int argc, char** argv)
 {
@@ -105,16 +125,19 @@ int main(int argc, char** argv)
     ros::NodeHandle nh;
     ros::Publisher pid_pub = nh.advertise<std_msgs::Int16MultiArray>("/pid_values", 10);
     ros::Subscriber dataSubscriber = nh.subscribe("drone_data", 1000, dataCallback);
+    ros::Subscriber set_point = nh.subscribe("/input_key", 1, change_setpoint);
     ros::Rate rate(100);
+
+    image_transport::ImageTransport it(nh);
+    image_transport::Publisher image_pub = it.advertise("/camera/image_raw", 10);
         
     // PIDController roll_pid(0.40625, 0.0,6.4, 1300, 1700);
-    PIDController roll_pid(0.4, 0.0,6.5, 1300, 1700);
-    // PIDController roll_pid(0.5, 0.0, 10, 1300, 1700);
+    PIDController roll_pid(0.25, 0.0,6.35, 1300, 1700);
 
-    PIDController pitch_pid(0.4, 0.0, 6.5, 1300, 1700);
+    PIDController pitch_pid(0.25, 0.0, 6.35, 1300, 1700);
 
     // PIDController yaw_pid(0.0, 0.0, 0.0, 1200, 1800);
-    PIDController throttle_pid(2, 0.0, 1.5, 1300, 1800);
+    PIDController throttle_pid(1.425, 0.0, 0.5, 1300, 1800);
 
     // PIDController roll_pid(0.0, 0.0, 0.0, 1300, 1700);
     // PIDController pitch_pid(0.0, 0.0, 0.0, 1300, 1700);
@@ -129,7 +152,6 @@ int main(int argc, char** argv)
 
     float roll_pid_output = 0, pitch_pid_output = 0, yaw_pid_output = 0, throttle_pid_output = 0;
 
-    int alt_hold = 500;
 
     float depth_value,tof_data; //because realsense provides data in 16 bits
     
@@ -148,10 +170,7 @@ int main(int argc, char** argv)
     td->quad_decimate = 2.0;
     td->quad_sigma = 0.05;
     td->decode_sharpening = 0.25;
-    td->refine_edges = 0;
-    td->nthreads = 6;
-
-
+    td->refine_edges = 0;#include <opencv2/opencv.hpp>
     cv::VideoCapture cap(6);
     if (!cap.isOpened()) {
         ROS_ERROR("Error: Could not open the camera.");
@@ -160,9 +179,10 @@ int main(int argc, char** argv)
 
     cap.set(CAP_PROP_FRAME_WIDTH, 640);
     cap.set(CAP_PROP_FRAME_HEIGHT, 480);
-    // cap.set(CAP_PROP_FPS, 30);
-    // cap.set(CAP_PROP_AUTO_EXPOSURE, 0.25);
-    // cap.set(CAP_PROP_EXPOSURE, -4);
+    // // cap.set(CAP_PROP_FPS, 30);
+    // // cap.set(CAP_PROP_AUTO_EXPOSURE, 0.25);
+    // // cap.set(CAP_PROP_EXPOSURE, -4);
+
     // rs2::pipeline pipeline;
     // rs2::config config;
     // config.enable_stream(RS2_STREAM_COLOR, 640,480, RS2_FORMAT_BGR8, 60);
@@ -182,15 +202,21 @@ int main(int argc, char** argv)
         
         // cv::Mat frame(cv::Size( 640,480), CV_8UC3, (void*)color_frame.get_data(), cv::Mat::AUTO_STEP);
         // cv::Mat depth = cv::Mat(cv::Size( 640,480), CV_16U, (void*)depth_frame.get_data(), cv::Mat::AUTO_STEP);  // Convert depth frame to Mat
+        
         cap.read(frame);
 
         cv::Mat gray;
         if (frame.empty()) break;
 
+        cv_bridge::CvImagePtr cv_ptr;
+
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
         image_u8_t img_header = {gray.cols, gray.rows, gray.cols, gray.data};
         zarray_t* detections = apriltag_detector_detect(td, &img_header);
         
+        
+
+
         tof_data = z_kal.kalman_filter_calc(current_drone_data.alt);
 
 
@@ -199,7 +225,7 @@ int main(int argc, char** argv)
             apriltag_detection_t* det;
             zarray_get(detections, i, &det);
 
-            if (det->id == 0 && det->decision_margin > 30) 
+            if (det->id == 0 && det->decision_margin > 50) 
             {
                 detected = true;
 
@@ -216,8 +242,12 @@ int main(int argc, char** argv)
                 int tag_center_x = det->c[0];
                 int tag_center_y = det->c[1];
 
-                error_x = tag_center_x - (frame.cols / 2);
-                error_y = tag_center_y - (frame.rows / 2);
+                // error_x = tag_center_x - (frame.cols / 2);
+                // error_y = tag_center_y - (frame.rows / 2);
+
+                error_x = tag_center_x - frame_centre_x;
+                error_y = tag_center_y - frame_centre_y;
+
                 error_yaw = atan2(pose.R->data[3], pose.R->data[0]) * 180.0 / CV_PI;
 
                 last_known_position = {tag_center_x, tag_center_y};
@@ -276,7 +306,7 @@ int main(int argc, char** argv)
         pid_pub.publish(msg);
 
 
-        ROS_INFO("Published: Dist = %f, Roll=%d, Pitch=%d, Yaw=%d, Throttle=%d",
+        ROS_INFO("X_Hold = %d ,Published: Dist = %f, Roll=%d, Pitch=%d, Yaw=%d, Throttle=%d",static_cast<int>(frame_centre_x),
                 static_cast<float>(estimated_distance),static_cast<int>(roll_pid_output), static_cast<int>(pitch_pid_output),
                 static_cast<int>(yaw_pid_output), static_cast<int>(throttle_pid_output));
 
@@ -299,7 +329,17 @@ int main(int argc, char** argv)
         putText(frame, "Throttle PID: " + to_string(int(throttle_pid_output)), Point(text_x, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
 
 
-        cv::imshow("April Tracking with PID", frame);
+        // cv::imshow("April Tracking with PID", frame);
+
+        cv_ptr = cv_bridge::CvImagePtr(new cv_bridge::CvImage);
+        cv_ptr->header.stamp = ros::Time::now(); // Time stamp
+        cv_ptr->header.frame_id = "camera";      // Frame ID
+        cv_ptr->encoding = sensor_msgs::image_encodings::BGR8; // Encoding format
+        cv_ptr->image = frame; // The captured frame
+
+        // Publish the image
+        image_pub.publish(cv_ptr->toImageMsg());
+        ROS_INFO("publishing");
 
         if (cv::waitKey(1) == 'q') break;
 

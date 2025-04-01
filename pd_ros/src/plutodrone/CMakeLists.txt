@@ -16,6 +16,11 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  sensor_msgs
+  cv_bridge
+  image_transport
+  
+
 )
 
 ## System dependencies are found with CMake's conventions
@@ -273,8 +278,35 @@ target_link_libraries(april
   ${OpenCV_LIBS}
   apriltag
 )
-target_link_libraries(april ${catkin_LIBRARIES} realsense2)
+target_link_libraries(april ${catkin_LIBRARIES} 
+    ${cv_bridge_LIBRARIES}
+    ${image_transport_LIBRARIES}
+)
 
 #add_executable(listener src/listener.cpp)
 #target_link_libraries(listener ${catkin_LIBRARIES})
 #add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+
+
+add_executable(cam_pub src/cam_pub.cpp)
+
+
+target_link_libraries(cam_pub
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${cv_bridge_LIBRARIES}
+  ${image_transport_LIBRARIES}
+
+)
+# target_link_libraries(cam_pub ${catkin_LIBRARIES} realsense2)
+
+add_executable(cam_sub src/cam_sub.cpp)
+
+
+target_link_libraries(cam_sub
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${cv_bridge_LIBRARIES}
+  ${image_transport_LIBRARIES}
+
+)
