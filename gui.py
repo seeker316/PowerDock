@@ -15,18 +15,10 @@ import threading
 from plutodrone.msg import Drone_stats
 import math
 from kivy.garden import joystick
-
-import threading
-import rospy
+import numpy as np
 import cv2
-import os
 from sensor_msgs.msg import Image as ROSImage
 from cv_bridge import CvBridge
-from kivymd.app import MDApp
-from kivy.clock import Clock
-from kivy.lang import Builder
-from kivy.uix.image import Image as KivyImage
-import numpy as np
 from kivy.graphics.texture import Texture
 
 from kivy.core.window import Window
