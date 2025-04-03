@@ -16,6 +16,22 @@ from plutodrone.msg import Drone_stats
 import math
 from kivy.garden import joystick
 
+import threading
+import rospy
+import cv2
+import os
+from sensor_msgs.msg import Image as ROSImage
+from cv_bridge import CvBridge
+from kivymd.app import MDApp
+from kivy.clock import Clock
+from kivy.lang import Builder
+from kivy.uix.image import Image as KivyImage
+import numpy as np
+from kivy.graphics.texture import Texture
+
+from kivy.core.window import Window
+from std_msgs.msg import Int16
+
 KV = '''
 BoxLayout:
     orientation: 'vertical'
@@ -165,12 +181,10 @@ BoxLayout:
                 elevation: 10
                 md_bg_color: 0.13, 0.13, 0.13, 1
 
-            Widget:
+            Image:
                 id: camera_feed
                 size_hint: 1, 1
-                canvas.before:
-                    Color:
-                        rgba: 0.2, 0.2, 0.2, 1
+                fit_mode: 'contain'
 
 
 
@@ -332,6 +346,21 @@ class PathPlannerWidget(Widget):
         self.add_widget(self.hover_label)
         self.hover_label.opacity = 0  # Initially hidden
 
+        Clock.schedule_interval(self.update_drone_position, 0.5)
+
+    def update_drone_position(self, dt):
+        """Update the drone's position using UWB data."""
+        uwb_x, uwb_y, uwb_z = 2, 3, 2  # Simulated UWB values
+        widget_x, widget_y = self.pos
+        widget_width, widget_height = self.size
+
+        # Convert UWB coordinates to screen space
+        drone_x = widget_x + (uwb_x / self.ARENA_SIZE_METERS) * widget_width
+        drone_y = widget_y + (uwb_y / self.ARENA_SIZE_METERS) * widget_height
+
+        self.drone.pos = (drone_x - 20, drone_y - 20)
+
+
     def scale_to_arena(self, pos):
         """Convert screen pixels to real-world 4m x 4m coordinates"""
         widget_x, widget_y = self.pos  # Get widget position in the window
@@ -342,7 +371,6 @@ class PathPlannerWidget(Widget):
         y_meters = ((pos[1] - widget_y) / widget_height) * self.ARENA_SIZE_METERS
 
         return x_meters, y_meters
-    
     
     def on_mouse_move(self, window, pos):
         """Update label position dynamically and show (X, Y, Z)."""
@@ -371,38 +399,21 @@ class PathPlannerWidget(Widget):
                 print(f"Clicked at: {scaled_pos} meters")  # Debugging output
                 self.add_point(scaled_pos)
 
-    def on_key_down(self, window, key, *args):
-        """Handles 'P' key for marking points."""
-        if key == 112:  # ASCII code for 'P'
-            self.add_point(Window.mouse_pos)
-
     def add_point(self, pos):
         """Adds a new point to the path and redraws."""
+        x,y = pos
+        z_value = MDApp.get_running_app().root.ids.path_slider.value
+        pos = x,y,z_value
+        print(pos)
         self.points.append(pos)
         self.update_path()
 
-    # def update_path(self):
-    #     """Redraws the path with marked points and connecting lines."""
-    #     self.canvas.remove(self.path_group)  # Remove old path
-    #     self.path_group.clear()
-
-    #     self.path_group.add(Color(0, 0, 1, 1))  # Blue for lines
-    #     if len(self.points) > 1:
-    #         self.path_group.add(Line(points=sum(self.points, ()), width=2))
-
-    #     self.path_group.add(Color(1, 0, 0, 1))  # Red for points
-    #     for x, y in self.points:
-    #         self.path_group.add(Ellipse(pos=(x - 5, y - 5), size=(10, 10)))  # Small circles
-
-    #     self.canvas.add(self.path_group)  # Re-add updated path
-    
     def update_path(self):
         """Redraws the path separately without clearing the drone image."""
         self.canvas.remove(self.path_group)  # Remove old path only
         self.path_group.clear()
 
         self.path_group.add(Color(0, 0, 1, 1))  # Blue path
-        
 
         if self.points:
             screen_points = []
@@ -420,15 +431,9 @@ class PathPlannerWidget(Widget):
         self.canvas.add(self.path_group)  # Re-add updated path
 
 
-
     def move_drone(self, start_pos, end_pos, duration):
         """Moves the drone smoothly from start to end position."""
-        print(f"Moving drone from {start_pos} to {end_pos} in {duration}s")
-
-        if not self.drone.parent:
-            self.add_widget(self.drone)  # Ensure drone marker is visible
-            print("Drone marker added to the screen.")
-
+        # Interpolate between start_pos and end_pos over a period of time (duration)
         steps = 30  # Number of steps for smooth movement
         step_size = 1.0 / steps
 
@@ -437,14 +442,12 @@ class PathPlannerWidget(Widget):
                 x = start_pos[0] + (end_pos[0] - start_pos[0]) * step
                 y = start_pos[1] + (end_pos[1] - start_pos[1]) * step
                 self.drone.pos = (x - 20, y - 20)  # Move drone
-                print(f"Step {step:.2f}: Drone at {self.drone.pos}")
-
                 Clock.schedule_once(lambda dt: move_step(step + step_size), duration / steps)
             else:
+                # Ensure drone is exactly at the end position when the animation finishes
                 self.drone.pos = (end_pos[0] - 20, end_pos[1] - 20)
-                print("Drone reached the destination.")
 
-        move_step(0)
+        move_step(0)  # Start movement
 
         
       
@@ -452,9 +455,20 @@ class DroneApp(MDApp):
     def build(self):
         self.is_paused = False 
         self.root = Builder.load_string(KV)
+        self.bridge = CvBridge()
+        self.cv_image = None  # Store the latest frame
+        self.image_path = "/tmp/ros_camera_feed.jpg"  # Temporary image file
+
+        # Create a default image to avoid a white screen
+        self.create_default_image()
         rospy.init_node('pluto_gui_node', anonymous=True)
+        self.pub = rospy.Publisher('/input_key', Int16, queue_size=1)
+        Window.bind(on_key_down=self.on_key_down)
+        Window.bind(on_key_up=self.on_key_up)
         self.subscriber_thread = threading.Thread(target=self.start_ros_subscriber, daemon=True)
         self.subscriber_thread.start()
+
+        Clock.schedule_interval(self.update_kivy_image, 1.0 / 30.0)  
         return self.root
 
     def start_ros_subscriber(self):
@@ -464,6 +478,91 @@ class DroneApp(MDApp):
 
         rospy.spin()
 
+    def on_key_down(self, instance, keyboard, keycode, text, modifiers):
+        print(f"Received keycode: {keycode}")  # Debugging
+
+        # Extract keycode if it's a tuple
+        keycode = keycode[1] if isinstance(keycode, tuple) else keycode
+
+        keyboard_control = {
+            82: 10,  # up
+            80: 30,  # left
+            79: 40,  # right
+            26: 50,  # w
+            22: 60,  # s
+            44: 70,  # space
+            21: 80,  # r
+            23: 90,  # t
+            19: 100, # p
+            12: 85,  # i
+            18: 95,  # o
+            81: 110, # down
+            17: 120, # n
+            20: 130, # q
+            8:  140, # e
+            4: 150,  # a
+            7: 160,  # d
+            46: 15,  # +
+            30: 25,  # 1
+            31: 30,  # 2
+            32: 35,  # 3
+            33: 45   # 4
+        }
+
+        msg_pub = keyboard_control.get(keycode, 80)  # Default to 80 if key is not in dictionary
+
+        # Ensure self.pub is initialized
+        if not hasattr(self, 'pub') or self.pub is None:
+            print("Error: self.pub is not initialized")
+            return
+
+        # Update GUI label safely
+        if hasattr(self, 'label'):
+            self.label.text = f"Key Pressed: {keycode} Command: {msg_pub}"
+
+        # Publish message
+        self.pub.publish(msg_pub)
+
+    def on_key_up(self, window, key, scancode):
+        print(f"Key Released: {key}")
+        # Stop movement when the key is released
+
+
+    def create_default_image(self):
+        """Create a default black image to avoid a white screen."""
+        default_img = cv2.imread("default.jpg")  # Try loading an existing image
+        if default_img is None:
+            default_img = 255 * np.ones((480, 640, 3), dtype=np.uint8)  # Create a white image
+            cv2.imwrite("default.jpg", default_img)  # Save it
+
+    def start_ros_subscriber(self):
+        """ROS Subscriber to get the drone camera feed."""
+        rospy.Subscriber("/camera/image_raw", ROSImage, self.image_callback)
+        rospy.spin()
+
+    def image_callback(self, msg):
+        """Convert incoming ROS image message to OpenCV format."""
+        try:
+            self.cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        except Exception as e:
+            rospy.logerr(f"Failed to process image: {e}")
+
+    def update_kivy_image(self, dt):
+        """Convert OpenCV image to Kivy texture and update UI."""
+        if self.cv_image is not None:
+            # Convert BGR to RGB
+            rgb_image = cv2.cvtColor(self.cv_image, cv2.COLOR_BGR2RGB)
+
+            # Flip the image vertically to correct orientation
+            flipped_image = cv2.flip(rgb_image, 0)
+
+            # Convert OpenCV image to Kivy texture
+            texture = Texture.create(size=(flipped_image.shape[1], flipped_image.shape[0]), colorfmt='rgb')
+            texture.blit_buffer(flipped_image.tobytes(), colorfmt='rgb', bufferfmt='ubyte')
+
+            # Update the Kivy Image widget
+            self.root.ids.camera_feed.texture = texture
+            
     def snap_slider(self, slider):
         """Snap the slider to predefined values when released."""
         fixed_values = [30, 50, 70, 100, 130]
