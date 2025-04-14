@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "plutodrone: 3 messages, 2 services")
+message(STATUS "plutodrone: 3 messages, 3 services")
 
 set(MSG_I_FLAGS "-Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -42,6 +42,11 @@ add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" ""
 )
 
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
+add_custom_target(_plutodrone_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "plutodrone" "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -80,6 +85,12 @@ _generate_srv_cpp(plutodrone
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
 )
+_generate_srv_cpp(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/plutodrone
+)
 
 ### Generating Module File
 _generate_module_cpp(plutodrone
@@ -102,6 +113,8 @@ add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
+add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_cpp _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -145,6 +158,12 @@ _generate_srv_eus(plutodrone
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
 )
+_generate_srv_eus(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/plutodrone
+)
 
 ### Generating Module File
 _generate_module_eus(plutodrone
@@ -167,6 +186,8 @@ add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
+add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_eus _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -210,6 +231,12 @@ _generate_srv_lisp(plutodrone
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
 )
+_generate_srv_lisp(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/plutodrone
+)
 
 ### Generating Module File
 _generate_module_lisp(plutodrone
@@ -232,6 +259,8 @@ add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
+add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_lisp _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -275,6 +304,12 @@ _generate_srv_nodejs(plutodrone
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
 )
+_generate_srv_nodejs(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/plutodrone
+)
 
 ### Generating Module File
 _generate_module_nodejs(plutodrone
@@ -297,6 +332,8 @@ add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messag
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
+add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_nodejs _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -340,6 +377,12 @@ _generate_srv_py(plutodrone
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
 )
+_generate_srv_py(plutodrone
+  "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/plutodrone
+)
 
 ### Generating Module File
 _generate_module_py(plutodrone
@@ -362,6 +405,8 @@ add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_c
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv" NAME_WE)
+add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv" NAME_WE)
 add_dependencies(plutodrone_generate_messages_py _plutodrone_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -55,9 +55,31 @@ int Protocol::read32()
   + ((inputBuffer[bufferIndex++] & 0xff) << 16) + ((inputBuffer[bufferIndex++] & 0xff) << 24);
 }
 
+float Protocol::readFloat32()
+{
+    union {
+        uint32_t u;
+        float f;
+    } convert;
+
+    convert.u = read32();  // Reuse your existing read32()
+    return convert.f;
+}
+
+float Protocol::readScaledFloat()
+{
+    int low = inputBuffer[bufferIndex++] & 0xFF;
+    int high = inputBuffer[bufferIndex++] << 8;
+    int16_t raw = low + high;
+    return (float)raw / 1000.0f;
+}
+
+
 void Protocol::evaluateCommand(int command)
 {
   switch (command) {
+
+
 
     case MSP_FC_VERSION:
       FC_versionMajor=read8();
@@ -65,6 +87,25 @@ void Protocol::evaluateCommand(int command)
       FC_versionPatchLevel=read8();
 
       break;
+    
+    case MSP_UWB:
+      // union {
+      //   uint32_t u;
+      //   float f;
+      //   } a1;
+        // int a1 = read32();
+        // a1 = readFloat32();
+        // a2 = readFloat32();
+        // a3 = readFloat32();
+        // a1 = a1.f;
+        // float value = *((float*)&a1);
+        a1 = read32();
+        a2 = read32();
+        a3 = read32();
+        // a1 = readScaledFloat();
+        // a2 = readScaledFloat();
+        // a3 = readScaledFloat();
+        break;  
 
     case MSP_RAW_IMU:
 
@@ -121,12 +162,7 @@ void Protocol::evaluateCommand(int command)
 
       break;
 
-    case MSP_UWB:
-      a1 = read32();
-      a2 = read32();
-      a3 = read32();
-
-      break;
+    
 
     default:
       break;

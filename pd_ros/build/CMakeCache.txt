@@ -306,6 +306,9 @@ EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
 //Empy script
 EMPY_SCRIPT:STRING=/usr/lib/python3/dist-packages/em.py
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
+
 //Path to a library.
 GMOCK_LIBRARY:FILEPATH=GMOCK_LIBRARY-NOTFOUND
 
@@ -514,9 +517,6 @@ plutoserver_BINARY_DIR:STATIC=/home/ubuntu/pd_ros/build/plutoserver
 
 //Value Computed by CMake
 plutoserver_SOURCE_DIR:STATIC=/home/ubuntu/pd_ros/src/plutoserver
-
-//The directory containing a CMake configuration file for realsense2.
-realsense2_DIR:PATH=/usr/local/lib/cmake/realsense2
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake

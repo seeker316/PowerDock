@@ -49,6 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/plutodrone/srv" TYPE FILE FILES
     "/home/ubuntu/pd_ros/src/plutodrone/srv/PlutoPilot.srv"
     "/home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv"
+    "/home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv"
     )
 endif()
 

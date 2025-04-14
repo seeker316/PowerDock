@@ -230,6 +230,10 @@
 #include <plutodrone/PlutoMsgAP.h>
 #include <plutodrone/Drone_stats.h>
 
+#include <ros/time.h>
+
+ros::Time start_time;  // Variable to store the timestamp of the first a1 value
+bool a1_received = false;
 
 #define TRIM_MAX 1000
 #define TRIM_MIN -1000
@@ -334,9 +338,37 @@ void *serviceFunction(void* args)
     new_msg.alt = alt;
     new_msg.battery = battery;
     new_msg.rssi = rssi;
-    new_msg.a1 = a1;
-    new_msg.a2 = a2;
-    new_msg.a3 = a3;
+    // new_msg.a1 = ((a1/536870912) < 5 && (a1/536870912) >= 0) ? (a1/536870912) : new_msg.a1;
+    // new_msg.a2 = ((a2/536870912) < 5 && (a2/536870912) >= 0) ? (a2/536870912) : new_msg.a2;
+    // new_msg.a3 = ((a3/536870912) < 5 && (a3/536870912) >= 0) ? (a3/536870912) : new_msg.a3;
+
+    // if (!a1_received && (a1) < 5 && (a1) >= 0) 
+    
+    if (!a1_received) 
+    {
+      start_time = ros::Time::now();  // Capture the current time
+      a1_received = true;  // Mark that the first a1 value is received
+    }
+
+    if (a1_received && (a1) != new_msg.a1) 
+    {
+      ros::Time end_time = ros::Time::now();  // Capture the current time
+      ros::Duration time_diff = end_time - start_time;  // Calculate the time difference
+      ROS_INFO("Time difference for a1 update: %.2f seconds", time_diff.toSec());
+      
+      a1_received = false;  // Reset the flag after the value is updated
+    }
+
+     // Update the new_msg a1, a2, a3 with condition
+    new_msg.a1 = (a1);
+    // ROS_INFO("Time difference",new_msg.a1);
+    new_msg.a2 = (a2);
+    new_msg.a3 = (a3);
+    // new_msg.a1 = ((a1) < 5 && (a1) >= 0) ? (a1) : new_msg.a1;
+    // new_msg.a2 = ((a2) < 5 && (a2) >= 0) ? (a2) : new_msg.a2;
+    // new_msg.a3 = ((a3) < 5 && (a3) >= 0) ? (a3) : new_msg.a3;
+    
+    
 
 
     // Publish the new message

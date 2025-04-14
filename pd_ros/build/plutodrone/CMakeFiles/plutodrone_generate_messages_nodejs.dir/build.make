@@ -58,6 +58,7 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/d
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/Drone_stats.js
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
 plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/aruco.js
+plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/SetPos.js
 
 
 /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -85,12 +86,18 @@ plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from plutodrone/aruco.srv"
 	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/pd_ros/src/plutodrone/srv/aruco.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv
 
+/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/SetPos.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/SetPos.js: /home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/pd_ros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from plutodrone/SetPos.srv"
+	cd /home/ubuntu/pd_ros/build/plutodrone && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/pd_ros/src/plutodrone/srv/SetPos.srv -Iplutodrone:/home/ubuntu/pd_ros/src/plutodrone/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p plutodrone -o /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv
+
 plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs
 plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsg.js
 plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/PlutoMsgAP.js
 plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/msg/Drone_stats.js
 plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/PlutoPilot.js
 plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/aruco.js
+plutodrone_generate_messages_nodejs: /home/ubuntu/pd_ros/devel/share/gennodejs/ros/plutodrone/srv/SetPos.js
 plutodrone_generate_messages_nodejs: plutodrone/CMakeFiles/plutodrone_generate_messages_nodejs.dir/build.make
 
 .PHONY : plutodrone_generate_messages_nodejs

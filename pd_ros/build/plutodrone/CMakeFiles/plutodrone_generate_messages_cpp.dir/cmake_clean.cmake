@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsg.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoMsgAP.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/PlutoPilot.h"
+  "/home/ubuntu/pd_ros/devel/include/plutodrone/SetPos.h"
   "/home/ubuntu/pd_ros/devel/include/plutodrone/aruco.h"
   "CMakeFiles/plutodrone_generate_messages_cpp"
 )

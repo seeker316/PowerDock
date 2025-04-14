@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsg.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/msg/PlutoMsgAP.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/PlutoPilot.lisp"
+  "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/SetPos.lisp"
   "/home/ubuntu/pd_ros/devel/share/common-lisp/ros/plutodrone/srv/aruco.lisp"
   "CMakeFiles/plutodrone_generate_messages_lisp"
 )

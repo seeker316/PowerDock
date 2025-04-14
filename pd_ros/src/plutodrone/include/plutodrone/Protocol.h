@@ -77,6 +77,10 @@ int read8();
 int read16();
 int read32();
 
+
+float readFloat32();
+float readScaledFloat();
+
 void evaluateCommand(int command);
 
 void sendRequestMSP(std::vector<int8_t> data);

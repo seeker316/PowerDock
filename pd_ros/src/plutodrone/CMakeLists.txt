@@ -69,6 +69,7 @@ add_service_files(
    FILES
     PlutoPilot.srv
     aruco.srv
+    SetPos.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -226,7 +227,7 @@ target_link_libraries(plutodrone)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
 find_package(OpenCV REQUIRED)
 
-find_package(realsense2 REQUIRED)
+# find_package(realsense2 REQUIRED)
 
 
 ## Declare ROS messages and services
@@ -264,12 +265,11 @@ add_executable(key_handling src/key_handling.cpp)
 target_link_libraries(key_handling ${catkin_LIBRARIES} plutodrone)
 add_dependencies(key_handling plutodrone_generate_messages_cpp)
 
-add_executable(aruco src/aruco.cpp)
-target_link_libraries(aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
-target_link_libraries(aruco ${catkin_LIBRARIES} realsense2)
+# add_executable(aruco src/aruco.cpp)
+# target_link_libraries(aruco ${catkin_LIBRARIES} ${OpenCV_LIBS})
+# target_link_libraries(aruco ${catkin_LIBRARIES} )
 
-add_dependencies(aruco plutodrone_generate_messages_cpp)
-
+# add_dependencies(aruco plutodrone_generate_messages_cpp)
 add_executable(april src/april.cpp)
 
 
@@ -277,11 +277,42 @@ target_link_libraries(april
   ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
   apriltag
+  Eigen3::Eigen
 )
 target_link_libraries(april ${catkin_LIBRARIES} 
     ${cv_bridge_LIBRARIES}
     ${image_transport_LIBRARIES}
 )
+
+add_executable(pdclient src/pdclient.cpp)
+
+
+target_link_libraries(pdclient
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  apriltag
+  Eigen3::Eigen
+)
+target_link_libraries(pdclient ${catkin_LIBRARIES} 
+    ${cv_bridge_LIBRARIES}
+    ${image_transport_LIBRARIES}
+)
+
+##################################################
+add_executable(pdserver src/pdserver.cpp)
+
+
+target_link_libraries(pdserver
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  apriltag
+  Eigen3::Eigen
+)
+target_link_libraries(pdserver ${catkin_LIBRARIES} 
+    ${cv_bridge_LIBRARIES}
+    ${image_transport_LIBRARIES}
+)
+###################################################
 
 #add_executable(listener src/listener.cpp)
 #target_link_libraries(listener ${catkin_LIBRARIES})
@@ -309,4 +340,15 @@ target_link_libraries(cam_sub
   ${cv_bridge_LIBRARIES}
   ${image_transport_LIBRARIES}
 
+)
+
+include_directories(${EIGEN3_INCLUDE_DIR})
+find_package(Eigen3 REQUIRED)
+
+add_executable(localization src/localization.cpp)
+
+
+target_link_libraries(localization
+  ${catkin_LIBRARIES}
+  Eigen3::Eigen
 )
