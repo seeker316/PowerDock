@@ -190,7 +190,7 @@ int main(int argc, char** argv)
     td->quad_sigma = 0.05;
     td->decode_sharpening = 0.25;
     td->refine_edges = 0;
-    cv::VideoCapture cap(2);
+    cv::VideoCapture cap(6);
     if (!cap.isOpened()) {
         ROS_ERROR("Error: Could not open the camera.");
         return -1;

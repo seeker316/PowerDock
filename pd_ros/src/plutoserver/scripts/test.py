@@ -1,173 +1,25 @@
-# #!/usr/bin/env python
-# from plutodrone.srv import *
-# from plutodrone.msg import *
-# from std_msgs.msg import Int16, Int16MultiArray
-# import rospy
+#!/usr/bin/env python3
 
-# control = False
-
-# class send_data():
-# 	"""docstring for request_data"""
-# 	def __init__(self):
-# 		rospy.init_node('drone_server')
-# 		self.command_pub = rospy.Publisher('/drone_command', PlutoMsg, queue_size=1)
-
-# 		self.key_value =0
-# 		self.cmd = PlutoMsg()
-# 		self.cmd.rcRoll =1500
-# 		self.cmd.rcPitch = 1500
-# 		self.cmd.rcYaw =1500
-# 		self.cmd.rcThrottle =1500
-# 		self.cmd.rcAUX1 =1500
-# 		self.cmd.rcAUX2 =1500
-# 		self.cmd.rcAUX3 =1500
-# 		self.cmd.rcAUX4 =1000
-# 		self.cmd.commandType = 0
-# 		self.cmd.trim_roll = 0
-# 		self.cmd.trim_pitch = 0
-# 		self.cmd.isAutoPilotOn = 0
-
-#         rospy.Subscriber('/input_key', Int16, self.indentify_key )
-#         rospy.Subscriber('/pid_values', Int16MultiArray, self.aruco_callback)  # Subscribe to PID values
-
-
-
-# 	def arm(self):
-# 		self.cmd.rcRoll=1500
-# 		self.cmd.rcYaw=1500
-# 		self.cmd.rcPitch =1500
-# 		self.cmd.rcThrottle =1000
-# 		self.cmd.rcAUX4 =1500
-# 		self.cmd.isAutoPilotOn = 0
-# 		self.command_pub.publish(self.cmd)
-# 		rospy.sleep(1)
-
-# 	def box_arm(self):
-# 		self.cmd.rcRoll=1500
-# 		self.cmd.rcYaw=1500
-# 		self.cmd.rcPitch =1500
-# 		self.cmd.rcThrottle =1500
-# 		self.cmd.rcAUX4 =1500
-# 		self.cmd.isAutoPilotOn = 0
-# 		self.command_pub.publish(self.cmd)
-# 		rospy.sleep(0.5)
-
-# 	def disarm(self):
-# 		self.cmd.rcThrottle =1300
-# 		self.cmd.rcAUX4 = 1200
-# 		self.command_pub.publish(self.cmd)
-# 		rospy.sleep(0.5)
-
-#     def aruco_callback(self, msg):
-#         """Receive PID values and store them."""
-#         global control
-# 		if control:
-# 			rospy.loginfo(msg.data)
-            
-
-
-# 	def indentify_key(self, msg):
-# 		self.key_value = msg.data
-
-# 		if self.key_value == 70:
-# 			if(self.cmd.rcAUX4 == 1500):
-# 				self.disarm()
-# 			else:
-# 				self.arm()
-# 		elif self.key_value == 10:
-# 			self.forward()
-# 		elif self.key_value == 30:
-# 			self.left()
-# 		elif self.key_value == 40:
-# 			self.right()
-# 		elif self.key_value == 80:
-# 			self.reset()
-# 		elif self.key_value == 90:
-# 			if(self.cmd.isAutoPilotOn == 1):
-# 				self.cmd.isAutoPilotOn = 0
-# 			else:
-# 				self.cmd.isAutoPilotOn = 1
-# 		elif self.key_value == 50:
-# 			self.increase_height()
-# 		elif self.key_value == 60:
-# 			self.decrease_height()
-# 		elif self.key_value == 110:
-# 			self.backward()
-# 		elif self.key_value == 130:
-# 			self.take_off()
-# 		elif self.key_value == 140:
-# 			self.land()
-# 		elif self.key_value == 150:
-# 			self.left_yaw()
-# 		elif self.key_value == 160:
-# 			self.right_yaw()
-# 		elif self.key_value == 85:
-# 			control = True
-# 		elif self.key_value == 95:
-# 			control = False
-# 		self.command_pub.publish(self.cmd)
-
-# 	def forward(self):
-# 		self.cmd.rcPitch =1600
-# 		self.command_pub.publish(self.cmd)
-# 	def backward(self):
-# 		self.cmd.rcPitch =1400
-# 		self.command_pub.publish(self.cmd)
-# 	def left(self):
-# 		self.cmd.rcRoll =1400
-# 		self.command_pub.publish(self.cmd)
-# 	def right(self):
-# 		self.cmd.rcRoll =1600
-# 		self.command_pub.publish(self.cmd)
-# 	def left_yaw(self):
-# 		self.cmd.rcYaw = 1200
-# 		self.command_pub.publish(self.cmd)
-# 	def right_yaw(self):
-# 		self.cmd.rcYaw = 1800
-# 		self.command_pub.publish(self.cmd)
-# 	def reset(self):
-# 		self.cmd.rcRoll =1500
-# 		self.cmd.rcThrottle =1500
-# 		self.cmd.rcPitch =1500
-# 		self.cmd.rcYaw = 1500
-# 		self.cmd.commandType = 0
-# 		self.command_pub.publish(self.cmd)
-# 	def increase_height(self):
-# 		self.cmd.rcThrottle = 1800
-# 		self.command_pub.publish(self.cmd)
-# 	def decrease_height(self):
-# 		self.cmd.rcThrottle =1300
-# 		self.command_pub.publish(self.cmd)
-# 	def take_off(self):
-# 		self.disarm()
-# 		self.box_arm()
-# 		self.cmd.commandType = 1
-# 		self.command_pub.publish(self.cmd)
-# 	def land(self):
-# 		self.cmd.commandType = 2
-# 		self.command_pub.publish(self.cmd)
-
-
-# if __name__ == '__main__':
-# 	test = send_data()
-# 	while not rospy.is_shutdown():
-# 		rospy.spin()
-# 		sys.exit(1)
-
-#!/usr/bin/env python
 import rospy
-from std_msgs.msg import Int16MultiArray
+from plutodrone.srv import SetPos, SetPosResponse
 
-# Callback function to handle received PID values
-def pid_callback(msg):
-    roll, pitch, yaw, throttle = msg.data
-    rospy.loginfo(f"📥 Received PID Values: Roll={roll}, Pitch={pitch}, Yaw={yaw}, Throttle={throttle}")
+def handle_set_position(req):
+    rospy.loginfo("Received position request: x=%.2f, y=%.2f, z=%.2f", req.pos_x, req.pos_y, req.pos_z)
 
-# Initialize the ROS node
-rospy.init_node("pid_subscriber", anonymous=True)
+    # Echo back the values as confirmation (can be modified if needed)
+    res = SetPosResponse()
+    res.set_x = req.pos_x
+    res.set_y = req.pos_y
+    res.set_z = req.pos_z
 
-# Subscribe to the `/pid_values` topic
-rospy.Subscriber("/pid_values", Int16MultiArray, pid_callback)
+    rospy.loginfo("Responding with: set_x=%.2f, set_y=%.2f, set_z=%.2f", res.set_x, res.set_y, res.set_z)
+    return res
 
-# Keep the node running
-rospy.spin()
+def pdserver():
+    rospy.init_node('pdserver')
+    service = rospy.Service('set_position', SetPos, handle_set_position)
+    rospy.loginfo("SetPos service is ready to receive requests.")
+    rospy.spin()
+
+if __name__ == "__main__":
+    pdserver()

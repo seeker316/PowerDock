@@ -56,7 +56,7 @@ double x_raw,y_raw,x_sum,y_sum;
 
 double s1_filtered,s2_filtered, s3_filtered;
 
-const int CALIBRATION_SAMPLES = 100;
+const int CALIBRATION_SAMPLES = 1;
 
 plutodrone::Drone_stats current_drone_data;
 std::mutex data_mutex; 
@@ -357,7 +357,7 @@ int main(int argc, char **argv)
     td->refine_edges = 0;
 
     // Cam Initialization
-    cv::VideoCapture cap(2);
+    cv::VideoCapture cap(6);
 
     if (!cap.isOpened()) {
         ROS_ERROR("Error: Could not open the camera.");
@@ -369,7 +369,7 @@ int main(int argc, char **argv)
 
     cv::Mat frame, gray, prev_gray;
 
-    cv_bridge::CvImagePtr cv_ptr; //warn in main code it was declared in the loop
+    // cv_bridge::CvImagePtr cv_ptr; 
 
     float img_errorx = 0,img_errory = 0,img_erroryaw = 0;
     float last_known_distance = 0, last_yaw_error = 0;
@@ -460,7 +460,6 @@ int main(int argc, char **argv)
         x_raw = raw_xy(0) - xy_offsets(0);
         y_raw = raw_xy(1) - xy_offsets(1);
 
-        std::lock_guard<std::mutex> lock(data_mutex); //warn check usage
         tof_data = z_kal.kalman_filter_calc(current_drone_data.alt);
 
         ROS_INFO("s1 filtered : %f | s2 filtered : %f | s3 filtered : %f",s1_filtered,s2_filtered,s3_filtered);
@@ -494,6 +493,9 @@ int main(int argc, char **argv)
 
         cap.read(frame);
         if (frame.empty()) break;
+
+        cv_bridge::CvImagePtr cv_ptr; 
+
 
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
         image_u8_t img_header = {gray.cols, gray.rows, gray.cols, gray.data};
@@ -604,7 +606,7 @@ int main(int argc, char **argv)
         putText(frame, "Throttle PID: " + to_string(int(throttle_pid_output)), Point(text_x, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
 
 
-        cv::imshow("April Tracking with PID", frame); // warn imshow window
+        // cv::imshow("April Tracking with PID", frame); // warn imshow window
 
 
 
@@ -621,7 +623,7 @@ int main(int argc, char **argv)
 
 
         apriltag_detections_destroy(detections);
-        rate.sleep();
+        // rate.sleep();
         ros::spinOnce();
 
     }
