@@ -43,6 +43,8 @@ const double tag_size = 0.05;  // 5 cm
 //CHANGE ACCORDING TO CAM FRAME
 int frame_centre_x = 320,frame_centre_y = 240;
 
+int dum_frame_centre_x = 320,dum_frame_centre_y = 240;
+
 double xA1 = 0, yA1 = 1, zA1 = 0;
 double xA2 = 0, yA2 = 0, zA2 = 0;
 double xA3 = 1, yA3 = 0, zA3 = 0;
@@ -55,6 +57,7 @@ double x_true = 0.56,y_true = 0.30;
 double x_raw,y_raw,x_sum,y_sum;
 
 double s1_filtered,s2_filtered, s3_filtered;
+
 
 const int CALIBRATION_SAMPLES = 1;
 
@@ -287,10 +290,20 @@ class PIDController {
 //FUNCTION TO MANUALLY CHANGE SETPOINTS FOR DEBUGGING PURPOSES
 void change_setpoint(const std_msgs::Int16::ConstPtr& msg) {
     int key = msg->data;
-    int new_hold;
+    int new_holdx,new_holdy,new_holdz;
     switch (key) {
-        case 63: new_hold = frame_centre_x + pos_step; frame_centre_x = new_hold; break;
-        case 64: new_hold = frame_centre_x - pos_step; frame_centre_x = new_hold; break;
+        case 63: new_holdx = frame_centre_x + pos_step; frame_centre_x = new_holdx; break;
+        case 64: new_holdx = frame_centre_x - pos_step; frame_centre_x = new_holdx; break;
+        
+        case 65: new_holdy = frame_centre_y + pos_step; frame_centre_y = new_holdy; break;
+        case 66: new_holdy = frame_centre_y - pos_step; frame_centre_y = new_holdy; break;
+
+        case 67: new_holdz = alt_hold + pos_step; alt_hold = new_holdz; break;
+        case 68: new_holdz = alt_hold - pos_step; alt_hold = new_holdz; break;
+        
+        
+        ROS_INFO("pRESSED KEY: %f",key);
+
     }
     
 }
@@ -372,6 +385,7 @@ int main(int argc, char **argv)
     // cv_bridge::CvImagePtr cv_ptr; 
 
     float img_errorx = 0,img_errory = 0,img_erroryaw = 0;
+    float dum_error_x = 0,dum_error_y = 0;
     float last_known_distance = 0, last_yaw_error = 0;
     bool detected = false;
 
@@ -467,10 +481,22 @@ int main(int argc, char **argv)
 
 
         // assigning the x,y,z to service request params
-        req.pos_x = x_raw;
-        req.pos_y = y_raw;
-        req.pos_z = tof_data;
+        if(true)
+        {
+            req.pos_x = (img_errorx / 100) + 2;
+            req.pos_y = (img_errory / 100) + 2;
+            
+            req.pos_z = tof_data;
 
+            ROS_INFO("POS_x : %f | POS_y: %f",dum_error_x,dum_error_y);
+            ROS_INFO("x_FINAL : %f | y_FINAL: %f",img_errorx,img_errory);
+        }
+        else
+        {
+            req.pos_x = x_raw;
+            req.pos_y = y_raw;
+            req.pos_z = tof_data;
+        }
         // Call the service and check the result
         if (client.call(req, res))
         {
@@ -523,6 +549,9 @@ int main(int argc, char **argv)
                 img_errorx = tag_center_x - frame_centre_x;
                 img_errory = tag_center_y - frame_centre_y;
 
+                dum_error_x = tag_center_x - dum_frame_centre_x;
+                dum_error_y = tag_center_y - dum_frame_centre_y;
+
                 img_erroryaw = atan2(pose.R->data[3], pose.R->data[0]) * 180.0 / CV_PI;
 
                 last_known_position = {tag_center_x, tag_center_y};
@@ -550,6 +579,9 @@ int main(int argc, char **argv)
                     last_known_position = {static_cast<int>(next_points[0].x), static_cast<int>(next_points[0].y)};
                     img_errorx = last_known_position[0] - (frame.cols / 2);
                     img_errory = last_known_position[1] - (frame.rows / 2);
+
+                    dum_error_x = last_known_position[0] - (frame.cols / 2);
+                    dum_error_y = last_known_position[1] - (frame.rows / 2);
                     img_erroryaw = last_yaw_error;
 
                     circle(frame, Point(last_known_position[0], last_known_position[1]), 10, Scalar(255, 0, 0), -1);
@@ -559,11 +591,15 @@ int main(int argc, char **argv)
         }
 
         //warn little confused about this if statement 
-        if((x_raw < dockx+dockrange) && (x_raw > dockx-dockrange) && (y_raw < docky+dockrange) && (y_raw > docky-dockrange) && (tof_data < dockz+dockrange) && (tof_data > dockz-dockrange) && ((setpointx == dockx) && (setpointy == docky) && (setpointz == dockz)))
+        if(true)
         {
             alt_error = setpointz - estimated_distance;
             error_x = x_kal.kalman_filter_calc((img_errorx/fx)*estimated_distance);
             error_y = y_kal.kalman_filter_calc((img_errory/fy)*estimated_distance);
+
+            dum_error_x = x_kal.kalman_filter_calc((dum_error_x/fx)*estimated_distance);
+            dum_error_y = y_kal.kalman_filter_calc((dum_error_y/fy)*estimated_distance);
+
             error_yaw = img_erroryaw;
         }
         else
@@ -596,9 +632,14 @@ int main(int argc, char **argv)
 
         int text_x = frame.cols - 250;
         putText(frame, "Battery: " + to_string(current_drone_data.battery), Point(10, 30), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
-        putText(frame, "X Error: " + to_string(int(error_x)), Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
-        putText(frame, "Y Error: " + to_string(int(error_y)), Point(10, 90), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
-        putText(frame, "Yaw: " + to_string(int(error_yaw)), Point(10, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        // putText(frame, "X Error: " + to_string(int(error_x)), Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        // putText(frame, "Y Error: " + to_string(int(error_y)), Point(10, 90), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        // putText(frame, "Yaw: " + to_string(int(error_yaw)), Point(10, 120), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+
+        putText(frame, "X centre: " + to_string(int(frame_centre_x)), Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        putText(frame, "Y Centre: " + to_string(int(frame_centre_y)), Point(10, 90), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+        // putText(frame, "Alt hold: " + to_string(int(alt_hold)), Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
+
         putText(frame, "Distance: " + to_string(estimated_distance), Point(10, 150), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
         putText(frame, "Roll PID: " + to_string(int(roll_pid_output)), Point(text_x, 30), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);
         putText(frame, "Pitch PID: " + to_string(int(pitch_pid_output)), Point(text_x, 60), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 255), 2);

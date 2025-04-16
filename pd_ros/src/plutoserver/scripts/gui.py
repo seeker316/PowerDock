@@ -50,7 +50,7 @@ BoxLayout:
         MDBoxLayout:
             orientation: 'vertical'
             size_hint_x: 2/5
-            md_bg_color: 0.18, 0.18, 0.18, 1  # Dark Gray
+            md_bg_color: 0.9, 0.9, 0.9, 1  # Dark Gray
 
             MDTopAppBar:
                 title: "Path Planning"
@@ -348,32 +348,19 @@ class PathPlannerWidget(Widget):
 
     def update_drone_position(self, dt):
         """Update the drone's position using UWB data."""
-        try:
+        app = MDApp.get_running_app()
 
-            uwb_x, uwb_y, uwb_z = MDApp.get_running_app().drone_position
+        uwb_x, uwb_y, uwb_z = app.drone_position # Simulated UWB values
+        widget_x, widget_y = self.pos
+        widget_width, widget_height = self.size
 
-            if not all(isinstance(val, (int, float)) for val in [uwb_x, uwb_y, uwb_z]):
-                raise ValueError("Invalid UWB data format.")
+        # Convert UWB coordinates to screen space
+        drone_x = widget_x + (uwb_x / self.ARENA_SIZE_METERS) * widget_width
+        drone_y = widget_y + (1 - float(uwb_y) / self.ARENA_SIZE_METERS) * widget_height
 
-            widget_x, widget_y = self.pos
-            widget_width, widget_height = self.size
-            print(MDApp.get_running_app().drone_position)
 
-            screen_x = widget_x + (float(uwb_x) / self.ARENA_SIZE_METERS) * widget_width
-            screen_y = widget_y + (float(uwb_y) / self.ARENA_SIZE_METERS) * widget_height
-
-            # Ensure valid float values
-            screen_x, screen_y = float(screen_x), float(screen_y)
-
-            # Move drone marker (ensure it's within screen bounds)
-            self.drone.pos = (max(0, screen_x - 20), max(0, screen_y - 20))
-
-            # Debugging output
-            # print(f"UWB Position: {uwb_x:.2f}, {uwb_y:.2f}, {uwb_z:.2f} -> Screen Position: {screen_x}, {screen_y}")
-
-        except Exception as e:
-            print(f"Error updating drone position: {e}")
-
+        self.drone.pos = (drone_x - 20, drone_y - 20)
+        print(f"Updated Drone Position (UWB): X={uwb_x}, Y={uwb_y}, Z={uwb_z}")
 
 
     def scale_to_arena(self, pos):
@@ -427,6 +414,7 @@ class PathPlannerWidget(Widget):
         """Redraws the path separately without clearing the drone image."""
         self.canvas.remove(self.path_group)  # Remove old path only
         self.path_group.clear()
+        app = MDApp.get_running_app()
 
         self.path_group.add(Color(0, 0, 1, 1))  # Blue path
 
@@ -478,9 +466,7 @@ class DroneApp(MDApp):
 
         # Store points and index as instance variables
         self.interpolatedPoints = [
-            (1.0, 2.0, 3.0),
-            (4.0, 5.0, 6.0),
-            (7.0, 8.0, 9.0),
+        
             # add as many as you want
         ]
         self.current_index = 0
@@ -509,11 +495,10 @@ class DroneApp(MDApp):
     def handle_get_next_point(self, req):
         # Always update the latest drone-reported position
         self.drone_position = (req.pos_x, req.pos_y, req.pos_z)
-        rospy.loginfo("Received drone position: x=%.2f, y=%.2f, z=%.2f", *self.drone_position)
 
         # If all points have been sent, echo back current position
         if self.current_index >= len(self.interpolatedPoints):
-            rospy.loginfo("All mission points sent.")
+          
             res = SetPosResponse()
             res.set_x, res.set_y, res.set_z = req.pos_x, req.pos_y, req.pos_z
             return res
@@ -521,7 +506,7 @@ class DroneApp(MDApp):
         # Otherwise, send the next mission point
         x, y, z = self.interpolatedPoints[self.current_index]
         self.current_index += 1
-        rospy.loginfo(f"Sending mission point: ({x}, {y}, {z})")
+        print(self.current_index )
 
         res = SetPosResponse()
         res.set_x = x
@@ -564,14 +549,20 @@ class DroneApp(MDApp):
             30: 25,  # 1
             31: 30,  # 2
             32: 35,  # 3
-            33: 45   # 4
+            33: 45,  # 4
+            13: 63,  # k
+            14: 64,  # k
+            16: 65,  # m
+            17: 66,  # n
+            15: 67,  # l
+            19: 68   # p
+
         }
 
         msg_pub = keyboard_control.get(keycode, 80)  # Default to 80 if key is not in dictionary
 
         # Ensure self.pub is initialized
         if not hasattr(self, 'pub') or self.pub is None:
-            print("Error: self.pub is not initialized")
             return
 
         # Update GUI label safely
@@ -648,25 +639,27 @@ class DroneApp(MDApp):
         for i in range(len(mission) - 1):
             startPoint = mission[i]
             endPoint = mission[i + 1]
-            distance = np.linalg.norm(endPoint - startPoint)
-            stepSize = stepFactor * distance
-            numSteps = int(np.ceil(distance / stepSize))
+            if(np.array_equal(startPoint, endPoint) == 0):
+                distance = np.linalg.norm(endPoint - startPoint)
+                stepSize = stepFactor * distance
+                numSteps = int(np.ceil(distance / stepSize))
 
-            for j in range(1, numSteps + 1):
-                t = (j - 1) / numSteps
-                point = (1 - t) * startPoint + t * endPoint
-                self.interpolatedPoints.append(point)
+                for j in range(1, numSteps + 1):
+                    t = (j - 1) / numSteps
+                    point = (1 - t) * startPoint + t * endPoint
+                    self.interpolatedPoints.append(point)
 
         self.interpolatedPoints.append(mission[-1])
         self.interpolatedPoints = np.array(self.interpolatedPoints)
-        print(self.interpolatedPoints)
-
-        self.threshold_upper = self.interpolatedPoints + threshold_radius
-        self.threshold_lower = self.interpolatedPoints - threshold_radius
+        
 
     def execute_path(self):
+        # self.current_index  = 0
         """Executes the drawn path for the drone to follow sequentially."""
         path_points = self.root.ids.path_planner.points
+        path_points.insert(0,self.drone_position)
+        # print(path_points)
+        # print(self.drone_position)
         self.mission_planner(path_points)
         path_planner = self.root.ids.path_planner
         widget_x, widget_y = path_planner.pos
@@ -675,22 +668,24 @@ class DroneApp(MDApp):
         if len(path_points) < 2:
             return  # Need at least two points to move
 
-        def move_next(index):
-            if index < len(path_points) - 1:
-                x1, y1, z1 = path_points[index]
-                x2, y2, z2 = path_points[index + 1]
+        # def move_next(index):
+        #     if index < len(path_points) - 1:
+        #         x1, y1, z1 = path_points[index]
+        #         x2, y2, z2 = path_points[index + 1]
 
-                new_x1 = widget_x + (x1 / 4) * widget_width
-                new_y1 = widget_y + (y1 / 4) * widget_height
-                new_x2 = widget_x + (x2 / 4) * widget_width
-                new_y2 = widget_y + (y2 / 4) * widget_height
+        #         new_x1 = widget_x + (x1 / 4) * widget_width
+        #         new_y1 = widget_y + (y1 / 4) * widget_height
+        #         new_x2 = widget_x + (x2 / 4) * widget_width
+        #         new_y2 = widget_y + (y2 / 4) * widget_height
 
-                path_planner.move_drone((new_x1, new_y1), (new_x2, new_y2), 2)
+        #         path_planner.move_drone((new_x1, new_y1), (new_x2, new_y2), 2)
 
-                # Schedule the next move after the current one finishes
-                Clock.schedule_once(lambda dt: move_next(index + 1), 2)  # 2 seconds duration
+        #         # Schedule the next move after the current one finishes
+        #         Clock.schedule_once(lambda dt: move_next(index + 1), 2)  # 2 seconds duration
 
-        move_next(0)
+        # move_next(0)
+        self.current_index  = 0
+        
 
     def pause_resume(self):
 
@@ -713,7 +708,6 @@ class DroneApp(MDApp):
         self.last_telemetry_time = time.time()  # Update last telemetry time
 
         (x, y, z)  = self.drone_position 
-        print(x,y,z)
 
         telemetry_text = (
             f"Roll: {msg.roll} | Pitch: {msg.pitch} | Yaw: {msg.yaw}\n"
@@ -745,38 +739,23 @@ class DroneApp(MDApp):
         battery_bar.color = (0, 1, 0, 1) if battery_level > 60 else \
                             (1, 1, 0, 1) if battery_level > 30 else \
                             (1, 0, 0, 1)
+        
+        if battery_level <= 30:
+            
+            """Executes the drawn path for the drone to follow sequentially."""
+            path_points = [(2,2,50)]
+            path_points.insert(0,self.drone_position)
+            print(path_points)
+        # print(self.drone_position)
+            self.mission_planner(path_points)
+            path_planner = self.root.ids.path_planner
+
 
         battery_bar.value = battery_level
         battery_level = round(msg.battery, 2) 
         self.root.ids.bms_status.text = f"System Status: Battery {battery_level}"
 
     
-def trilateration(a1, a2, a3):
-    # Define known anchor positions (adjust as per your setup)
-    A1 = np.array([0, 1, 0])   # Anchor 1 (x1, y1, z1)
-    A2 = np.array([0, 0, 0])   # Anchor 2 (x2, y2, z2)
-    A3 = np.array([1, 0, 0])   # Anchor 3 (x3, y3, z3)
-
-    # Distances from the drone to each anchor
-    d1, d2, d3 = a1, a2, a3
-
-    # Solve trilateration equations
-    A = 2 * (A2 - A1)
-    B = 2 * (A3 - A1)
-    C = np.array([
-        d1**2 - d2**2 + np.sum(A2**2) - np.sum(A1**2),
-        d1**2 - d3**2 + np.sum(A3**2) - np.sum(A1**2)
-    ])
-
-    # Compute x, y (ignoring z for now)
-    xy = np.linalg.lstsq(np.vstack([A, B]), C, rcond=None)[0]
-
-    # Estimate z using one of the spheres
-    z = np.sqrt(abs(d1**2 - np.sum(xy**2)))  # Ensure non-negative value
-
-    return round(xy[0], 2), round(xy[1], 2), round(z, 2)
-
-
 
 
 if __name__ == "__main__":
